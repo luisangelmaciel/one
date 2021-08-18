@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de sitio del contenido</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="icon" href="https://www.xiiber.com/favicon.png" sizes="192x192">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        
+        body {
+            background-color: #222429;
+            color: #fff;
+        }
+        
+        html {
+            font-family: sans-serif;
+            font-size: 10px;
+            color: #fff;
+        }
+        
+        y {
+            width: 100%;
+            min-height: 100vh;
+            font-size: 1.6rem;
+            line-height: 140%;
+            opacity: 0.3;
+            opacity: 1;
+            display: grid;
+            place-items: center;
+        }
+        
+        .acc-container {
+            padding: .3rem .3rem;
+            mask-position: initial;
+        }
+        
+        .acc-btn {
+            width: 100%;
+            padding: 1.6rem 2rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: inherit;
+            border: none;
+            outline: none;
+            text-align: left;
+            transition: all 0.5s linear;
+        }
+        
+        .acc-btn:after {
+            content: "\271A";
+            color: #017db0;
+            float: right;
+            transition: all 0.3s linear;
+        }
+        
+        .acc-btn.is-open:after {
+            transform: rotate(90deg);
+        }
+        
+        .acc-btn:hover,
+        .acc-btn.is-open {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .acc-btnx {
+            width: 100%;
+            padding: 1.6rem 2rem;
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: inherit;
+            border: none;
+            outline: none;
+            text-align: left;
+            transition: all 0.5s linear;
+        }
+        
+        .acc-btnx:after {
+            color: #ffffff;
+            transition: all 0.3s linear;
+        }
+        
+        .acc-content {
+            max-height: 0;
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 2rem;
+            padding-left: 1rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .btn_get_two {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: #fff;
+            border-color: #fff;
+            color: #fff;
+        }
+        
+        .btn_get_two:hover {
+            background: transparent;
+            color: #017db0;
+        }
+        
+        .new_footer_top .f_social_icon a:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #017db0;
+        }
+        
+        .new_footer_top .f_social_icon a+a {
+            margin-left: 4px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+        
+        a:link {
+            text-decoration: none
+        }
+        
+        a:visited {
+            color: #fff;
+            text-decoration: none
+        }
+        
+        a:hover {
+            color: #fff;
+            font-family: arial;
+            text-decoration: none
+        }
+        
+        * {
+            outline: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="w3-container  w3-center w3-opacity w3-large w3-padding-32"><span class="w3-large w3-padding-small" style="text-align:center;color:#ffffff"><b>How </b>to <span style="font-family: 'Montserrat Alternates', sans-serif; font-size: 18px; color:rgb(255, 255, 255); text-align: center; " class="w3-hover"> </span></b>
+        </span><br>
+        <div id="Typing-name">
+
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+            <style>
+                /*  .bodyfirma {
+                    display: grid;
+                    place-items: center;
+                    min-height: 100vh;
+                    text-align: center;
+                } */
+                
+                .type-animation {
+                    display: inline-flex;
+                    width: 0;
+                    overflow: hidden;
+                    padding-right: 0.03em;
+                    position: relative;
+                    color: #017db0;
+                }
+                
+                .type-animation:after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: -0.02em;
+                    bottom: -0.02em;
+                    width: 0.06em;
+                    border-right: 2px solid transparent;
+                }
+                
+                .type-animation.animating {
+                    -webkit-animation: type 1620ms;
+                    animation: type 1620ms;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards;
+                    -webkit-animation-delay: 1s;
+                    animation-delay: 1s;
+                }
+                
+                .type-animation.animating:after {
+                    -webkit-animation: cursor 320ms 8.625 ease-in-out;
+                    animation: cursor 320ms 8.625 ease-in-out;
+                }
+                
+                @-webkit-keyframes cursor {
+                    0%,
+                    100% {
+                        border-color: #f7f3ff;
+                    }
+                    50% {
+                        border-color: #c2bfd4;
+                    }
+                    100% {
+                        width: 0;
+                    }
+                }
+                
+                @keyframes cursor {
+                    0%,
+                    100% {
+                        border-color: #f7f3ff;
+                    }
+                    50% {
+                        border-color: #cbc9db;
+                    }
+                    100% {
+                        width: 0;
+                    }
+                }
+                
+                @-webkit-keyframes type {
+                    11.1111111111% {
+                        width: 0.49em;
+                    }
+                    22.2222222222% {
+                        width: 0.98em;
+                    }
+                    33.3333333333% {
+                        width: 1.47em;
+                    }
+                    44.4444444444% {
+                        width: 1.96em;
+                    }
+                    55.5555555556% {
+                        width: 2.45em;
+                    }
+                    66.6666666667% {
+                        width: 2.94em;
+                    }
+                    77.7777777778% {
+                        width: 3.43em;
+                    }
+                    88.8888888889% {
+                        width: 3.92em;
+                    }
+                    100% {
+                        width: 3.00em;
+                        padding-right: 0;
+                    }
+                }
+                
+                @keyframes type {
+                    11.1111111111% {
+                        width: 0.49em;
+                    }
+                    22.2222222222% {
+                        width: 0.98em;
+                    }
+                    33.3333333333% {
+                        width: 1.47em;
+                    }
+                    44.4444444444% {
+                        width: 1.96em;
+                    }
+                    55.5555555556% {
+                        width: 2.45em;
+                    }
+                    66.6666666667% {
+                        width: 2.94em;
+                    }
+                    77.7777777778% {
+                        width: 3.43em;
+                    }
+                    88.8888888889% {
+                        width: 3.92em;
+                    }
+                    100% {
+                        width: 3.00em;
+                        padding-right: 0;
+                    }
+                }
+            </style>
+
+            <div class="bodyfirma">
+                <h1>Luis <span class="type-animation animating" style="color: #017db0;"><b>Ángel </b></span>Maciel</h1>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <ul style="list-style-type: none;  margin: 0 2rem; padding-left: 1rem;">
+            <li style="    list-style-type: none;">
+                <a href="one/pure-css-typing-animation/index.html"><b>1</b> Pure CSS typing animation</a>
+            </li>
+            <li>
+                <a href="one/pure-css-typing-animation-retype/index.html"><b>2</b> Pure CSS typing animation + button retype</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/type-and-delete/"><b>3</b> Type and delete correction</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/transitions-text-css-01"><b>4</b> Transition text CSS 01</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/transitions-text-css-02"><b>5</b> Transition text CSS 02</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/transitions-text-css-02"><b>6</b> Transition text CSS 03</a>
+            </li>
+            <li>
+                <a href="one/slide-random-image/index.html"><b></b> Slide random image</a>
+            </li>
+            <li>
+                <a href="one/text-random-Emoji-con-ReactJS/index.html"><b></b> Text random Emoji con ReactJS</a>
+            </li>
+            <li>
+                <a href=""><b></b> </a>
+            </li>
+            <li>
+                <a href=""><b></b> </a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/user-header/"><b></b> User Header</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/semantic-ui"><b></b>Elementos Semantic-UI</a>
+            </li>
+            <li>
+                <a href="https://luisemoji.github.io/one/rellenar-tabla-con-base-de-datos-en-js-con-base-para-ahref-en-jquery/"><b>8</b>Rellenar tabla con base de datos en js con base para ahref en-jQuery</a>
+            </li>
+            <br><br></ul>
+
+        <div class="acc-container">
+
+
+
+            <button class="acc-btn">Proyectos</button>
+            <div class="acc-content">
+                <ul class="list-unstyled f_list">
+                    <li>
+                        <a href="https://www.xiiber.com" target="_blank" title="Xiiber Travel, experiencias y viajes gay">Xiiber</a>
+                    </li>
+                    <li>
+                        <a href="https://dragvesti.xiiber.com" target="_blank" title="Dragvesti, la carrera Drag Online y en vivo">Dragvesti</a>
+                    </li>
+                    <li>
+                        <a href="apps.html" target="_blank" title="Apps">Apps</a>
+                    </li><br><br></ul>
+            </div>
+            <button class="acc-btn">Blog</button>
+            <div class="acc-content">
+                <ul class="list-unstyled f_list">
+                    <li>
+                        <a href="https://luisemoji.github.io/one/blog-pride/"><b>A</b> Blog Pride</a>
+                    </li>
+                    <li>
+                        <a href="https://luisemoji.github.io/one/blog-blue-simple/"><b>B</b> Blog simple blue</a>
+                    </li>
+                </ul><br></div>
+        </div>
+    </main>
+    <footer class=" w3-container w3-center w3-opacity w3-large w3-padding-32">
+        <ul class="w3-small  w3-center"><span style="text-align:center;color:#000000"><b>Hecho con <span class="w3-hover-opacity">❤️ </span> y mucha paciencia</b>
+            </span><br>
+            <p class="w3-small ">
+                <div id="para-copiar-pegar">
+
+
+                    <p><b>How</b> to. Parte
+                        <span class="txt-type" data-wait="300" data-words='["Uno", "One", "I", "1"]'></span>
+                    </p>
+
+
+                    <script>
+                        // const TypeWriter = function(txtElement, words, wait = 3000) {
+                        //   this.txtElement = txtElement;
+                        //   this.words = words;
+                        //   this.txt = '';
+                        //   this.wordIndex = 0;
+                        //   this.wait = parseInt(wait, 10);
+                        //   this.type();
+                        //   this.isDeleting = false;
+                        // }
+
+                        // // Type Method
+                        // TypeWriter.prototype.type = function() {
+                        //   // Current index of word
+                        //   const current = this.wordIndex % this.words.length;
+                        //   // Get full text of current word
+                        //   const fullTxt = this.words[current];
+
+                        //   // Check if deleting
+                        //   if(this.isDeleting) {
+                        //     // Remove char
+                        //     this.txt = fullTxt.substring(0, this.txt.length - 1);
+                        //   } else {
+                        //     // Add char
+                        //     this.txt = fullTxt.substring(0, this.txt.length + 1);
+                        //   }
+
+                        //   // Insert txt into element
+                        //   this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+                        //   // Initial Type Speed
+                        //   let typeSpeed = 300;
+
+                        //   if(this.isDeleting) {
+                        //     typeSpeed /= 2;
+                        //   }
+
+                        //   // If word is complete
+                        //   if(!this.isDeleting && this.txt === fullTxt) {
+                        //     // Make pause at end
+                        //     typeSpeed = this.wait;
+                        //     // Set delete to true
+                        //     this.isDeleting = true;
+                        //   } else if(this.isDeleting && this.txt === '') {
+                        //     this.isDeleting = false;
+                        //     // Move to next word
+                        //     this.wordIndex++;
+                        //     // Pause before start typing
+                        //     typeSpeed = 500;
+                        //   }
+
+                        //   setTimeout(() => this.type(), typeSpeed);
+                        // }
+
+
+                        // ES6 Class
+                        class TypeWriter {
+                            constructor(txtElement, words, wait = 3000) {
+                                this.txtElement = txtElement;
+                                this.words = words;
+                                this.txt = '';
+                                this.wordIndex = 0;
+                                this.wait = parseInt(wait, 10);
+                                this.type();
+                                this.isDeleting = false;
+                            }
+
+                            type() {
+                                // Current index of word
+                                const current = this.wordIndex % this.words.length;
+                                // Get full text of current word
+                                const fullTxt = this.words[current];
+
+                                // Check if deleting
+                                if (this.isDeleting) {
+                                    // Remove char
+                                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                                } else {
+                                    // Add char
+                                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                                }
+
+                                // Insert txt into element
+                                this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+                                // Initial Type Speed
+                                let typeSpeed = 300;
+
+                                if (this.isDeleting) {
+                                    typeSpeed /= 2;
+                                }
+
+                                // If word is complete
+                                if (!this.isDeleting && this.txt === fullTxt) {
+                                    // Make pause at end
+                                    typeSpeed = this.wait;
+                                    // Set delete to true
+                                    this.isDeleting = true;
+                                } else if (this.isDeleting && this.txt === '') {
+                                    this.isDeleting = false;
+                                    // Move to next word
+                                    this.wordIndex++;
+                                    // Pause before start typing
+                                    typeSpeed = 500;
+                                }
+
+                                setTimeout(() => this.type(), typeSpeed);
+                            }
+                        }
+
+
+                        // Init On DOM Load
+                        document.addEventListener('DOMContentLoaded', init);
+
+                        // Init App
+                        function init() {
+                            const txtElement = document.querySelector('.txt-type');
+                            const words = JSON.parse(txtElement.getAttribute('data-words'));
+                            const wait = txtElement.getAttribute('data-wait');
+                            // Init TypeWriter
+                            new TypeWriter(txtElement, words, wait);
+                        }
+                    </script>
+
+                </div>
+            </p>
+            <br>
+            <i class="fa fa-instagram w3-hover-opacity w3-large" onclick="document.location='https://www.instagram.com/xiibertravel/' "></i> &nbsp;
+            <i class=" fa fa-youtube-play w3-hover-opacity  w3-large" onclick="document.location='https://www.facebook.com/cgtravel' "></i> &nbsp;
+            <i class="fa fa-twitter w3-hover-opacity w3-large" onclick="document.location='https://twitter.com/XiiberTravel' "></i> &nbsp;
+            <i class="fa fa-google w3-hover-opacity w3-large" onclick="document.location='https://www.google.com/maps/place/Xiiber/@19.3507605,-99.1486646,17z/data=!3m1!4b1!4m5!3m4!1s0x85d1fdea83072205:0x762481276f0ce59d!8m2!3d19.3507606!4d-99.1464759' "></i>            &nbsp;
+            <i class=" w3-hover-opacity "><img src="img/xiiber.png " alt="Xiiber " width="21px " height="21px " style="color: white;"></i>
+
+
+
+    </footer>
+    <script>
+        const btns = document.querySelectorAll(".acc-btn");
+        // fn
+        function accordion() {
+            // this = the btn | icon & bg changed
+            this.classList.toggle("is-open");
+            // the acc-content
+            const content = this.nextElementSibling;
+            // IF open, close | else open
+            if (content.style.maxHeight) content.style.maxHeight = null;
+            else content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        // event
+        btns.forEach((el) => el.addEventListener("click", accordion));
+    </script>
+</body>
+
+</html>
+
+<!-- 
+    Copyright © 
+-->

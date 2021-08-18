@@ -1,0 +1,33 @@
+html {
+    height: 100%
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.Mood__emoji {
+    line-height: 4rem;
+    font-size: 4rem;
+    margin-bottom: .25rem;
+}
+
+.Mood__name {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.Mood__button {
+    background: #eee;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transition text CSS 03</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Righteous);
+        @import url(https://fonts.googleapis.com/css?family=Black+Ops+One);
+        body,
+        html {
+            margin: 0px;
+            text-align: center;
+            height: 325px;
+            max-height: 325px;
+        }
+        
+        section {
+            height: 100vh;
+        }
+        
+        .anchor {
+            position: absolute;
+        }
+        
+        .item {
+            margin-bottom: 20px;
+        }
+        
+        .landing {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        .welcome {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+        
+        .welcome h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 3em;
+        }
+        
+        .welcome span {
+            font-size: 2em;
+            color: #017db0;
+            position: relative;
+        }
+        
+        .welcome span:nth-child(3) {
+            position: relative;
+            display: block;
+            color: #017db0;
+            font-size: 1em;
+        }
+        
+        .nav-2 {
+            background: #2E71CC;
+        }
+        
+        .nav-2 nav {
+            background: #3384F2;
+        }
+        
+        .nav-2 .linktext {
+            font-size: 3.3em;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            color: #85B9FF;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+            transition-delay: 0s;
+            -webkit-transition-delay: 0s;
+        }
+        
+        .nav-2 .linktext:before {
+            display: inline-block;
+            content: attr(data-text);
+            position: absolute;
+            top: 0px;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+            transition-delay: 0.15s;
+            -webkit-transition-delay: 0.15s;
+            opacity: 1;
+            color: #236CCF;
+        }
+        
+        .nav-2 .item {
+            position: relative;
+            display: inline-block;
+            height: 100px;
+            padding-top: 15px;
+            margin-left: 25px;
+            margin-right: 25px;
+            background: transparent;
+            z-index: 2;
+            color: #007BFF;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            transition: 0.3s ease-in-out;
+            -webkit-transition: 0.3s ease-in-out;
+        }
+        /*.nav-2 .item:hover .linktext{
+          color:#236CCF;
+        }*/
+        
+        .nav-2 .item:hover .linktext {
+            transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            transition-delay: 0.15s;
+            -webkit-transition-delay: 0.15s;
+        }
+        
+        .nav-2 .item:hover .linktext:before {
+            transform: translateY(30px);
+            -webkit-transform: translateY(30px);
+            transition-delay: 0s;
+            -webkit-transition-delay: 0s;
+            opacity: 0;
+        }
+        /*   /NAV-2   */
+    </style>
+</head>
+
+<body>
+
+    <a class="anchor" name="nav-2">
+    </a>
+    <section class="nav-2">
+        <nav>
+            <a class="item" href="#nav-2">
+                <div data-text="Xiiber" class="linktext">Xiiber</div>
+            </a>
+        </nav>
+    </section>
+    <!--
+        
+         <link rel="stylesheet" href="./style.css">
+         <a class="anchor" name="nav-3"></a><section class="nav-3"><nav><a class="item" href="#nav-3"><div data-text="Home" class="linktext">Home</div></a><a class="item" href="#nav-3"><div data-text="About" class="linktext">About</div></a><a class="item" href="#nav-3"><div data-text="Portfolio" class="linktext">Portfolio</div></a><a class="item" href="#nav-3"><div data-text="Contact" class="linktext">Contact</div></a><a class="item" href="#nav-3"><div data-text="Blog" class="linktext">Blog</div></a></nav></section><a class="anchor" name="nav-4"></a><section class="nav-4"><nav><a class="item" href="#nav-4"><div class="linktext">Home</div></a><a class="item" href="#nav-4"><div class="linktext">About</div></a><a class="item" href="#nav-4"><div class="linktext">Portfolio</div></a><a class="item" href="#nav-4"><div class="linktext">Contact</div></a><a class="item" href="#nav-4"><div class="linktext">Blog</div></a></nav></section><a class="anchor" name="nav-5"></a><section class="nav-5"><nav><a class="item" href="#nav-5"><div data-text="Home" class="linktext">Home</div><div class="testbox fix"><span>Home</span></div></a><a class="item" href="#nav-5"><div data-text="About" class="linktext">About</div><div class="testbox"><span>About</span></div></a><a class="item" href="#nav-5"><div data-text="Portfolio" class="linktext">Portfolio</div><div class="testbox fix"><span>Portfolio</span></div></a><a class="item" href="#nav-5"><div data-text="Contact" class="linktext">Contact</div><div class="testbox"><span>Contact</span></div></a><a class="item" href="#nav-5"><div data-text="Blog" class="linktext">Blog</div><div class="testbox fix"><span>Blog</span></div></a></nav></section><a class="anchor" name="nav-6"></a><section class="nav-6"><nav><a class="item" href="#nav-6"><div class="linktext">Home</div></a><a class="item" href="#nav-6"><div class="linktext">About</div></a><a class="item" href="#nav-6"><div class="linktext">Portfolio</div></a><a class="item" href="#nav-6"><div class="linktext">Contact</div></a><a class="item" href="#nav-6"><div class="linktext">Blog</div></a></nav></section><a class="anchor" name="nav-7"></a><section class="nav-7"><nav><a class="item" href="#nav-7"><div class="linktext">Home</div></a><a class="item" href="#nav-7"><div class="linktext">About</div></a><a class="item" href="#nav-7"><div class="linktext">Portfolio</div></a><a class="item" href="#nav-7"><div class="linktext">Contact</div></a><a class="item" href="#nav-7"><div class="linktext">Blog</div></a></nav></section><a class="anchor" name="nav-9"></a><section class="nav-9"><nav><a class="item" href="#nav-9"><div data-text="Main page" class="linktext">Home</div></a><a class="item" href="#nav-9"><div data-text="What we do" class="linktext">About</div></a><a class="item" href="#nav-9"><div data-text="See our works" class="linktext">Portfolio</div></a><a class="item" href="#nav-9"><div data-text="Get in touch" class="linktext">Contact</div></a><a class="item" href="#nav-9"><div data-text="Thoughts" class="linktext">Blog</div></a></nav></section>-->
+</body>
+
+</html>
