@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Post</title>
+
+    <script src="w3.js"></script>
+    <script src="publicaciones.js"></script>
+
+    <style>
+         :root {
+            --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
+        }
+        
+        *,
+         ::after,
+         ::before {
+            box-sizing: border-box
+        }
+        
+        .container-publicaciones {
+            width: 100%;
+            padding-right: var(--bs-gutter-x, .75rem);
+            padding-left: var(--bs-gutter-x, .75rem);
+            margin-right: auto;
+            margin-left: auto
+        }
+        
+        @media (min-width:576px) {
+            .container-publicaciones {
+                max-width: 540px
+            }
+        }
+        
+        @media (min-width:768px) {
+            .container-publicaciones {
+                max-width: 720px
+            }
+        }
+        
+        @media (min-width:992px) {
+            .container-publicaciones {
+                max-width: 960px
+            }
+        }
+        
+        @media (min-width:1200px) {
+            .container-publicaciones {
+                max-width: 1140px
+            }
+        }
+        
+        @media (min-width:1400px) {
+            .container-publicaciones {
+                max-width: 1320px
+            }
+        }
+        
+        .nicknamex,
+        h1 .h1publi {
+            margin-top: 0;
+            margin-bottom: .5rem;
+            font-weight: 500;
+            line-height: 1.2
+        }
+        
+        h1 .h1publi {
+            font-size: calc(1.375rem + 1.5vw)
+        }
+        
+        @media (min-width:1200px) {
+            h1 .h1publi {
+                font-size: 2.5rem
+            }
+        }
+        
+        .nicknamex {
+            font-size: 1rem
+        }
+    </style>
+
+</head>
+
+<body style=" margin: 0;font-family: var(--bs-font-sans-serif);font-size: 1rem;font-weight: 400;line-height: 1.5;color: #212529;-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: transparent">
+
+    <main class="container-publicaciones">
+        <br>
+        <div style="display: flex; align-items: center;padding: 1rem; margin-top: 1rem!; margin-bottom: 1rem; color: #fff; background-color: #017dbb; box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075); border-radius: .25rem">
+            <img src="57x57.png" width="48" height="48" style="vertical-align: middle; flex-shrink: 0; border-radius: .25rem;  margin-right: .5rem; ">
+            <div style="line-height: 1">
+                <h1 class="h1publi nicknamex " style=" color: #fff; line-height: 1;  margin-bottom: 0; ">Xiiber Travel</h1>
+                <strong style="font-weight: bolder">@Xiiber</strong>
+            </div>
+        </div>
+
+        <div style="padding: 1rem; margin-top: 1rem!;
+        margin-bottom: 1rem!; margin-top: 1rem!; margin-bottom: 1rem; border-radius: .25rem; box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)" id="publicaciones">
+            <ul id="idPost" style=" padding-left: 2rem;
+            margin-top: 0;
+            margin-bottom: 1rem; list-style-type: none;  margin: 0;  padding: 0;">
+                <li w3-repeat="publicacionesXiiber" style="list-style-type: none;  margin: 0;  padding: 0;">
+                    <div style="display: flex; padding-top: 1rem">
+                        <img src="57x57.png" width="32" height="32" style="vertical-align: middle; margin-right: .5rem; flex-shrink: 0; border-radius: .25rem; box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)">
+                        <p style=" margin-top: 0;
+                        margin-bottom: 1rem; padding-bottom: 1rem;  font-size: .875em; margin-bottom: 0; border-bottom: 1px solid #e1e5e9  line-height: 1.25">
+                            <strong style=" font-weight: bolder; display: block ">@XiiberTravel 
+                                <span style="font-weight: 100;">
+                                {{fechaDePublicacion}}
+                            </span>
+                        </strong> {{Post}}
+
+
+                            <a rel="nofollow" href="#" data-href="{{pageid}}" class="automatic">{{accion}}</a><br>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <script>
+            const baseUrl = "http://www.xiiber.com";
+            const link = {
+                Generator: {
+                    go: (id) => `${baseUrl}/${id}`
+                }
+            };
+
+            document.querySelectorAll('.automatic').forEach(a => (a.href = link.Generator.go(a.dataset.href)));
+        </script>
+        <script>
+            w3.displayObject("idPost", myObject);
+        </script>
+
+    </main>
+
+</body>

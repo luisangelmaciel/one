@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <title>bild</title>
+  <rect width="200" height="200" style="fill: none"/>
+  <g>
+    <path d="M64,31.5H30.4V169.4H63.9a7.4,7.4,0,0,0,7.4-7.4h0V102.1a7.8,7.8,0,0,0-7.8-7.8h0.7a7.1,7.1,0,0,0,7.1-7.1V38.9A7.4,7.4,0,0,0,64,31.5ZM54.4,152.4h-7V104.7h7v47.6Zm0-64.5h-7V48.5h7V87.8Z" transform="translate(0 -0.5)" style="fill: #91959e"/>
+    <rect x="78.7" y="55" width="17" height="113.94" style="fill: #91959e"/>
+    <path d="M151.4,31.5v24H134.8a7.4,7.4,0,0,0-7.3,7.4v99a7.4,7.4,0,0,0,7.4,7.4h33.5V31.5h-17Zm0,120.9h-7v-80h7v80Z" transform="translate(0 -0.5)" style="fill: #91959e"/>
+    <rect x="78.7" y="31" width="17" height="17.03" style="fill: #91959e"/>
+    <rect x="103.1" y="31" width="17" height="137.97" style="fill: #91959e"/>
+  </g>
+</svg>

@@ -1,0 +1,2882 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--     <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/components/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/site.css">
+
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/container.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/divider.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/grid.css">
+
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/header.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/segment.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/table.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/icon.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/menu.css">
+    <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/dist/components/message.css">
+ -->
+    <!-- Site Properties -->
+    <title>Attached - Semantic</title>
+
+    <style>
+        .ui.menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: 1rem 0em;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            background: #FFFFFF;
+            font-weight: normal;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+            -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            border-radius: 0.28571429rem;
+            min-height: 2.85714286em;
+        }
+        
+        .ui.menu:after {
+            content: '';
+            display: block;
+            height: 0px;
+            clear: both;
+            visibility: hidden;
+        }
+        
+        .ui.menu:first-child {
+            margin-top: 0rem;
+        }
+        
+        .ui.menu:last-child {
+            margin-bottom: 0rem;
+        }
+        /*--------------
+    Sub-Menu
+---------------*/
+        /*--------------
+      Item
+---------------*/
+        
+        .ui.menu:not(.vertical) .item {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        
+        .ui.menu .item {
+            position: relative;
+            vertical-align: middle;
+            line-height: 1;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: none;
+            padding: 0.92857143em 1.14285714em;
+            text-transform: none;
+            color: rgba(0, 0, 0, 0.87);
+            font-weight: normal;
+            -webkit-transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+            transition: background 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+            transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+            transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease, -webkit-box-shadow 0.1s ease;
+        }
+        
+        .ui.menu>.item:first-child {
+            border-radius: 0.28571429rem 0px 0px 0.28571429rem;
+        }
+        /* Border */
+        
+        .ui.menu .item:before {
+            position: absolute;
+            content: '';
+            top: 0%;
+            right: 0px;
+            height: 100%;
+            width: 1px;
+            background: rgba(34, 36, 38, 0.1);
+        }
+        /*--------------
+  Text Content
+---------------*/
+        /*--------------
+      Icons
+---------------*/
+        /*--------------
+     Button
+---------------*/
+        /*----------------
+ Grid / Container
+-----------------*/
+        /*--------------
+     Inputs
+---------------*/
+        /*--------------
+     Header
+---------------*/
+        /*--------------
+    Dropdowns
+---------------*/
+        /* Dropdown Icon */
+        /* Menu */
+        /* Menu Items */
+        /* Secondary */
+        /* Pointing */
+        /* Inverted */
+        /* Vertical */
+        /* Evenly Divided */
+        /*--------------
+     Labels
+---------------*/
+        /*--------------
+     Images
+---------------*/
+        /*******************************
+          Coupling
+*******************************/
+        /*--------------
+     List
+---------------*/
+        /* Menu divider shouldnt apply */
+        /*--------------
+     Sidebar
+---------------*/
+        /* Show vertical dividers below last */
+        /*--------------
+    Container
+---------------*/
+        /*******************************
+             States
+*******************************/
+        /*--------------
+      Hover
+---------------*/
+        
+        .ui.menu a.item:hover {
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.03);
+            color: rgba(0, 0, 0, 0.95);
+        }
+        /*--------------
+     Pressed
+---------------*/
+        
+        .ui.menu a.item:active {
+            background: rgba(0, 0, 0, 0.03);
+            color: rgba(0, 0, 0, 0.95);
+        }
+        /*--------------
+     Active
+---------------*/
+        /*--------------
+  Active Hover
+---------------*/
+        /*--------------
+     Disabled
+---------------*/
+        /*******************************
+             Types
+*******************************/
+        /*------------------
+Floated Menu / Item
+-------------------*/
+        /* Left Floated */
+        /* Right Floated */
+        /* Swapped Borders */
+        /*--------------
+    Vertical
+---------------*/
+        /*--- Item ---*/
+        /*--- Label ---*/
+        /*--- Icon ---*/
+        /*--- Border ---*/
+        /*--- Sub Menu ---*/
+        /* Vertical Active */
+        /*--------------
+     Tabular
+---------------*/
+        /* Hover */
+        /* Active */
+        /* Grey */
+        /*--------------
+     Fitted
+---------------*/
+        /*--------------
+   Borderless
+---------------*/
+        /*-------------------
+       Compact
+--------------------*/
+        /*-------------------
+        Fluid
+--------------------*/
+        /*-------------------
+      Evenly Sized
+--------------------*/
+        
+        .ui.item.menu,
+        .ui.item.menu .item {
+            width: 100%;
+            padding-left: 0em !important;
+            padding-right: 0em !important;
+            margin-left: 0em !important;
+            margin-right: 0em !important;
+            text-align: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+        
+        .ui.attached.item.menu {
+            margin: 0em -1px !important;
+        }
+        
+        .ui.item.menu .item:last-child:before {
+            display: none;
+        }
+        
+        .ui.menu.three.item .item {
+            width: 33.333%;
+        }
+        
+        .ui.menu.four.item .item {
+            width: 25%;
+        }
+        /*--------------
+     Fixed
+---------------*/
+        /* Coupling with Grid */
+        /*-------------------
+       Pointing
+--------------------*/
+        /* Active */
+        /* Don't double up pointers */
+        /* Colors */
+        /*--------------
+    Attached
+---------------*/
+        /* Middle */
+        
+        .ui.attached.menu {
+            top: 0px;
+            bottom: 0px;
+            border-radius: 0px;
+            margin: 0em -1px;
+            width: calc(100% - (-1px * 2));
+            max-width: calc(100% - (-1px * 2));
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        
+        .ui.attached+.ui.attached.menu:not(.top) {
+            border-top: none;
+        }
+        /* Top */
+        
+        .ui[class*="top attached"].menu {
+            bottom: 0px;
+            margin-bottom: 0em;
+            top: 0px;
+            margin-top: 1rem;
+            border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+        }
+        
+        .ui.menu[class*="top attached"]:first-child {
+            margin-top: 0em;
+        }
+        /* Bottom */
+        
+        .ui[class*="bottom attached"].menu {
+            bottom: 0px;
+            margin-top: 0em;
+            top: 0px;
+            margin-bottom: 1rem;
+            -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+            box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+            border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+        }
+        
+        .ui[class*="bottom attached"].menu:last-child {
+            margin-bottom: 0em;
+        }
+        /* Attached Menu Item */
+        
+        .ui.top.attached.menu>.item:first-child {
+            border-radius: 0.28571429rem 0em 0em 0em;
+        }
+        
+        .ui.bottom.attached.menu>.item:first-child {
+            border-radius: 0em 0em 0em 0.28571429rem;
+        }
+        /* Tabular Attached */
+        
+        .ui.attached.menu:not(.tabular) {
+            border: 1px solid #D4D4D5;
+        }
+        /*--------------
+     Sizes
+---------------*/
+        /* Mini */
+        /* Tiny */
+        /* Small */
+        /* Medium */
+        
+        .ui.menu {
+            font-size: 1rem;
+        }
+        
+        i.icon {
+            display: inline-block;
+            opacity: 1;
+            margin: 0em 0.25rem 0em 0em;
+            width: 1.18em;
+            height: 1em;
+            font-family: 'Icons';
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            text-align: center;
+            speak: none;
+            font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        i.icon:before {
+            background: none !important;
+        }
+        /*******************************
+             Types
+*******************************/
+        
+        i.icon {
+            font-size: 1em;
+        }
+        /*******************************
+            Groups
+*******************************/
+        /* Corner Icon */
+        /*
+ * Font Awesome 5.0.8 by @fontawesome - http://fontawesome.io - @fontawesome
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0 License, Fonts: SIL OFL 1.1 License, CSS: MIT License)
+ */
+        /*******************************
+
+Semantic-UI integration of font-awesome :
+
+///class names are separated
+i.icon.circle => i.icon.circle
+i.icon.circle-o => i.icon.circle.outline
+
+//abbreviation are replaced by full letters:
+i.icon.ellipsis-h => i.icon.ellipsis.horizontal
+i.icon.ellipsis-v => i.icon.ellipsis.vertical
+.alpha => .i.icon.alphabet
+.asc => .i.icon.ascending
+.desc => .i.icon.descending
+.alt =>.alternate
+
+ASCII order is conserved for easier maintenance.
+
+Icons that only have one style 'outline', 'square' etc do not require this class
+for instance `lemon icon` not `lemon outline icon` since there is only one lemon
+
+*******************************/
+        /*******************************
+            Icons
+*******************************/
+        /* Deprecated *In/Out Naming Conflict) */
+        /* Icons */
+        
+        i.icon.arrow.right:before {
+            content: "\f061";
+        }
+        
+        i.icon.chart.bar:before {
+            content: "\f080";
+        }
+        
+        i.icon.star:before {
+            content: "\f005";
+        }
+        
+        i.icon.tag:before {
+            content: "\f02b";
+        }
+        /* Aliases */
+        
+        i.icon.bar:before {
+            content: "\f0fc";
+        }
+        
+        i.icon.shop:before {
+            content: "\f07a";
+        }
+        /*******************************
+        Outline Icons
+*******************************/
+        /* Outline Icon */
+        /* Load & Define Icon Font */
+        
+        @font-face {
+            font-family: 'outline-icons';
+            src: url("./../themes/default/assets/fonts/outline-icons.eot");
+            src: url("./../themes/default/assets/fonts/outline-icons.eot?#iefix") format('embedded-opentype'), url("./../themes/default/assets/fonts/outline-icons.woff2") format('woff2'), url("./../themes/default/assets/fonts/outline-icons.woff") format('woff'), url("./../themes/default/assets/fonts/outline-icons.ttf") format('truetype'), url("./../themes/default/assets/fonts/outline-icons.svg#icons") format('svg');
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-decoration: inherit;
+            text-transform: none;
+        }
+        /* Icon Definitions */
+        /* Outline Aliases */
+        /*******************************
+           Brand Icons
+*******************************/
+        /* Load & Define Brand Font */
+        
+        @font-face {
+            font-family: 'brand-icons';
+            src: url("./../themes/default/assets/fonts/brand-icons.eot");
+            src: url("./../themes/default/assets/fonts/brand-icons.eot?#iefix") format('embedded-opentype'), url("./../themes/default/assets/fonts/brand-icons.woff2") format('woff2'), url("./../themes/default/assets/fonts/brand-icons.woff") format('woff'), url("./../themes/default/assets/fonts/brand-icons.ttf") format('truetype'), url("./../themes/default/assets/fonts/brand-icons.svg#icons") format('svg');
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-decoration: inherit;
+            text-transform: none;
+        }
+        /* Brand Icon Font Family */
+        /* Brand Icons Ideally Would Be Defined Here */
+        /*******************************
+         Site Overrides
+*******************************/
+        /*
+ * # Semantic UI - 2.4.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * http://www.semantic-ui.com/
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*!
+ * # Semantic UI - Table
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+             Table
+*******************************/
+        /* Prototype */
+        
+        .ui.table {
+            width: 100%;
+            background: #FFFFFF;
+            margin: 1em 0em;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-radius: 0.28571429rem;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.87);
+            border-collapse: separate;
+            border-spacing: 0px;
+        }
+        /*******************************
+             Parts
+*******************************/
+        /* Table Content */
+        
+        .ui.table td {
+            -webkit-transition: background 0.1s ease, color 0.1s ease;
+            transition: background 0.1s ease, color 0.1s ease;
+        }
+        /* Headers */
+        /* Footer */
+        /* Table Row */
+        
+        .ui.table tr td {
+            border-top: 1px solid rgba(34, 36, 38, 0.1);
+        }
+        
+        .ui.table tr:first-child td {
+            border-top: none;
+        }
+        /* Repeated tbody */
+        /* Table Cells */
+        
+        .ui.table td {
+            padding: 0.78571429em 0.78571429em;
+            text-align: inherit;
+        }
+        /* Icons */
+        /* Table Segment */
+        /* Responsive */
+        
+        @media only screen and (max-width: 767px) {
+            .ui.table:not(.unstackable) {
+                width: 100%;
+            }
+            .ui.table:not(.unstackable) tbody,
+            .ui.table:not(.unstackable) tr,
+            .ui.table:not(.unstackable) tr>td {
+                width: auto !important;
+                display: block !important;
+            }
+            .ui.table:not(.unstackable) {
+                padding: 0em;
+            }
+            .ui.table:not(.unstackable) tr {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+                box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.1) inset !important;
+            }
+            .ui.table:not(.unstackable) tr>td {
+                background: none;
+                border: none !important;
+                padding: 0.25em 0.75em !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+            .ui.table:not(.unstackable) td:first-child {
+                font-weight: bold;
+            }
+            /* Definition Table */
+        }
+        /*******************************
+            Coupling
+*******************************/
+        /* UI Image */
+        /*******************************
+             Types
+*******************************/
+        /*--------------
+    Complex
+---------------*/
+        /*--------------
+   Definition
+---------------*/
+        /* Remove Border */
+        /* Highlight Defining Column */
+        
+        .ui.definition.table tr td:first-child:not(.ignored) {
+            background: rgba(0, 0, 0, 0.03);
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.95);
+            text-transform: '';
+            -webkit-box-shadow: '';
+            box-shadow: '';
+            text-align: '';
+            font-size: 1em;
+            padding-left: '';
+            padding-right: '';
+        }
+        /* Fix 2nd Column */
+        
+        .ui.definition.table td:nth-child(2) {
+            border-left: 1px solid rgba(34, 36, 38, 0.15);
+        }
+        /*******************************
+             States
+*******************************/
+        /*--------------
+    Positive
+---------------*/
+        /*--------------
+     Negative
+---------------*/
+        /*--------------
+      Error
+---------------*/
+        /*--------------
+     Warning
+---------------*/
+        /*--------------
+     Active
+---------------*/
+        /*--------------
+     Disabled
+---------------*/
+        /*******************************
+          Variations
+*******************************/
+        /*--------------
+    Stackable
+---------------*/
+        
+        @media only screen and (max-width: 991px) {
+            /* Definition Table */
+        }
+        /*--------------
+  Column Count
+---------------*/
+        /* Grid Based */
+        /* Column Width */
+        
+        .ui.table td.two.wide {
+            width: 12.5%;
+        }
+        /*--------------
+    Sortable
+---------------*/
+        /* Hover */
+        /* Sorted */
+        /* Sorted Hover */
+        /* Inverted */
+        /*--------------
+    Inverted
+---------------*/
+        /* Text Color */
+        /* Definition */
+        /*--------------
+   Collapsing
+---------------*/
+        /*--------------
+      Basic
+---------------*/
+        /* Very Basic */
+        /*--------------
+     Celled
+---------------*/
+        /*--------------
+     Padded
+---------------*/
+        /* Very */
+        /*--------------
+     Compact
+---------------*/
+        /* Very */
+        /*--------------
+      Sizes
+---------------*/
+        /* Small */
+        /* Standard */
+        
+        .ui.table {
+            font-size: 1em;
+        }
+        /* Large */
+        /*******************************
+         Site Overrides
+*******************************/
+        /*
+ * # Semantic UI - 2.4.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * http://www.semantic-ui.com/
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*!
+ * # Semantic UI - Segment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+            Segment
+*******************************/
+        
+        .ui.segment {
+            position: relative;
+            background: #FFFFFF;
+            -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            margin: 1rem 0em;
+            padding: 1em 1em;
+            border-radius: 0.28571429rem;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+        }
+        
+        .ui.segment:first-child {
+            margin-top: 0em;
+        }
+        
+        .ui.segment:last-child {
+            margin-bottom: 0em;
+        }
+        /* Vertical */
+        /*-------------------
+    Loose Coupling
+--------------------*/
+        /* Header */
+        /* Label */
+        /* Grid */
+        /* Table */
+        /*******************************
+             Types
+*******************************/
+        /*-------------------
+     Placeholder
+--------------------*/
+        /*-------------------
+        Piled
+--------------------*/
+        /* Piled Attached */
+        /*-------------------
+       Stacked
+--------------------*/
+        /* Add additional page */
+        /* Inverted */
+        /*-------------------
+       Padded
+--------------------*/
+        /* Padded vertical */
+        /*-------------------
+       Compact
+--------------------*/
+        /* Compact Group */
+        /*-------------------
+       Circular
+--------------------*/
+        /*-------------------
+       Raised
+--------------------*/
+        /*******************************
+            Groups
+*******************************/
+        /* Group */
+        
+        .ui.segments {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            position: relative;
+            margin: 1rem 0em;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+            -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+            border-radius: 0.28571429rem;
+        }
+        
+        .ui.segments:first-child {
+            margin-top: 0em;
+        }
+        
+        .ui.segments:last-child {
+            margin-bottom: 0em;
+        }
+        /* Nested Segment */
+        
+        .ui.segments>.segment {
+            top: 0px;
+            bottom: 0px;
+            border-radius: 0px;
+            margin: 0em;
+            width: auto;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none;
+            border-top: 1px solid rgba(34, 36, 38, 0.15);
+        }
+        
+        .ui.segments:not(.horizontal)>.segment:first-child {
+            border-top: none;
+            margin-top: 0em;
+            bottom: 0px;
+            margin-bottom: 0em;
+            top: 0px;
+            border-radius: 0.28571429rem 0.28571429rem 0em 0em;
+        }
+        /* Bottom */
+        
+        .ui.segments:not(.horizontal)>.segment:last-child {
+            top: 0px;
+            bottom: 0px;
+            margin-top: 0em;
+            margin-bottom: 0em;
+            -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+            box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), none;
+            border-radius: 0em 0em 0.28571429rem 0.28571429rem;
+        }
+        /* Only */
+        /* Nested Group */
+        /* Horizontal Group */
+        /* Nested Horizontal Group */
+        /* Horizontal Segment */
+        /* Border Fixes */
+        /*******************************
+            States
+*******************************/
+        /*--------------
+    Disabled
+---------------*/
+        /*--------------
+    Loading
+---------------*/
+        /*******************************
+           Variations
+*******************************/
+        /*-------------------
+       Basic
+--------------------*/
+        /*-------------------
+       Clearing
+--------------------*/
+        /*-------------------
+       Colors
+--------------------*/
+        /* Red */
+        /* Orange */
+        /* Yellow */
+        /* Olive */
+        /* Green */
+        /* Teal */
+        /* Blue */
+        /* Violet */
+        /* Purple */
+        /* Pink */
+        /* Brown */
+        /* Grey */
+        /* Black */
+        /*-------------------
+       Aligned
+--------------------*/
+        /*-------------------
+       Floated
+--------------------*/
+        /*-------------------
+      Inverted
+--------------------*/
+        /* Nested */
+        /* Attached */
+        /*-------------------
+     Emphasis
+--------------------*/
+        /* Secondary */
+        /* Tertiary */
+        /*-------------------
+      Attached
+--------------------*/
+        /* Middle */
+        /* Top */
+        /* Bottom */
+        /*-------------------
+        Size
+--------------------*/
+        
+        .ui.segments .segment,
+        .ui.segment {
+            font-size: 1rem;
+        }
+        /*******************************
+         Theme Overrides
+*******************************/
+        /*******************************
+         Site Overrides
+*******************************/
+        /*
+ * # Semantic UI - 2.4.2
+ * https://github.com/Semantic-Org/Semantic-UI
+ * http://www.semantic-ui.com/
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*!
+ * # Semantic UI - Header
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+            Header
+*******************************/
+        /* Standard */
+        
+        .ui.header {
+            border: none;
+            margin: calc(2rem - 0.14285714em) 0em 1rem;
+            padding: 0em 0em;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            line-height: 1.28571429em;
+            text-transform: none;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        
+        .ui.header:first-child {
+            margin-top: -0.14285714em;
+        }
+        /*--------------
+   Sub Header
+---------------*/
+        /*--------------
+      Icon
+---------------*/
+        
+        .ui.header>.icon {
+            display: table-cell;
+            opacity: 1;
+            font-size: 1.5em;
+            padding-top: 0em;
+            vertical-align: middle;
+        }
+        /* With Text Node */
+        
+        .ui.header .icon:only-child {
+            display: inline-block;
+            padding: 0em;
+            margin-right: 0.75rem;
+        }
+        /*-------------------
+        Image
+--------------------*/
+        /*--------------
+     Content
+---------------*/
+        /* After Image */
+        /* After Icon */
+        /*--------------
+ Loose Coupling
+---------------*/
+        /* Positioning */
+        
+        .ui.header+p {
+            margin-top: 0em;
+        }
+        /*******************************
+            Types
+*******************************/
+        /*--------------
+     Page
+---------------*/
+        
+        h2.ui.header {
+            font-size: 1.71428571rem;
+        }
+        
+        h3.ui.header {
+            font-size: 1.28571429rem;
+        }
+        
+        h4.ui.header {
+            font-size: 1.07142857rem;
+        }
+        /* Sub Header */
+        /*--------------
+ Content Heading
+---------------*/
+        /* Sub Header */
+        /*--------------
+   Sub Heading
+---------------*/
+        /*-------------------
+        Icon
+--------------------*/
+        /*******************************
+            States
+*******************************/
+        /*******************************
+           Variations
+*******************************/
+        /*-------------------
+      Inverted
+--------------------*/
+        /*-------------------
+       Colors
+--------------------*/
+        /*--- Red ---*/
+        /* Inverted */
+        /*--- Orange ---*/
+        /* Inverted */
+        /*--- Olive ---*/
+        /* Inverted */
+        /*--- Yellow ---*/
+        /* Inverted */
+        /*--- Green ---*/
+        /* Inverted */
+        /*--- Teal ---*/
+        /* Inverted */
+        /*--- Blue ---*/
+        /* Inverted */
+        /*--- Violet ---*/
+        /* Inverted */
+        /*--- Purple ---*/
+        /* Inverted */
+        /*--- Pink ---*/
+        /* Inverted */
+        /*--- Brown ---*/
+        /* Inverted */
+        /*--- Grey ---*/
+        /* Inverted */
+        /*-------------------
+       Aligned
+--------------------*/
+        
+        .ui.center.aligned.header {
+            text-align: center;
+        }
+        /*-------------------
+       Floated
+--------------------*/
+        /*-------------------
+       Fitted
+--------------------*/
+        /*-------------------
+      Dividing
+--------------------*/
+        /*-------------------
+        Block
+--------------------*/
+        /*-------------------
+       Attached
+--------------------*/
+        /* Attached Sizes */
+        /*-------------------
+        Sizing
+--------------------*/
+        /*******************************
+         Theme Overrides
+*******************************/
+        /*******************************
+         Site Overrides
+*******************************/
+        /*!
+ * # Semantic UI 2.4.1 - Feed
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+         Activity Feed
+*******************************/
+        
+        .ui.feed {
+            margin: 1em 0em;
+        }
+        
+        .ui.feed:first-child {
+            margin-top: 0em;
+        }
+        /*******************************
+              Content
+  *******************************/
+        /* Event */
+        
+        .ui.feed>.event {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            width: 100%;
+            padding: 0.21428571rem 0em;
+            margin: 0em;
+            background: none;
+            border-top: none;
+        }
+        
+        .ui.feed>.event:first-child {
+            border-top: 0px;
+            padding-top: 0em;
+        }
+        
+        .ui.feed>.event:last-child {
+            padding-bottom: 0em;
+        }
+        /* Event Label */
+        
+        .ui.feed>.event>.label {
+            display: block;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 2.5em;
+            height: auto;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+            text-align: left;
+        }
+        
+        .ui.feed>.event>.label img {
+            width: 100%;
+            height: auto;
+            border-radius: 500rem;
+        }
+        
+        .ui.feed>.event>.label+.content {
+            margin: 0.5em 0em 0.35714286em 1.14285714em;
+        }
+        /*--------------
+       Content
+  ---------------*/
+        /* Content */
+        
+        .ui.feed>.event>.content {
+            display: block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -ms-flex-item-align: stretch;
+            align-self: stretch;
+            text-align: left;
+            word-wrap: break-word;
+        }
+        
+        .ui.feed>.event:last-child>.content {
+            padding-bottom: 0em;
+        }
+        /* Link */
+        
+        .ui.feed>.event>.content a {
+            cursor: pointer;
+        }
+        /*--------------
+        Date
+  ---------------*/
+        
+        .ui.feed>.event>.content .date {
+            margin: -0.5rem 0em 0em;
+            padding: 0em;
+            font-weight: normal;
+            font-size: 1em;
+            font-style: normal;
+            color: rgba(0, 0, 0, 0.4);
+        }
+        /*--------------
+       Summary
+  ---------------*/
+        
+        .ui.feed>.event>.content .summary {
+            margin: 0em;
+            font-size: 1em;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        /* Summary Image */
+        /*--------------
+        User
+  ---------------*/
+        /*--------------
+     Inline Date
+  ---------------*/
+        /* Date inside Summary */
+        /*--------------
+    Extra Summary
+  ---------------*/
+        
+        .ui.feed>.event>.content .extra {
+            margin: 0.5em 0em 0em;
+            background: none;
+            padding: 0em;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        /* Images */
+        
+        .ui.feed>.event>.content .extra.images img {
+            display: inline-block;
+            margin: 0em 0.25em 0em 0em;
+            width: 6em;
+        }
+        /* Text */
+        
+        .ui.feed>.event>.content .extra.text {
+            padding: 0em;
+            border-left: none;
+            font-size: 1em;
+            max-width: 500px;
+            line-height: 1.4285em;
+        }
+        /*--------------
+        Meta
+  ---------------*/
+        /* First element */
+        /* Action */
+        /*******************************
+              Variations
+  *******************************/
+        
+        .ui.feed {
+            font-size: 1rem;
+        }
+        /*******************************
+           Theme Overrides
+  *******************************/
+        /*******************************
+      User Variable Overrides
+  *******************************/
+        /*!
+ * # Semantic UI 2.4.1 - Comment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+            Standard
+*******************************/
+        /*--------------
+    Comments
+---------------*/
+        
+        .ui.comments {
+            margin: 1.5em 0em;
+            max-width: 650px;
+        }
+        /*--------------
+       Comment
+  ---------------*/
+        
+        .ui.comments .comment {
+            position: relative;
+            background: none;
+            margin: 0.5em 0em 0em;
+            padding: 0.5em 0em 0em;
+            border: none;
+            border-top: none;
+            line-height: 1.2;
+        }
+        
+        .ui.comments .comment:first-child {
+            margin-top: 0em;
+            padding-top: 0em;
+        }
+        /*--------------------
+      Nested Comments
+  ---------------------*/
+        /*--------------
+       Avatar
+  ---------------*/
+        
+        .ui.comments .comment .avatar {
+            display: block;
+            width: 2.5em;
+            height: auto;
+            float: left;
+            margin: 0.2em 0em 0em;
+        }
+        
+        .ui.comments .comment .avatar img {
+            display: block;
+            margin: 0em auto;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.25rem;
+        }
+        /*--------------
+       Content
+  ---------------*/
+        
+        .ui.comments .comment>.content {
+            display: block;
+        }
+        /* If there is an avatar move content over */
+        
+        .ui.comments .comment>.avatar~.content {
+            margin-left: 3.5em;
+        }
+        /*--------------
+       Author
+  ---------------*/
+        
+        .ui.comments .comment .author {
+            font-size: 1em;
+            color: rgba(0, 0, 0, 0.87);
+            font-weight: bold;
+        }
+        
+        .ui.comments .comment a.author {
+            cursor: pointer;
+        }
+        
+        .ui.comments .comment a.author:hover {
+            color: #1e70bf;
+        }
+        /*--------------
+       Metadata
+  ---------------*/
+        
+        .ui.comments .comment .metadata {
+            display: inline-block;
+            margin-left: 0.5em;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 0.875em;
+        }
+        
+        .ui.comments .comment .metadata>* {
+            display: inline-block;
+            margin: 0em 0.5em 0em 0em;
+        }
+        
+        .ui.comments .comment .metadata> :last-child {
+            margin-right: 0em;
+        }
+        /*--------------------
+       Comment Text
+  ---------------------*/
+        
+        .ui.comments .comment .text {
+            margin: 0.25em 0em 0.5em;
+            font-size: 1em;
+            word-wrap: break-word;
+            color: rgba(0, 0, 0, 0.87);
+            line-height: 1.3;
+        }
+        /*--------------------
+       User Actions
+  ---------------------*/
+        /*--------------------
+        Reply Form
+  ---------------------*/
+        /*******************************
+              State
+  *******************************/
+        /*******************************
+             Variations
+  *******************************/
+        /*--------------------
+          Threaded
+  ---------------------*/
+        /*--------------------
+          Minimal
+  ---------------------*/
+        /*-------------------
+          Sizes
+  --------------------*/
+        
+        .ui.comments {
+            font-size: 1rem;
+        }
+        /*******************************
+           Theme Overrides
+  *******************************/
+        /*******************************
+      User Variable Overrides
+  *******************************/
+        /*!
+ * # Semantic UI 2.4.1 - Divider
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+            Divider
+*******************************/
+        
+        .ui.divider {
+            margin: 1rem 0rem;
+            line-height: 1;
+            height: 0em;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            color: rgba(0, 0, 0, 0.85);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        
+        .ui.horizontal.divider {
+            display: table;
+            white-space: nowrap;
+            height: auto;
+            margin: '';
+            line-height: 1;
+            text-align: center;
+        }
+        
+        .ui.horizontal.divider:before,
+        .ui.horizontal.divider:after {
+            content: '';
+            display: table-cell;
+            position: relative;
+            top: 50%;
+            width: 50%;
+            background-repeat: no-repeat;
+        }
+        
+        .ui.horizontal.divider:before {
+            background-position: right 1em top 50%;
+        }
+        
+        .ui.horizontal.divider:after {
+            background-position: left 1em top 50%;
+        }
+        /*--------------
+      Vertical
+  ---------------*/
+        /* Inside grid */
+        /*--------------
+        Icon
+  ---------------*/
+        
+        .ui.divider>.icon {
+            margin: 0rem;
+            font-size: 1rem;
+            height: 1em;
+            vertical-align: middle;
+        }
+        /*******************************
+            Variations
+  *******************************/
+        /*--------------
+      Hidden
+  ---------------*/
+        /*--------------
+      Inverted
+  ---------------*/
+        /*--------------
+      Fitted
+  ---------------*/
+        /*--------------
+      Clearing
+  ---------------*/
+        /*--------------
+      Section
+  ---------------*/
+        /*--------------
+       Sizes
+  ---------------*/
+        
+        .ui.divider {
+            font-size: 1rem;
+        }
+        /*******************************
+           Theme Overrides
+  *******************************/
+        
+        .ui.horizontal.divider:before,
+        .ui.horizontal.divider:after {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
+        }
+        /*******************************
+           Site Overrides
+  *******************************/
+        
+        h2 {
+            margin: 2em 0em;
+        }
+        
+        .ui.container {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+        /*!
+ * # Semantic UI 2.4.1 - Button
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+        /*******************************
+            Button
+*******************************/
+        
+        .ui.button {
+            cursor: pointer;
+            display: inline-block;
+            min-height: 1em;
+            outline: none;
+            border: none;
+            vertical-align: baseline;
+            background: #E0E1E2 none;
+            color: rgba(0, 0, 0, 0.6);
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            margin: 0em 0.25em 0em 0em;
+            padding: 0.78571429em 1.5em 0.78571429em;
+            text-transform: none;
+            text-shadow: none;
+            font-weight: bold;
+            line-height: 1em;
+            font-style: normal;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 0.28571429rem;
+            -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+            transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+            transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+            transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+            will-change: '';
+            -webkit-tap-highlight-color: transparent;
+        }
+        /*******************************
+              States
+  *******************************/
+        /*--------------
+        Hover
+  ---------------*/
+        
+        .ui.button:hover {
+            background-color: #CACBCD;
+            background-image: none;
+            -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .ui.button:hover .icon {
+            opacity: 0.85;
+        }
+        /*--------------
+        Focus
+  ---------------*/
+        
+        .ui.button:focus {
+            background-color: #CACBCD;
+            color: rgba(0, 0, 0, 0.8);
+            background-image: '' !important;
+            -webkit-box-shadow: '' !important;
+            box-shadow: '' !important;
+        }
+        
+        .ui.button:focus .icon {
+            opacity: 0.85;
+        }
+        /*--------------
+        Down
+  ---------------*/
+        
+        .ui.button:active {
+            background-color: #BABBBC;
+            background-image: '';
+            color: rgba(0, 0, 0, 0.9);
+            -webkit-box-shadow: 0px 0px 0px 1px transparent inset, none;
+            box-shadow: 0px 0px 0px 1px transparent inset, none;
+        }
+        /*--------------
+       Active
+  ---------------*/
+        /*--------------
+      Loading
+  ---------------*/
+        /* Specificity hack */
+        /*-------------------
+        Disabled
+  --------------------*/
+        
+        .ui.button:disabled {
+            cursor: default;
+            opacity: 0.45 !important;
+            background-image: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            pointer-events: none !important;
+        }
+        /* Basic Group With Disabled */
+        /*******************************
+               Types
+  *******************************/
+        /*-------------------
+         Animated
+  --------------------*/
+        
+        .ui.animated.button {
+            position: relative;
+            overflow: hidden;
+            padding-right: 0em !important;
+            vertical-align: middle;
+            z-index: 1;
+        }
+        
+        .ui.animated.button .content {
+            will-change: transform, opacity;
+        }
+        
+        .ui.animated.button .visible.content {
+            position: relative;
+            margin-right: 1.5em;
+        }
+        
+        .ui.animated.button .hidden.content {
+            position: absolute;
+            width: 100%;
+        }
+        /* Horizontal */
+        
+        .ui.animated.button .visible.content,
+        .ui.animated.button .hidden.content {
+            -webkit-transition: right 0.3s ease 0s;
+            transition: right 0.3s ease 0s;
+        }
+        
+        .ui.animated.button .visible.content {
+            left: auto;
+            right: 0%;
+        }
+        
+        .ui.animated.button .hidden.content {
+            top: 50%;
+            left: auto;
+            right: -100%;
+            margin-top: -0.5em;
+        }
+        
+        .ui.animated.button:focus .visible.content,
+        .ui.animated.button:hover .visible.content {
+            left: auto;
+            right: 200%;
+        }
+        
+        .ui.animated.button:focus .hidden.content,
+        .ui.animated.button:hover .hidden.content {
+            left: auto;
+            right: 0%;
+        }
+        /* Vertical */
+        
+        .ui.vertical.animated.button .visible.content,
+        .ui.vertical.animated.button .hidden.content {
+            -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+            transition: top 0.3s ease, -webkit-transform 0.3s ease;
+            transition: top 0.3s ease, transform 0.3s ease;
+            transition: top 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+        }
+        
+        .ui.vertical.animated.button .visible.content {
+            -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+            right: auto;
+        }
+        
+        .ui.vertical.animated.button .hidden.content {
+            top: -50%;
+            left: 0%;
+            right: auto;
+        }
+        
+        .ui.vertical.animated.button:focus .visible.content,
+        .ui.vertical.animated.button:hover .visible.content {
+            -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+            right: auto;
+        }
+        
+        .ui.vertical.animated.button:focus .hidden.content,
+        .ui.vertical.animated.button:hover .hidden.content {
+            top: 50%;
+            right: auto;
+        }
+        /* Fade */
+        
+        .ui.fade.animated.button .visible.content,
+        .ui.fade.animated.button .hidden.content {
+            -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+            transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+        }
+        
+        .ui.fade.animated.button .visible.content {
+            left: auto;
+            right: auto;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        .ui.fade.animated.button .hidden.content {
+            opacity: 0;
+            left: 0%;
+            right: auto;
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+        
+        .ui.fade.animated.button:focus .visible.content,
+        .ui.fade.animated.button:hover .visible.content {
+            left: auto;
+            right: auto;
+            opacity: 0;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+        }
+        
+        .ui.fade.animated.button:focus .hidden.content,
+        .ui.fade.animated.button:hover .hidden.content {
+            left: 0%;
+            right: auto;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        /*-------------------
+         Inverted
+  --------------------*/
+        /* Group */
+        /* States */
+        /* Hover */
+        /* Active / Focus */
+        /* Active Focus */
+        /*-------------------
+      Labeled Button
+  --------------------*/
+        /* Tag */
+        /* Right */
+        /* Left Side */
+        /*-------------------
+         Social
+  --------------------*/
+        /* Facebook */
+        /* Twitter */
+        /* Google Plus */
+        /* Linked In */
+        /* YouTube */
+        /* Instagram */
+        /* Pinterest */
+        /* VK */
+        /*--------------
+       Icon
+  ---------------*/
+        /*******************************
+             Variations
+  *******************************/
+        /*-------------------
+         Floated
+  --------------------*/
+        /*-------------------
+         Compact
+  --------------------*/
+        /*-------------------
+          Sizes
+  --------------------*/
+        
+        .ui.buttons .button,
+        .ui.buttons .or,
+        .ui.button {
+            font-size: 1rem;
+        }
+        
+        .ui.large.buttons .button,
+        .ui.large.buttons .or {
+            font-size: 1.14285714rem;
+        }
+        /*--------------
+      Icon Only
+  ---------------*/
+        /*-------------------
+          Basic
+  --------------------*/
+        /* Vertical */
+        /* Standard Basic Inverted */
+        /* Basic Group */
+        /*--------------
+    Labeled Icon
+  ---------------*/
+        /* Left Labeled */
+        /* Left Labeled */
+        /* Right Labeled */
+        /* Fluid Labeled */
+        /*--------------
+       Toggle
+  ---------------*/
+        /* Toggle (Modifies active state to give affordances) */
+        /*--------------
+      Circular
+  ---------------*/
+        /*-------------------
+        Or Buttons
+  --------------------*/
+        
+        .ui.buttons .or {
+            position: relative;
+            width: 0.3em;
+            height: 2.57142857em;
+            z-index: 3;
+        }
+        
+        .ui.buttons .or:before {
+            position: absolute;
+            text-align: center;
+            border-radius: 500rem;
+            content: 'or';
+            top: 50%;
+            left: 50%;
+            background-color: #FFFFFF;
+            text-shadow: none;
+            margin-top: -0.89285714em;
+            margin-left: -0.89285714em;
+            width: 1.78571429em;
+            height: 1.78571429em;
+            line-height: 1.78571429em;
+            color: rgba(0, 0, 0, 0.4);
+            font-style: normal;
+            font-weight: bold;
+            -webkit-box-shadow: 0px 0px 0px 1px transparent inset;
+            box-shadow: 0px 0px 0px 1px transparent inset;
+        }
+        /* Fluid Or */
+        /*-------------------
+         Attached
+  --------------------*/
+        /* Singular */
+        /* Top / Bottom */
+        /* Left / Right */
+        /* Plural */
+        /* Top / Bottom */
+        /* Left / Right */
+        /*-------------------
+          Fluid
+  --------------------*/
+        /* Fluid Vertical Buttons */
+        /*-------------------
+         Colors
+  --------------------*/
+        /*--- Black ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Grey ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Brown ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Blue ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Green ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Orange ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Pink ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Violet ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Purple ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Red ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Teal ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Olive ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*--- Yellow ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*-------------------
+         Primary
+  --------------------*/
+        /*--- Standard ---*/
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*-------------------
+        Secondary
+  --------------------*/
+        /* Standard */
+        /* Basic */
+        /* Inverted */
+        /* Inverted Basic */
+        /*---------------
+      Positive
+  ----------------*/
+        /* Standard */
+        
+        .ui.positive.button {
+            background-color: #21BA45;
+            color: #FFFFFF;
+            text-shadow: none;
+            background-image: none;
+        }
+        
+        .ui.positive.button {
+            -webkit-box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            box-shadow: 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+        }
+        
+        .ui.positive.button:hover {
+            background-color: #16ab39;
+            color: #FFFFFF;
+            text-shadow: none;
+        }
+        
+        .ui.positive.button:focus {
+            background-color: #0ea432;
+            color: #FFFFFF;
+            text-shadow: none;
+        }
+        
+        .ui.positive.button:active {
+            background-color: #198f35;
+            color: #FFFFFF;
+            text-shadow: none;
+        }
+        /* Basic */
+        /*---------------
+       Negative
+  ----------------*/
+        /* Standard */
+        /* Basic */
+        /*******************************
+              Groups
+  *******************************/
+        
+        .ui.buttons {
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            font-size: 0em;
+            vertical-align: baseline;
+            margin: 0em 0.25em 0em 0em;
+        }
+        
+        .ui.buttons:not(.basic):not(.inverted) {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        /* Clearfix */
+        
+        .ui.buttons:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /* Standard Group */
+        
+        .ui.buttons .button {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            margin: 0em;
+            border-radius: 0em;
+            margin: 0px 0px 0px 0px;
+        }
+        
+        .ui.buttons>.ui.button:not(.basic):not(.inverted),
+        .ui.buttons:not(.basic):not(.inverted)>.button {
+            -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+            box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+        }
+        
+        .ui.buttons .button:first-child {
+            border-left: none;
+            margin-left: 0em;
+            border-top-left-radius: 0.28571429rem;
+            border-bottom-left-radius: 0.28571429rem;
+        }
+        
+        .ui.buttons .button:last-child {
+            border-top-right-radius: 0.28571429rem;
+            border-bottom-right-radius: 0.28571429rem;
+        }
+        /* Vertical  Style */
+        /*******************************
+           Theme Overrides
+  *******************************/
+        /*******************************
+           Site Overrides
+  *******************************/
+        /*
+   * # Semantic UI - 2.4.2
+   * https://github.com/Semantic-Org/Semantic-UI
+   * http://www.semantic-ui.com/
+   *
+   * Copyright 2014 Contributors
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*!
+   * # Semantic UI - Reset
+   * http://github.com/semantic-org/semantic-ui/
+   *
+   *
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*******************************
+               Reset
+  *******************************/
+        /* Border-Box */
+        
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+        
+        html {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /* iPad Input Shadows */
+        /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+        /* Document
+     ========================================================================== */
+        /**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in
+   *    IE on Windows Phone and in iOS.
+   */
+        
+        html {
+            line-height: 1.15;
+            /* 1 */
+            -ms-text-size-adjust: 100%;
+            /* 2 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+        /* Sections
+     ========================================================================== */
+        /**
+   * Remove the margin in all browsers (opinionated).
+   */
+        
+        body {
+            margin: 0;
+        }
+        /**
+   * Add the correct display in IE 9-.
+   */
+        /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+        /* Grouping content
+     ========================================================================== */
+        /**
+   * Add the correct display in IE 9-.
+   * 1. Add the correct display in IE.
+   */
+        /**
+   * Add the correct margin in IE 8.
+   */
+        /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+        /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+        /* Text-level semantics
+     ========================================================================== */
+        /**
+   * 1. Remove the gray background on active links in IE 10.
+   * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+   */
+        
+        a {
+            background-color: transparent;
+            /* 1 */
+            -webkit-text-decoration-skip: objects;
+            /* 2 */
+        }
+        /**
+   * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+        /**
+   * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+   */
+        /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+        /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+        /**
+   * Add the correct font style in Android 4.3-.
+   */
+        /**
+   * Add the correct background and color in IE 9-.
+   */
+        /**
+   * Add the correct font size in all browsers.
+   */
+        /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+        /* Embedded content
+     ========================================================================== */
+        /**
+   * Add the correct display in IE 9-.
+   */
+        /**
+   * Add the correct display in iOS 4-7.
+   */
+        /**
+   * Remove the border on images inside links in IE 10-.
+   */
+        
+        img {
+            border-style: none;
+        }
+        /**
+   * Hide the overflow in IE.
+   */
+        /* Forms
+     ========================================================================== */
+        /**
+   * 1. Change the font styles in all browsers (opinionated).
+   * 2. Remove the margin in Firefox and Safari.
+   */
+        
+        button {
+            font-family: sans-serif;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            line-height: 1.15;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+        }
+        /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+        
+        button {
+            /* 1 */
+            overflow: visible;
+        }
+        /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+        
+        button {
+            /* 1 */
+            text-transform: none;
+        }
+        /**
+   * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+   *    controls in Android 4.
+   * 2. Correct the inability to style clickable types in iOS and Safari.
+   */
+        
+        button {
+            -webkit-appearance: button;
+            /* 2 */
+        }
+        /**
+   * Remove the inner border and padding in Firefox.
+   */
+        
+        button::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+        /**
+   * Restore the focus styles unset by the previous rule.
+   */
+        
+        button:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+        /**
+   * Correct the padding in Firefox.
+   */
+        /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+        /**
+   * 1. Add the correct display in IE 9-.
+   * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+        /**
+   * Remove the default vertical scrollbar in IE.
+   */
+        /**
+   * 1. Add the correct box sizing in IE 10-.
+   * 2. Remove the padding in IE 10-.
+   */
+        /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+        /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+        /**
+   * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+   */
+        /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+        
+         ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+        /* Interactive
+     ========================================================================== */
+        /*
+   * Add the correct display in IE 9-.
+   * 1. Add the correct display in Edge, IE, and Firefox.
+   */
+        /*
+   * Add the correct display in all browsers.
+   */
+        /* Scripting
+     ========================================================================== */
+        /**
+   * Add the correct display in IE 9-.
+   */
+        /**
+   * Add the correct display in IE.
+   */
+        /* Hidden
+     ========================================================================== */
+        /**
+   * Add the correct display in IE 10-.
+   */
+        /*******************************
+           Site Overrides
+  *******************************/
+        /*
+   * # Semantic UI - 2.4.2
+   * https://github.com/Semantic-Org/Semantic-UI
+   * http://www.semantic-ui.com/
+   *
+   * Copyright 2014 Contributors
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*!
+   * # Semantic UI - Site
+   * http://github.com/semantic-org/semantic-ui/
+   *
+   *
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*******************************
+               Page
+  *******************************/
+        
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+        html,
+        body {
+            height: 100%;
+        }
+        
+        html {
+            font-size: 14px;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            min-width: 320px;
+            background: #FFFFFF;
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.4285em;
+            color: rgba(0, 0, 0, 0.87);
+            font-smoothing: antialiased;
+        }
+        /*******************************
+               Headers
+  *******************************/
+        
+        h2,
+        h3,
+        h4 {
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            line-height: 1.28571429em;
+            margin: calc(2rem - 0.14285714em) 0em 1rem;
+            font-weight: bold;
+            padding: 0em;
+        }
+        
+        h2 {
+            font-size: 1.71428571rem;
+        }
+        
+        h3 {
+            font-size: 1.28571429rem;
+        }
+        
+        h4 {
+            font-size: 1.07142857rem;
+        }
+        
+        h4:first-child {
+            margin-top: 0em;
+        }
+        /*******************************
+               Text
+  *******************************/
+        
+        p {
+            margin: 0em 0em 1em;
+            line-height: 1.4285em;
+        }
+        /*-------------------
+          Links
+  --------------------*/
+        
+        a {
+            color: #4183C4;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #1e70bf;
+            text-decoration: none;
+        }
+        /*******************************
+           Scrollbars
+  *******************************/
+        /*******************************
+            Highlighting
+  *******************************/
+        /* Site */
+        
+         ::-webkit-selection {
+            background-color: #CCE2FF;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        
+         ::-moz-selection {
+            background-color: #CCE2FF;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        
+         ::selection {
+            background-color: #CCE2FF;
+            color: rgba(0, 0, 0, 0.87);
+        }
+        /* Form */
+        /* Force Simple Scrollbars */
+        
+        body ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+        }
+        
+        body ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+        }
+        
+        body ::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.25);
+            -webkit-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+        }
+        
+        body ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        body ::-webkit-scrollbar-thumb:hover {
+            background: rgba(128, 135, 139, 0.8);
+        }
+        /* Inverted UI */
+        
+        body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        /*******************************
+          Global Overrides
+  *******************************/
+        /*******************************
+           Site Overrides
+  *******************************/
+        /*
+   * # Semantic UI - 2.4.2
+   * https://github.com/Semantic-Org/Semantic-UI
+   * http://www.semantic-ui.com/
+   *
+   * Copyright 2014 Contributors
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*!
+   * # Semantic UI - Container
+   * http://github.com/semantic-org/semantic-ui/
+   *
+   *
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*******************************
+              Container
+  *******************************/
+        /* All Sizes */
+        
+        .ui.container {
+            display: block;
+            max-width: 100% !important;
+        }
+        /* Mobile */
+        
+        @media only screen and (max-width: 767px) {
+            .ui.container {
+                width: auto !important;
+                margin-left: 1em !important;
+                margin-right: 1em !important;
+            }
+        }
+        /* Tablet */
+        
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .ui.container {
+                width: 723px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        /* Small Monitor */
+        
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            .ui.container {
+                width: 933px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        /* Large Monitor */
+        
+        @media only screen and (min-width: 1200px) {
+            .ui.container {
+                width: 1127px;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        /*******************************
+               Types
+  *******************************/
+        /* Text Container */
+        
+        .ui.text.container {
+            font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            max-width: 700px !important;
+            line-height: 1.5;
+        }
+        
+        .ui.text.container {
+            font-size: 1.14285714rem;
+        }
+        /* Fluid */
+        /*******************************
+             Variations
+  *******************************/
+        /*******************************
+           Theme Overrides
+  *******************************/
+        /*******************************
+           Site Overrides
+  *******************************/
+        /*
+   * # Semantic UI - 2.4.2
+   * https://github.com/Semantic-Org/Semantic-UI
+   * http://www.semantic-ui.com/
+   *
+   * Copyright 2014 Contributors
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   */
+        /*!
+   * # Semantic UI - Grid
+   * http://github.com/semantic-org/semantic-ui/
+   *
+   *
+   * Released under the MIT license
+   * http://opensource.org/licenses/MIT
+   *
+   
+        /* Middle Aligned */
+        /* Bottom Aligned */
+        /* Stretched */
+        /*----------------------
+    Horizontally Centered
+  -----------------------*/
+        /* Left Aligned */
+        /* Center Aligned */
+        /* Right Aligned */
+        /* Justified */
+        /*----------------------
+           Colored
+  -----------------------*/
+        /* Red */
+        /* Orange */
+        /* Yellow */
+        /* Olive */
+        /* Green */
+        /* Teal */
+        /* Blue */
+        /* Violet */
+        /* Purple */
+        /* Pink */
+        /* Brown */
+        /* Grey */
+        /* Black */
+        /*----------------------
+        Equal Width
+  -----------------------*/
+        /*----------------------
+          Reverse
+  -----------------------*/
+        /* Mobile */
+        
+        @media only screen and (max-width: 767px) {
+            /* Divided Reversed */
+            /* Vertically Divided Reversed */
+            /* Celled Reversed */
+        }
+        /* Tablet */
+        
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            /* Divided Reversed */
+            /* Vertically Divided Reversed */
+            /* Celled Reversed */
+        }
+        /* Computer */
+        
+        @media only screen and (min-width: 992px) {
+            /* Divided Reversed */
+            /* Vertically Divided Reversed */
+            /* Celled Reversed */
+        }
+        /*-------------------
+        Doubling
+  --------------------*/
+        /* Tablet Only */
+        /* Mobile Only */
+        /*-------------------
+        Stackable
+  --------------------*/
+        
+        @media only screen and (max-width: 767px) {
+            /* Coupling */
+            /* Don't pad inside segment or nested grid */
+            /* Divided Stackable */
+        }
+        /*----------------------
+       Only (Device)
+  -----------------------*/
+        /* These include arbitrary class repetitions for forced specificity */
+        /* Mobile Only Hide */
+        /* Tablet Only Hide */
+        /* Computer Only Hide */
+        /* Large Screen Only Hide */
+        /* Widescreen Only Hide */
+        /*******************************
+           Theme Overrides
+  *******************************/
+        /*******************************
+           Site Overrides
+  *******************************/
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="ui container">
+        <h4 class="ui horizontal divider header">
+            <i class="tag icon"></i> Description
+        </h4>
+        <p>Doggie treats are good for all times of the year. Proven to be eaten by 99.9% of all dogs worldwide.</p>
+        <h4 class="ui horizontal divider header">
+            <i class="bar chart icon"></i> Specifications
+        </h4>
+        <table class="ui definition table">
+            <tbody>
+                <tr>
+                    <td class="two wide column">Size</td>
+                    <td>1" x 2"</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>6 ounces</td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td>Yellowish</td>
+                </tr>
+                <tr>
+                    <td>Odor</td>
+                    <td>Not Much Usually</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="ui animated button" tabindex="0">
+            <div class="visible content">Next</div>
+            <div class="hidden content">
+                <i class="right arrow icon"></i>
+            </div>
+        </div>
+        <div class="ui vertical animated button" tabindex="0">
+            <div class="hidden content">Shop</div>
+            <div class="visible content">
+                <i class="shop icon"></i>
+            </div>
+        </div>
+        <div class="ui animated fade button" tabindex="0">
+            <div class="visible content">Sign-up for a Pro account</div>
+            <div class="hidden content">
+                $12.99 a month
+            </div>
+        </div>
+
+
+        <div class="ui large buttons">
+            <button class="ui button">One</button>
+            <div class="or"></div>
+            <button class="ui button">Two</button>
+        </div>
+
+
+        <h3 class="ui center aligned header">Text Container</h3>
+        <div class="ui text container">
+            <div class="ui segments">
+                <div class="ui segment">Content</div>
+                <div class="ui segment">Content</div>
+                <div class="ui segment">Content</div>
+                <div class="ui segment">Content</div>
+            </div>
+        </div>
+
+        <div class="ui buttons">
+            <button class="ui button">Cancel</button>
+            <div class="or"></div>
+            <button class="ui positive button">Save</button>
+        </div>
+    </div>
+
+
+
+
+    <div class="ui container">
+        <div class="ui feed">
+            <div class="event">
+                <div class="label">
+                    <img src="https://semantic-ui.com/images/wireframe/image.png">
+                </div>
+                <div class="content">
+                    <div class="date">
+                        3 days ago
+                    </div>
+                    <div class="summary">
+                        <a>Helen Troy</a> added 2 photos
+                    </div>
+                    <div class="extra images">
+                        <a><img src="https://semantic-ui.com/images/wireframe/image.png"></a>
+                        <a><img src="https://semantic-ui.com/images/avatar/small/jenny.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="label">
+                    <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
+                </div>
+                <div class="content">
+                    <div class="date">
+                        3 days ago
+                    </div>
+                    <div class="summary">
+                        <a>Laura Faucet</a> created a post
+                    </div>
+                    <div class="extra text">
+                        Have you seen what's going on in Israel? Can you believe it.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="ui comments">
+            <div class="comment">
+                <a class="avatar">
+                    <img src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
+                </a>
+                <div class="content">
+                    <a class="author">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Stevie Feliciano</font>
+                        </font>
+                    </a>
+                    <div class="metadata">
+                        <div class="date">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">hace 2 días</font>
+                            </font>
+                        </div>
+                        <div class="rating">
+                            <i class="star icon"></i>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    5 favoritos
+                                </font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                Hola chicos, espero que este comentario de ejemplo les ayude a leer esta documentación.
+                            </font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2 class="ui header">Attached Content</h2>
+
+
+
+        <div class="column">
+            <div class="top attached ui three item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="attached ui three item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="attached ui three item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="bottom attached ui three item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+
+
+        </div>
+
+        <br>
+
+        <div class="column">
+            <div class="top attached ui four item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="attached ui four item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="attached ui four item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="bottom attached ui four item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+            <div class="bottom attached ui four item menu">
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+                <a class="item">Item</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

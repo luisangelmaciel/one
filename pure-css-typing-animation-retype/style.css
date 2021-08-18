@@ -1,0 +1,146 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.type-animation {
+    display: inline-flex;
+    width: 0;
+    overflow: hidden;
+    padding-right: 0.08em;
+    position: relative;
+}
+
+.type-animation:after {
+    content: "";
+    background: #f7f3ff;
+    position: absolute;
+    right: 0;
+    top: -0.05em;
+    bottom: -0.05em;
+    width: 0.08em;
+    border-right: 2px solid transparent;
+}
+
+.type-animation.animating {
+    -webkit-animation: type 1620ms;
+    animation: type 1620ms;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.type-animation.animating:after {
+    -webkit-animation: cursor 320ms 8.625 ease-in-out;
+    animation: cursor 320ms 8.625 ease-in-out;
+}
+
+@-webkit-keyframes cursor {
+    0%,
+    100% {
+        border-color: #f7f3ff;
+    }
+    50% {
+        border-color: #241b5b;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    0%,
+    100% {
+        border-color: #f7f3ff;
+    }
+    50% {
+        border-color: #241b5b;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes type {
+    11.1111111111% {
+        width: 0.49em;
+    }
+    22.2222222222% {
+        width: 0.98em;
+    }
+    33.3333333333% {
+        width: 1.47em;
+    }
+    44.4444444444% {
+        width: 1.96em;
+    }
+    55.5555555556% {
+        width: 2.45em;
+    }
+    66.6666666667% {
+        width: 2.94em;
+    }
+    77.7777777778% {
+        width: 3.43em;
+    }
+    88.8888888889% {
+        width: 3.92em;
+    }
+    100% {
+        width: 3.92em;
+        padding-right: 0;
+    }
+}
+
+@keyframes type {
+    11.1111111111% {
+        width: 0.49em;
+    }
+    22.2222222222% {
+        width: 0.98em;
+    }
+    33.3333333333% {
+        width: 1.47em;
+    }
+    44.4444444444% {
+        width: 1.96em;
+    }
+    55.5555555556% {
+        width: 2.45em;
+    }
+    66.6666666667% {
+        width: 2.94em;
+    }
+    77.7777777778% {
+        width: 3.43em;
+    }
+    88.8888888889% {
+        width: 3.92em;
+    }
+    100% {
+        width: 3.15em;
+        padding-right: 0;
+    }
+}
+
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.75em;
+    background: transparent;
+    border-radius: 4px;
+    color: inherit;
+    border: 2px solid currentcolor;
+    min-height: 34px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+button:hover,
+button:focus {
+    background-color: #e6daff;
+}
