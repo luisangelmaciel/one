@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vámos</title>
+    <style>
+        .body-vamos {
+            color: #fff;
+            font-family: "Rubik", sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        *:before,
+        *:after {
+            content: "";
+            position: absolute;
+        }
+        
+        .main-content {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        
+        .main-content .item {
+            display: grid;
+            grid-template-rows: 1fr min-content;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            flex-wrap: wrap;
+            background: var(--bg-color);
+        }
+        
+        .main-content .item:not(.footer) {
+            padding-top: 1rem;
+        }
+        
+        @charset "UTF-8";
+        button {
+            background: transparent;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            font: 24px "Margarine", sans-serif;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            letter-spacing: 2px;
+        }
+        
+        .button-parrot .parrot {
+            position: absolute;
+            width: 60px;
+            text-align: center;
+            animation: blink 0.8s infinite;
+            color: transparent;
+        }
+        
+        .button-parrot .parrot:before {
+            content: "Vámos!";
+        }
+        
+        .button-parrot .parrot:nth-child(1) {
+            top: -30px;
+            left: -40px;
+            font: 12px/1 "Margarine", sans-serif;
+            transform: rotate(-20deg);
+            animation-duration: 0.5s;
+        }
+        
+        .button-parrot .parrot:nth-child(2) {
+            font: 12px/1 "Margarine", sans-serif;
+            right: -40px;
+            top: -20px;
+            transform: rotate(15deg);
+            animation-duration: 0.3s;
+        }
+        
+        .button-parrot .parrot:nth-child(3) {
+            font: 16px/1 "Margarine", sans-serif;
+            top: -60px;
+            left: 15px;
+            transform: rotate(10deg);
+            animation-duration: 1s;
+        }
+        
+        .button-parrot .parrot:nth-child(4) {
+            font: 18px/1 "Margarine", sans-serif;
+            top: -70px;
+            left: 95px;
+            transform: rotate(2deg);
+            animation-duration: 0.7s;
+        }
+        
+        .button-parrot .parrot:nth-child(5) {
+            font: 14px/1 "Margarine", sans-serif;
+            top: 80px;
+            left: 105px;
+            transform: rotate(-20deg);
+            animation-duration: 0.8s;
+        }
+        
+        .button-parrot .parrot:nth-child(6) {
+            font: 12px/1 "Margarine", sans-serif;
+            top: 80px;
+            left: 5px;
+            transform: rotate(10deg);
+            animation-duration: 1.2s;
+        }
+        
+        .button-parrot button:hover .parrot:before {
+            content: "Do it!";
+            width: 70px;
+        }
+        
+        @keyframes blink {
+            25%,
+            75% {
+                color: transparent;
+            }
+            40%,
+            60% {
+                color: rgb(0, 0, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PARA COPIAR Y PEGAR 
+        <div>
+        <style>
+        .body-vamos {
+            color: #fff;
+            font-family: "Rubik", sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        *:before,
+        *:after {
+            content: "";
+            position: absolute;
+        }
+        
+        .main-content {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        
+        .main-content .item {
+            display: grid;
+            grid-template-rows: 1fr min-content;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            flex-wrap: wrap;
+            background: var(--bg-color);
+        }
+        
+        .main-content .item:not(.footer) {
+            padding-top: 1rem;
+        }
+        
+        @charset "UTF-8";
+        button {
+            background: transparent;
+            color: rgb(0, 0, 0);
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            font: 24px "Margarine", sans-serif;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            transition: 0.2s ease-in-out;
+            letter-spacing: 2px;
+        }
+        
+        .button-parrot .parrot {
+            position: absolute;
+            width: 60px;
+            text-align: center;
+            animation: blink 0.8s infinite;
+            color: transparent;
+        }
+        
+        .button-parrot .parrot:before {
+            content: "Vámos!";
+        }
+        
+        .button-parrot .parrot:nth-child(1) {
+            top: -30px;
+            left: -40px;
+            font: 12px/1 "Margarine", sans-serif;
+            transform: rotate(-20deg);
+            animation-duration: 0.5s;
+        }
+        
+        .button-parrot .parrot:nth-child(2) {
+            font: 12px/1 "Margarine", sans-serif;
+            right: -40px;
+            top: -20px;
+            transform: rotate(15deg);
+            animation-duration: 0.3s;
+        }
+        
+        .button-parrot .parrot:nth-child(3) {
+            font: 16px/1 "Margarine", sans-serif;
+            top: -60px;
+            left: 15px;
+            transform: rotate(10deg);
+            animation-duration: 1s;
+        }
+        
+        .button-parrot .parrot:nth-child(4) {
+            font: 18px/1 "Margarine", sans-serif;
+            top: -70px;
+            left: 95px;
+            transform: rotate(2deg);
+            animation-duration: 0.7s;
+        }
+        
+        .button-parrot .parrot:nth-child(5) {
+            font: 14px/1 "Margarine", sans-serif;
+            top: 80px;
+            left: 105px;
+            transform: rotate(-20deg);
+            animation-duration: 0.8s;
+        }
+        
+        .button-parrot .parrot:nth-child(6) {
+            font: 12px/1 "Margarine", sans-serif;
+            top: 80px;
+            left: 5px;
+            transform: rotate(10deg);
+            animation-duration: 1.2s;
+        }
+        
+        .button-parrot button:hover .parrot:before {
+            content: "Do it!";
+            width: 70px;
+        }
+        
+        @keyframes blink {
+            25%,
+            75% {
+                color: transparent;
+            }
+            40%,
+            60% {
+                color: rgb(0, 0, 0);
+            }
+        }
+    </style>
+    <div class="body-vamos"> 
+            <div class="item button-parrot ">
+        <button>Empezar
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      </button>
+    </div>
+      </div>
+      </div>-->
+    <div class="main-content">
+        <div class="item button-parrot ">
+            <button>Empezar
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      <div class="parrot "></div>
+      </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+</html>
