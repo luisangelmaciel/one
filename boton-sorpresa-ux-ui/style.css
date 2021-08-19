@@ -1,0 +1,293 @@
+    .page-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-x: hidden;
+    }
+    
+    .nav,
+    .footer {
+        background: #aaa;
+        line-height: 80px;
+    }
+    
+    .section {
+        display: block;
+        position: relative;
+        height: auto;
+        min-height: 80px;
+        width: 100%;
+        font-family: Verdana;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    
+    .top-section {
+        background: #2a2a30;
+        padding: 40px 0 0;
+    }
+    
+    .top-header {
+        display: block;
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 10px auto 50px;
+        font-size: 50px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #eee;
+    }
+    
+    .card-container {
+        display: inline-block;
+        height: 375px;
+        width: 22%;
+        min-width: 280px;
+        max-width: 360px;
+        margin: 0 1% 40px;
+        line-height: 30px;
+        text-align: left;
+        border-radius: 3px;
+        box-shadow: 0 0 12px rgba(215, 215, 215, 0.2);
+        transition: 0.3s ease;
+        overflow: hidden;
+    }
+    
+    .card-container:hover>.img-part {
+        background-position: left !important;
+    }
+    
+    .card-container:hover>.img-part::before {
+        left: 5%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .img-part {
+        display: block;
+        position: relative;
+        height: 75%;
+        width: 100%;
+        transition: 0.6s ease;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    .img-part:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: auto;
+        width: 62%;
+        top: 50%;
+        left: -75%;
+        padding: 10px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.1);
+        color: #fff;
+        transition: left 0.4s ease, background 0.4s 0.2s ease;
+    }
+    
+    .coffee {
+        background: url("http://previews.123rf.com/images/chamillewhite/chamillewhite1201/chamillewhite120100050/12046136-Coffee-cup-with-coffee-beans-background-Stock-Photo-latte-cappuccino-art.jpg");
+    }
+    
+    .coffee:before {
+        content: "A whole lotta beans";
+    }
+    
+    .train {
+        background: url("http://cache3.asset-cache.net/gc/170213594-man-waiting-for-a-train-gettyimages.jpg?v=1&c=IWSAsset&k=2&d=ND%2BsQuTvwdYTMelE5jop2ev%2FMrStKrBNt4%2FJV6ipmuhhr0Bh39g7bZIopu2W5Y1X");
+    }
+    
+    .train:before {
+        content: "Man at subway station";
+    }
+    
+    .cafe {
+        background: url("https://0.s3.envato.com/files/146926427/synergia-cafe-5015.jpg");
+    }
+    
+    .cafe:before {
+        content: "The computer's off bruh";
+    }
+    
+    .blurry-image {
+        background: url("https://www.unifynetwork.org/img/lock-bg3.jpg");
+    }
+    
+    .blurry-image:before {
+        content: "Pretty dope man";
+    }
+    
+    .info-part {
+        display: block;
+        position: relative;
+        height: 25%;
+        width: 100%;
+    }
+    
+    .info-part:hover .inner-info-thing {
+        left: 70%;
+    }
+    
+    .info-stats {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        width: 70%;
+        padding: 5% 0 0;
+        background: #e2e2e2;
+        color: #555;
+        text-align: center;
+    }
+    
+    .info-date {
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .inner-info-thing {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 0;
+        background: #77777c;
+        text-align: center;
+        color: #eaeaea;
+        transition: 0.3s ease;
+    }
+    
+    .next-section {
+        background: #fff;
+        height: 800px;
+    }
+    
+    .big-image-thing {
+        display: block;
+        position: absolute;
+        height: 600px;
+        top: 100px;
+        width: 90%;
+        max-width: 1000px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: cover !important;
+        background-position: center !important;
+        background: url("");
+        overflow: hidden;
+    }
+    
+    #big-image-checkbox {
+        display: none;
+    }
+    
+    #big-image-checkbox:checked~.big-image-label {
+        top: 25% !important;
+    }
+    
+    #big-image-checkbox:checked~.big-image-pix {
+        top: 36.5%;
+    }
+    
+    .big-image-label {
+        display: visibility;
+        position: absolute;
+        height: 80px;
+        left: 0;
+        right: 0;
+        top: 97%;
+        font-family: Verdana;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 80px;
+        transition: 0.3s ease;
+        background-color: rgb(0, 0, 0);
+        color: white
+    }
+    
+    .big-image-label:hover {
+        top: 88.5%;
+    }
+    
+    .big-image-pix {
+        display: block;
+        position: absolute;
+        height: 63.5%;
+        top: 100%;
+        left: 0;
+        right: -1px;
+        text-align: center;
+        transition: 0.3s ease;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+    .cat-pic {
+        display: inline-block;
+        position: relative;
+        width: 38%;
+        padding-bottom: 33%;
+        margin: 2%;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    .cat-one {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-two {
+        background: url("http://www.womp-int.com/images/story/2010vol06/14.jpg");
+    }
+    
+    .cat-three {
+        background: url("http://www.911metallurgist.com/blog/wp-content/uploads/2013/10/cat_793f_equipped_with_command_for_hauling1.jpg");
+    }
+    
+    .cat-four {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-five {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-six {
+        background: url("http://animium.com/wp-content/uploads/2012/10/caterpillar.jpg");
+    }
+    
+    .cat-seven {
+        background: url("https://upload.wikimedia.org/wikipedia/commons/1/14/Caterpillar_CS-533E.jpg");
+    }
+    
+    .cat-eight {
+        background: url("http://images1.fanpop.com/images/image_uploads/Funny-Cat-Pictures-cats-935656_500_375.jpg");
+    }
+    /* MEDIA QUERIES */
+    
+    @media screen and (max-width: 1280px) {
+        .card-container {
+            max-width: 400px;
+            width: 40%;
+            margin: 0 1% 40px;
+        }
+    }
+    
+    @media screen and (max-width: 620px) {
+        .card-container {
+            max-width: 380px;
+            width: 90%;
+            margin: 0 0 40px;
+        }
+        .cat-pic {
+            width: 90%;
+            padding-bottom: 80%;
+        }
+    }

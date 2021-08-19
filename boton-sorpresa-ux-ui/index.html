@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+<STYLE>
+    .page-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-x: hidden;
+    }
+    
+    .section {
+        display: block;
+        position: relative;
+        height: auto;
+        min-height: 80px;
+        width: 100%;
+        font-family: Verdana;
+        font-size: 24px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    
+    .next-section {
+        background: #fff;
+        height: 800px;
+    }
+    
+    .big-image-thing {
+        display: block;
+        position: absolute;
+        height: 600px;
+        top: 100px;
+        width: 90%;
+        max-width: 1000px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-size: cover !important;
+        background-position: center !important;
+        background: url("");
+        overflow: hidden;
+    }
+    
+    #big-image-checkbox {
+        display: none;
+    }
+    
+    #big-image-checkbox:checked~.big-image-label {
+        top: 25% !important;
+    }
+    
+    #big-image-checkbox:checked~.big-image-pix {
+        top: 36.5%;
+    }
+    
+    .big-image-label {
+        display: visibility;
+        position: absolute;
+        height: 80px;
+        left: 0;
+        right: 0;
+        top: 97%;
+        font-family: Verdana;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 80px;
+        transition: 0.3s ease;
+        background-color: rgb(0, 0, 0);
+        color: white
+    }
+    
+    .big-image-label:hover {
+        top: 88.5%;
+    }
+    
+    .big-image-pix {
+        display: block;
+        position: absolute;
+        height: 63.5%;
+        top: 100%;
+        left: 0;
+        right: -1px;
+        text-align: center;
+        transition: 0.3s ease;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+    .cat-pic {
+        display: inline-block;
+        position: relative;
+        width: 38%;
+        padding-bottom: 33%;
+        margin: 2%;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    
+    .cat-one {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-two {
+        background: url("http://www.womp-int.com/images/story/2010vol06/14.jpg");
+    }
+    
+    .cat-three {
+        background: url("http://www.911metallurgist.com/blog/wp-content/uploads/2013/10/cat_793f_equipped_with_command_for_hauling1.jpg");
+    }
+    
+    .cat-four {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-five {
+        background: url("https://s-media-cache-ak0.pinimg.com/736x/bd/22/2c/bd222c0aacb12c5a06a920f87c7ccda7.jpg");
+    }
+    
+    .cat-six {
+        background: url("http://animium.com/wp-content/uploads/2012/10/caterpillar.jpg");
+    }
+    
+    .cat-seven {
+        background: url("https://upload.wikimedia.org/wikipedia/commons/1/14/Caterpillar_CS-533E.jpg");
+    }
+    
+    .cat-eight {
+        background: url("http://images1.fanpop.com/images/image_uploads/Funny-Cat-Pictures-cats-935656_500_375.jpg");
+    }
+    /* MEDIA QUERIES */
+    
+    @media screen and (max-width: 620px) {
+        .cat-pic {
+            width: 90%;
+            padding-bottom: 80%;
+        }
+    }
+</STYLE>
+
+<!-- partial:index.partial.html -->
+<div class="page-container">
+    <div class="section next-section">
+        <div class="big-image-thing">
+            <input type="checkbox" id="big-image-checkbox" />
+            <label for="big-image-checkbox" class="big-image-label">¡Haga clic para ver fotos de gatitos!</label>
+            <div class="big-image-pix">
+                <div class="cat-pic cat-one"></div>
+                <div class="cat-pic cat-two"></div>
+                <div class="cat-pic cat-three"></div>
+                <div class="cat-pic cat-four"></div>
+                <div class="cat-pic cat-five"></div>
+                <div class="cat-pic cat-six"></div>
+                <div class="cat-pic cat-seven"></div>
+                <div class="cat-pic cat-eight"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
