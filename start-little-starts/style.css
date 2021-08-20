@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F6F8FF;
+  background: rgb(245, 250, 255);
+  font-family: "Arial", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* absolutely position the stars */
+.star {
+  position: absolute;
+  will-change: transform;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: hsla(var(--hue, 45), 90%, 70%, var(--alpha, 0));
+  z-index: 10; /* higher than button before click */
+}
+
+.icon {
+  --alpha: 1;
+}
+
+button {
+  position: relative;
+  font-size: 1.3rem;
+  font-family: monospace, sans-serif;
+  max-width: 25ch;
+  width: auto;
+  text-align: left;
+  padding: 1rem 1.75rem;
+  border-radius: .3rem;
+  background: inherit;
+  border: none;
+  background: rgb(29, 36, 58);
+  color: rgba(255, 255, 255, .95);
+  z-index: 5;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background: rgb(24, 30, 48);
+}
+
+.icon {
+  position: relative;
+  right: 18px;
+  top: -2px;
+  margin-left: 5.5rem;
+}
