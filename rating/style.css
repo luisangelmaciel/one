@@ -1,0 +1,224 @@
+@import url("https://rsms.me/inter/inter.css");
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-bare: #F8EDFF;
+  --purple-light: #e7cafa;
+  --purple-core: #7E26C8;
+  --purple-dark: #62457a;
+  --red: #e3468a;
+  --red-dark: #9e1852;
+  --gold: #faf18f;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+symbol {
+  overflow: visible;
+}
+
+legend {
+  margin: 0 0 1.5em;
+  display: block;
+  width: 100%;
+  font-size: 1.25em;
+  font-weight: 700;
+  text-align: center;
+  color: var(--purple-core);
+}
+
+#avatar {
+  margin: 0 auto 1em;
+  width: 150px;
+}
+#avatar div {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+#avatar div svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+input[type=radio] {
+  /* Visually hide radio buttons while still allowing them to receive keyboard focus. */
+  position: absolute;
+  top: auto;
+  z-index: 2;
+  width: 1.5em;
+  height: 2em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0.0001;
+}
+
+.rate-radio {
+  margin: 0 0.5em 0 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  color: #2a2a2a;
+  line-height: 1;
+}
+.rate-radio:last-of-type {
+  margin-right: 0;
+}
+.rate-radio svg {
+  display: block;
+  width: 3em;
+  height: 2.85em;
+  fill: var(--purple-bare);
+  stroke: #000;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  transform: scale(0.625);
+  transition: transform 0.2s ease-in-out;
+  overflow: visible;
+}
+.rate-radio span {
+  padding: 0.4em 0.5em;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  background: #333;
+  border: solid 2px var(--purple-dark);
+  border-radius: 0.25em;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(0.5em) translateX(-50%) scale(0);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+.rate-radio span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--purple-core);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rate-radio svg {
+    transform: none;
+    transition: transform 0.5s ease-in-out;
+  }
+  .rate-radio span {
+    transform: translateY(0.5em) translateX(-50%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+}
+
+.rate-radio--none svg {
+  width: 2.85em;
+  height: 2.85em;
+  fill: #FFF;
+  stroke: var(--red-dark);
+}
+input:focus + .rate-radio {
+  outline: dotted 0.25em #CCC;
+  outline-offset: 0.5em;
+}
+
+fieldset:not([disabled]) input:not([disabled]):hover + .rate-radio span,
+.rate-radio:hover span,
+input:focus + .rate-radio span {
+  opacity: 1;
+  transform: translateY(0.5em) translateX(-50%) scale(1);
+}
+
+fieldset:not([disabled]) input:not([disabled]):checked + .rate-radio span,
+.rate-radio:checked span,
+input:checked + .rate-radio span {
+  opacity: 1;
+  background: var(--purple-core);
+  transform: translateY(0.5em) translateX(-50%) scale(1);
+}
+fieldset:not([disabled]) input:not([disabled]):checked + .rate-radio span::before,
+.rate-radio:checked span::before,
+input:checked + .rate-radio span::before {
+  opacity: 1;
+}
+
+input:checked + .rate-radio span {
+  background: #333;
+  border: 2px solid var(--purple-dark);
+}
+
+/**
+* Set any rating icon that appears in the DOM, AFTER the checked input as appearing unselected.
+* If no input was checked by default, the first radio item will be auto selected, and that's the "none" option
+*/
+input:checked ~ .rate-radio svg {
+  fill: var(--purple-bare);
+  transform: scale(0.625);
+}
+@media (prefers-reduced-motion: reduce) {
+  input:checked ~ .rate-radio svg {
+    transform: none;
+  }
+}
+
+/**
+* If the no-rating option isn't checked get it to look all unselected again
+*/
+input:not(:checked) ~ .rate-radio--none svg {
+  fill: var(--purple-dark);
+  transform: scale(0.625);
+}
+@media (prefers-reduced-motion: reduce) {
+  input:not(:checked) ~ .rate-radio--none svg {
+    transform: none;
+  }
+}
+
+/**
+* The selectors that create the "selected" styling for the actual checked input, and the inputs previous to it in the DOM.
+*/
+.rate-radio svg,
+input:checked + .rate-radio svg {
+  fill: var(--gold);
+  stroke: var(--purple-dark);
+  transform: scale(1) translateY(-0.25em);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rate-radio svg,
+input:checked + .rate-radio svg {
+    transform: none;
+  }
+}
+
+/**
+* Coloring for when the "no rating" selection is currently active
+*/
+input:checked + .rate-radio--none svg {
+  fill: var(--red);
+  stroke: var(--red-dark);
+  transform: scale(1);
+}
