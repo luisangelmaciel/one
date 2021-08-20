@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>h8 - Neon Tex </title>
+
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh
+        }
+        
+        h8 {
+            color: #484848;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 7px;
+            cursor: pointer
+        }
+        
+        h8 span {
+            transition: .5s linear
+        }
+        
+        h8:hover span:nth-child(1) {
+            margin-right: 5px
+        }
+        
+        h8:hover span:nth-child(1):after {
+            content: "'";
+        }
+        
+        h8:hover span:nth-child(2) {
+            margin-left: 30px
+        }
+        
+        h8:hover span {
+            color: #fff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+        }
+        /*made with ❤, by hihello.monster */
+    </style>
+
+</head>
+
+<body>
+    <h8><span>HI</span>
+        <strong>hello</strong>
+        <span>MONSTER</span>
+    </h8>
+</body>
+
+</html>
