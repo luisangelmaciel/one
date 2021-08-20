@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+            outline: 0;
+            font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, helvetica neue, sans-serif;
+        }
+        
+        button {
+            width: 100%;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            border: 0;
+            background-color: rgb(0, 101, 253);
+            color: white;
+            border-radius: 3px;
+            transition: all .2s;
+            cursor: pointer;
+        }
+        
+        button:active {
+            transform: scale(.9);
+        }
+        
+        body {
+            text-align: center;
+            background-image: url("https://cdn.shopify.com/s/files/1/2930/2308/products/custom-step-and-repeat-moustache-for-father_s-day-photography-backdrop_82aa95ea-7418-4dc4-884a-3e3fee10b625_1024x1024.jpg?v=1535704616");
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;backdrop-filter: blur(3px);">
+        <div style=" position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+            <h1 style="background: black;color: white;padding: 4px;display: block;border-radius: 2px">Happy Father's Day!</h1>
+            <p>hoch DaSopbe'chu'! toH, tlhiHejtaHvIS tlhejtaHvIS.</p>
+            <button onclick='window.open("https://www.translate.com/english-klingon");'>Translate into English</button>
+            <button onclick="throwConfetti()">Throw Confetti</button>
+            <button onclick='window.open("https://smartlist.ga");'>Save money for free <br><span style="font-size: 6px">yeah. I know you wont click on this. but just trying!</span></button>
+        </div>
+    </div>
+    <div style="position: fixed;bottom: 5px;left:5px;font-size: 10px">
+        Made with ❤️ by Manu. CTRL + U to view source code. Hosted on GitHub</div>
+    <script>
+        function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        function throwConfetti() {
+            confetti({
+                angle: randomInRange(55, 125),
+                spread: randomInRange(50, 70),
+                particleCount: randomInRange(50, 100),
+                origin: {
+                    y: 0.6
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
