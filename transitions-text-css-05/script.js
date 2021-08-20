@@ -1,0 +1,1 @@
+//simple CSS text animation
