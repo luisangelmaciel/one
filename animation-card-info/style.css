@@ -1,0 +1,341 @@
+html,
+body {
+    font-family: 'Volte-Regular', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 300px;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6em;
+    overflow-x: hidden
+}
+
+img {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+img.shadow {
+    -webkit-box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .5);
+    box-shadow: 0 50px 100px -30px rgba(0, 0, 0, .5)
+}
+
+.no-touch ul#projekte-filter .filter-button:hover {
+    color: #ff0032;
+    border-color: #ff0032
+}
+
+ul#projekte-filter .filter-button.current {
+    color: #fff;
+    background-color: #ff0032;
+    border-color: #ff0032
+}
+
+.image-slider .flickity-page-dots {
+    bottom: -50px
+}
+
+.service {
+    position: relative;
+    list-style: none;
+    outline: 0
+}
+
+.no-touch .service:hover {
+    z-index: 2
+}
+
+.service figure,
+.service figure .content {
+    position: relative
+}
+
+.service a {
+    width: 100%;
+    height: 100%;
+    outline: 0
+}
+
+.service figure {
+    display: inline-block;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.service figure::before,
+.service figure::after {
+    pointer-events: none
+}
+
+.service figure img {
+    position: absolute;
+    z-index: 1;
+    padding: 0 40px;
+    filter: drop-shadow(0 20px 15px rgba(136, 142, 160, .4));
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear
+}
+
+.service figure figcaption {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    width: 100%;
+    margin: 100px 0 15px;
+    padding: 100px 30px 30px;
+    border-radius: 10px;
+    color: #888ea0;
+    background-color: #fff;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    -moz-box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.service figure figcaption h2 {
+    font-weight: 300;
+    color: #5d74b6;
+    padding: 20px 0;
+    font-size: 28px
+}
+
+.service figure figcaption .content h2,
+.service figure figcaption .content p {
+    margin: 0
+}
+
+.service figure figcaption .content p {
+    font-size: 15px;
+    line-height: 1.5em
+}
+
+.service figure figcaption .content p.desc {
+    min-height: 115px;
+    margin-bottom: 50px;
+    padding: 0
+}
+
+.service figure figcaption .content .linkText,
+.serviceLarge .content .linkText {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: -50px;
+    right: 0;
+    padding: 14px 25px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, .2);
+    border-radius: 50px
+}
+
+.service figure figcaption .content .linkText p,
+.serviceLarge .content .linkText p {
+    opacity: 0;
+    width: 100px;
+    line-height: 1.4em;
+    padding: 0
+}
+
+.service figure figcaption .content .linkText .arrow,
+.serviceLarge .content .linkText .arrow {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 20px;
+    height: 15px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.service figure figcaption .content .linkText span.arrow:before,
+.serviceLarge .content .linkText span.arrow:before {
+    content: '';
+    width: 20px;
+    border: 1px solid #888e9a;
+    display: inline-block;
+    position: relative;
+    background-color: #888e9a;
+    top: -5px
+}
+
+.service figure figcaption .content .linkText span.arrow:after,
+.serviceLarge .content .linkText span.arrow:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    border-bottom: 2px solid #888e9a;
+    border-right: 2px solid #888e9a;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.no-touch .service figure:hover img {
+    filter: drop-shadow(0 20px 15px rgba(0, 0, 0, .3))
+}
+
+.no-touch .service figure:hover figcaption {
+    background-image: linear-gradient(to right top, #0072ff, #002f5d);
+    -webkit-box-shadow: 0 50px 120px -20px #0072ff;
+    -moz-box-shadow: 0 50px 120px -20px #0072ff;
+    box-shadow: 0 50px 120px -20px #0072ff;
+}
+
+.no-touch .service figure:hover figcaption .content {
+    -webkit-transform: translateZ(20px);
+    transform: translateZ(20px)
+}
+
+.no-touch .service figure:hover figcaption .content,
+.no-touch .service figure:hover figcaption .content h2,
+.no-touch .service figure:hover figcaption .content p {
+    color: #fff
+}
+
+.no-touch .service figure:hover figcaption .content .linkText p {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.no-touch .service figure:hover figcaption .content .linkText p::before,
+.no-touch .serviceLarge:hover .content .linkText p::before {
+    width: 50px;
+    -webkit-transform: translateX(-60px);
+    transform: translateX(-60px)
+}
+
+.no-touch .service figure:hover figcaption .content .linkText,
+.no-touch .serviceLarge:hover .content .linkText {
+    display: block;
+    width: 150px
+}
+
+.no-touch .service figure:hover figcaption .content .linkText p,
+.no-touch .serviceLarge:hover .content .linkText p {
+    color: #fff;
+    opacity: 1
+}
+
+.no-touch .service figure:hover figcaption .content .linkText span.arrow:before,
+.no-touch .service figure:hover figcaption .content .linkText span.arrow:after {
+    border-color: #fff
+}
+
+.serviceList ul {
+    margin: 0;
+    padding: 0
+}
+
+.serviceList li {
+    font-size: 18px;
+    list-style: none;
+    padding: 5px 30px;
+    background: url(../assets/img/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-y: 12px
+}
+
+.serviceLarge {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 100%!important;
+    padding: 50px 30px;
+    border-radius: 10px;
+    color: #888ea0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    -moz-box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    box-shadow: 0 20px 70px rgba(136, 142, 160, .4);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease
+}
+
+.serviceLarge img {
+    -webkit-transform: none!important;
+    transform: none!important;
+    filter: drop-shadow(0 20px 15px rgba(136, 142, 160, .4))
+}
+
+.serviceLarge h2 {
+    font-weight: 300;
+    padding: 20px 0;
+    font-size: 28px;
+    margin: 0
+}
+
+.serviceLarge p {
+    margin-bottom: 0
+}
+
+.serviceLarge.greenhosting {
+    background-color: #2fcc6e
+}
+
+.serviceLarge.greenhosting .content .linkText span.arrow:before {
+    border: 1px solid #fff;
+    background-color: #fff
+}
+
+.serviceLarge.greenhosting .content .linkText span.arrow:after {
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff
+}
+
+.no-touch .serviceLarge.greenhosting:hover {
+    -webkit-box-shadow: 0 30px 120px -20px rgba(47, 204, 110, 1);
+    -moz-box-shadow: 0 30px 120px -20px rgba(47, 204, 110, 1);
+    box-shadow: 0 30px 120px -20px rgba(47, 204, 110, 1)
+}
+
+.serviceLarge.greenhosting h2,
+.serviceLarge.greenhosting p {
+    color: #fff
+}
+
+.serviceLarge.greenhosting .linkText p {
+    font-size: 15px
+}
+
+.imgBG {
+    position: absolute;
+    width: 50%;
+    right: 0px;
+    top: 75px;
+}
+
+figure .img-responsive {
+    max-width: 300px;
+}
