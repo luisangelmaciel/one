@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Mini Resume Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="./minirstyle.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- MINI RESUME CARD (HTML) dp 2017 -->
+
+    <!-- CONTAINER -->
+    <div class="mini-info-container">
+        <!-- CARD -->
+        <div class="card">
+            <!-- MASK (currently not used ) -->
+            <div class="mask"></div>
+
+            <!-- BACKGROUND IMAGE -->
+            <figure class="thumbnail">
+                <div class="date">
+                    <div class="day">24</div>
+                    <div class="month">Aug</div>
+                </div>
+                <img src="http://res.cloudinary.com/dpcloudinary/image/upload/v1510380468/cat.jpg" />
+            </figure>
+
+            <!-- CONTENT WRAPPER -->
+            <div class="panel-wrapper">
+                <!-- CATEGORY -->
+                <div class="category"><i class="fa fa-code" aria-hidden="true"></i> Profile</div>
+                <figure class="foto">
+                    <img src="http://res.cloudinary.com/dpcloudinary/image/upload/v1529892626/billmurray_arsobl.jpg" />
+                </figure>
+
+                <!-- CONTENT ABOUT -->
+                <div class="panel open" data-key="#about">
+                    <h1 class="title">Bill</h1>
+                    <h2 class="sub-title">Creative Front-end Developer</h2>
+                    <p class="description">Web Designer/Developer based in the Los Angeles Area with 10+ years experience in all aspects of web design and development and video production.</p>
+                </div>
+
+                <!-- CONTENT SKILLS -->
+                <div class="panel" data-key="#skills">
+                    <h1 class="title">Skills</h1>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>Javascript/jQuery</li>
+                        <li>Node.js</li>
+                        <li>React/Redux</li>
+                    </ul>
+                    <ul>
+                        <li>Sass/Less</li>
+                        <li>Animation</li>
+                        <li>Prototyping</li>
+                        <li>Video Production</li>
+                    </ul>
+                </div>
+
+                <!-- CONTENT PROJECTS -->
+                <div class="panel" data-key="#projects">
+                    <h1 class="title">Projects</h1>
+                    <ul>
+                        <li><a href="#">React Messaging</a></li>
+                        <li><a href="#">Mobile UI</a></li>
+                        <li><a href="#">Animation</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Website: Machinery</a></li>
+                        <li><a href="#">Website: Photography</a></li>
+                        <li><a href="#">Video: Travel</a></li>
+                    </ul>
+                </div>
+
+                <!-- INFO -->
+                <div class="panel" data-key="#info">
+                    <h1 class="title">Infos</h1>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                        <li><a href="https://github.com/dpinnick" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>Github</a></li>
+                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i>Dribbble</a></li>
+                        <li><a href="https://codepen.io/dpinnick/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i>CodePen</a></li>
+                    </ul>
+                    <p class="site"><a href="http://www.dpinnick.com" target="_blank">http://www.dpinnick.com</a></p>
+                    <p><a href="bruce@brucelee.com">bill@billmurray.com</a></p>
+                </div>
+            </div>
+
+            <!-- NAV -->
+            <div class="nav">
+                <ul>
+                    <li><a href="#about" class="active">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li class="info"><a href="#info"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- DIALOG LIKE -->
+            <div class="dialog like">
+                <p>Thanks for the love <i class="fa fa-heart" aria-hidden="true"></i></p>
+            </div>
+
+            <!-- META DATA -->
+            <div class="meta">
+                <div class="likes">
+                    <a href="#"><i class="fa fa-heart" aria-hidden="true"></i>Like (124)</a>
+                </div>
+                <div class="share">
+                    <a href="#"><i class="fa fa-share-alt" aria-hidden="true"></i>Share</a>
+                </div>
+            </div>
+
+            <!-- SHARE -->
+            <div class="social">
+                <div class="inner">
+                    <a href="#" class="buttons main"><span class="cross"></span></a>
+                    <a href="#" class="buttons"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#" class="buttons"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#" class="buttons"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" class="buttons"><i class="fa fa-google" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- partial -->
+    <script src="./minirscript.js"></script>
+
+</body>
+
+</html>
