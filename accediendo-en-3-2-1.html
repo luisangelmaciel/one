@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Accesando</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <center>
+        <h2> Accediendo al contenido ... </h2>
+        </p>
+    </center>
+    <script language="JavaScript" type="text/javascript">
+        window.opener.location.href = "https://www.xiiber.com";
+        var ventana = window.self;
+        ventana.opener = window.self;
+        ventana.close(); {
+            location.href = window
+        }
+        setTimeout("redireccionar()", 220);
+    </script>
+    <script type="text/javascript">
+        var pagina = 'https://www.xiiber.com';
+        var segundos = 230;
+
+        function redireccion() {
+            document.location.href = pagina;
+        }
+        setTimeout("redireccion()", segundos);
+    </script>
+
+
+</body>
+
+</html>
