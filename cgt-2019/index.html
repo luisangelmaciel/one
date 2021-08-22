@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-safety-blue.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<style>
+    body {
+        font-family: "Roboto", sans-serif
+    }
+    
+    .w3-bar-block .w3-bar-item {
+        padding: 16px;
+        font-weight: bold;
+    }
+    
+    .w3-theme-gradient {
+        color: #000 !important;
+        background: -webkit-linear-gradient(top, #64B5F6 25%, #42A5F5 75%)
+    }
+    
+    .w3-theme-gradient {
+        color: #000 !important;
+        background: -moz-linear-gradient(top, #64B5F6 25%, #42A5F5 75%)
+    }
+    
+    .w3-theme-gradient {
+        color: #000 !important;
+        background: -o-linear-gradient(top, #64B5F6 25%, #42A5F5 75%)
+    }
+    
+    .w3-theme-gradient {
+        color: #000 !important;
+        background: -ms-linear-gradient(top, #64B5F6 25%, #42A5F5 75%)
+    }
+    
+    .w3-theme-gradient {
+        color: #000 !important;
+        background: linear-gradient(top, #64B5F6 25%, #42A5F5 75%)
+    }
+    
+    .w3-safety-red {
+        color: #fff;
+        background-color: #bd1e24
+    }
+    
+    .w3-safety-orange {
+        color: #fff;
+        background-color: #e97600
+    }
+    
+    .w3-safety-yellow {
+        color: #fff;
+        background-color: #f6c700
+    }
+    
+    .w3-safety-green {
+        color: #fff;
+        background-color: #007256
+    }
+    
+    .w3-safety-blue {
+        color: #fff;
+        background-color: #0067a7
+    }
+    
+    .w3-safety-purple {
+        color: #fff;
+        background-color: #964f8e
+    }
+    
+    body {
+        font-family: "Roboto", sans-serif
+    }
+    
+    .w3-bar-block .w3-bar-item {
+        padding: 16px;
+        font-weight: bold;
+    }
+    
+    / citymodaltab .citymodaltab {
+        display: none
+    }
+    
+    / dark style original code .icon-bar {
+        width: 100%;
+        background-color: #ffffff;
+        overflow: auto position: fixed;
+    }
+    
+    .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 6px 0;
+        transition: all 0.3s ease;
+        color: #bfbfbf;
+        font-size: 28px;
+        background-color: #ffffff;
+    }
+    /* Darker background on mouse-over */
+    
+    .btnslc:hover {
+        background-color: #f2f2f2
+    }
+    
+    .w3-btn {
+        width: 150px;
+    }
+    
+    .w3-btn {
+        margin-bottom: 12px;
+    }
+    
+    .mySlides {
+        display: none
+    }
+    
+    .w3-left,
+    .w3-right,
+    .w3-badge {
+        cursor: pointer
+    }
+    
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0
+    }
+    
+    bodyemoji {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        min-height: 100vh;
+        background-color: #f9f9f9;
+    }
+    
+    .emoji {
+        font-size: calc(100px + 4vw);
+        min-width: 1.4em;
+        margin: 0.3em 0.4em;
+        text-align: center;
+    }
+    
+    .emoji::after {
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    .clock::after {
+        content: '🕛';
+        animation-name: clock;
+        animation-duration: 5s;
+    }
+    
+    .mailbox::after {
+        content: '📪';
+        animation-name: mailbox;
+        animation-duration: 2.5s;
+    }
+    
+    .camera::after {
+        content: '📷';
+        --emoji: '📸';
+        animation-name: twoFrames;
+        animation-duration: 1.2s;
+    }
+    
+    .hourglass::after {
+        content: '⏳';
+        --emoji: '⌛️';
+        animation-name: twoFrames;
+        animation-duration: 1.2s;
+    }
+    
+    .earth::after {
+        content: '🌎';
+        --emoji-1: '🌍';
+        --emoji-2: '🌏';
+        animation-name: threeFrames;
+        animation-duration: 1.5s;
+    }
+    
+    .moon::after {
+        content: '🌕';
+        animation-name: moon;
+        animation-duration: 1s;
+    }
+    
+    .bomb::after {
+        content: '💣';
+        --emoji: '💥';
+        animation-name: twoFrames;
+        animation-duration: 2s;
+    }
+    
+    .monkey::after {
+        content: '🙈';
+        --emoji-1: '🙉';
+        --emoji-2: '🙊';
+        animation-name: threeFrames;
+        animation-duration: 2s;
+    }
+    
+    .hearts::after {
+        content: '💗';
+        animation-name: hearts;
+        animation-duration: 3s;
+    }
+    
+    .wave::after {
+        content: '✋';
+        --emoji: '👋';
+        animation-name: twoFrames;
+        animation-duration: 1s;
+    }
+    
+    .inbox::after {
+        content: '📥';
+        --emoji: '📤';
+        animation-name: twoFrames;
+        animation-duration: 1s;
+    }
+    
+    .vomit::after {
+        content: '🤢';
+        --emoji: '🤮';
+        animation-name: twoFrames;
+        animation-duration: 1s;
+    }
+    
+    @keyframes twoFrames {
+        50% {
+            content: var(--emoji);
+        }
+    }
+    
+    @keyframes threeFrames {
+        33.333% {
+            content: var(--emoji-1);
+        }
+        66.666% {
+            content: var(--emoji-2);
+        }
+    }
+    
+    @keyframes mailbox {
+        25% {
+            content: '📫';
+        }
+        50% {
+            content: '📬';
+        }
+        75% {
+            content: '📭';
+        }
+    }
+    
+    @keyframes hearts {
+        16.666% {
+            content: '🧡';
+        }
+        33.333% {
+            content: '💛';
+        }
+        50% {
+            content: '💚';
+        }
+        66.666% {
+            content: '💙';
+        }
+        83.333% {
+            content: '💜';
+        }
+    }
+    
+    @keyframes moon {
+        12.5% {
+            content: '🌖';
+        }
+        25% {
+            content: '🌗';
+        }
+        37.5% {
+            content: '🌘 ';
+        }
+        50% {
+            content: '🌑';
+        }
+        62.5% {
+            content: '🌒';
+        }
+        75% {
+            content: '🌓';
+        }
+        87.5% {
+            content: '🌔';
+        }
+    }
+    
+    @keyframes clock {
+        8.333% {
+            content: '🕐';
+        }
+        16.666% {
+            content: '🕑';
+        }
+        25% {
+            content: '🕒';
+        }
+        33.333% {
+            content: '🕓';
+        }
+        41.666% {
+            content: '🕔';
+        }
+        50% {
+            content: '🕕';
+        }
+        58.333% {
+            content: '🕖';
+        }
+        66.666% {
+            content: '🕗';
+        }
+        75% {
+            content: '🕘';
+        }
+        83.333% {
+            content: '🕙';
+        }
+        91.666% {
+            content: '🕚';
+        }
+    }
+    
+    bodycarrusel {
+        -webkit-box-align: center;
+        align-items: center;
+        background: #cacaca;
+        display: -webkit-box;
+        display: flex;
+        height: 100vh;
+        -webkit-box-pack: center;
+        justify-content: center;
+    }
+    
+    @-webkit-keyframes s_scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+    
+    @keyframes s_scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+    
+    .slidercarrusel {
+        background: white;
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    
+    .slidercarrusel::before,
+    .slidercarrusel::after {
+        background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+        background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+    
+    .slidercarrusel::after {
+        right: 0;
+        top: 0;
+        -webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    
+    .slidercarrusel::before {
+        left: 0;
+        top: 0;
+    }
+    
+    .slidercarrusel .slide-trackcarrusel {
+        -webkit-animation: s_scroll 10s linear infinite;
+        animation: s_scroll 10s linear infinite;
+        display: -webkit-box;
+        display: flex;
+        width: calc(250px * 14);
+    }
+    
+    .slidercarrusel .slidecarrusel {
+        height: 100px;
+        width: 250px;
+    }
+    
+    / htmlcardflip2020 {
+        font-family: roboto;
+        box-sizing: border-box;
+    }
+    
+    cardflip2020,
+    cardflip2020:before,
+    cardflip2020:after {
+        box-sizing: inherit;
+    }
+    
+    .text-centercardflip2020 {
+        text-align: center;
+    }
+    
+    .color-whitecardflip2020 {
+        color: #fff;
+    }
+    
+    .box-containercardflip2020 {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 35px 15px;
+        width: 100%;
+    }
+    
+    @media screen and (min-width:1380px) {
+        .box-containercardflip2020 {
+            flex-direction: row
+        }
+    }
+    
+    .box-itemcardflip2020 {
+        position: relative;
+        -webkit-backface-visibility: hidden;
+        width: 415px;
+        margin-bottom: 35px;
+        max-width: 100%;
+    }
+    
+    .flip-boxcardflip2020 {
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+    }
+    
+    .flip-box-frontcardflip2020,
+    .flip-box-backcardflip2020 {
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        min-height: 475px;
+        -ms-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+        transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+        -webkit-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .flip-box-frontcardflip2020 {
+        -ms-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-boxcardflip2020:hover .flip-box-frontcardflip2020 {
+        -ms-transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-box-backcardflip2020 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -ms-transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-boxcardflip2020:hover .flip-box-backcardflip2020 {
+        -ms-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .flip-boxcardflip2020 .innercardflip2020 {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 60px;
+        outline: 1px solid transparent;
+        -webkit-perspective: inherit;
+        perspective: inherit;
+        z-index: 2;
+        transform: translateY(-50%) translateZ(60px) scale(.94);
+        -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
+        -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
+        top: 50%;
+    }
+    
+    .flip-box-headercardflip2020 {
+        font-size: 34px;
+    }
+    
+    .flip-boxcardflip2020 p {
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+    
+    .flip-box-imgcardflip2020 {
+        margin-top: 25px;
+    }
+    
+    .flip-box-buttoncardflip2020 {
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 25px;
+        padding: 15px 20px;
+        text-transform: uppercase;
+    }
+    
+    .flexico-centersocial-icons-vision-3d {
+        width: 100%;
+        min-height: 50vh;
+        background: white;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .iconico-3d {
+        padding: 10px;
+        -webkit-animation: icon3d 200ms 10;
+        animation: icon3d 200ms 10;
+        color: black;
+    }
+    
+    .iconico-3d:hover {
+        -webkit-animation: icon3d 200ms infinite;
+        animation: icon3d 200ms infinite;
+    }
+    
+    @keyframes icon3d {
+        0% {
+            text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+        }
+        25% {
+            text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+        }
+        50% {
+            text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+        }
+        75% {
+            text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+        }
+        100% {
+            text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+        }
+    }
+</style>
+
+
+
+<body>
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card " style="z-index:3;width:250px;" id="mySidebar">
+
+        <a class="w3-bar-item w3-button w3-border-bottom w3-large " href="#"><img src="https://pbs.twimg.com/media/Emr2XxBXYAEhOS0?format=jpg&name=medium" style="width:80%;"></a>
+        <a class="w3-bar-item w3-button w3-hide-large w3-large " href="javascript:void(0)" onclick="w3_close()">Cerrar          <i class="fa fa-remove"></i></a>
+
+        <div>
+            <a class="w3-bar-item w3-button w3-safety-blue" onclick="myAccordion('demo')" href="javascript:void(0)">Destinos<i class="fa fa-caret-down"></i></a>
+            <div id="demo" class="w3-hide">
+                <a class="w3-bar-item w3-button" href="#">Tepozspa</a>
+                <a class="w3-bar-item w3-button" href="#">Acapulco</a>
+                <a class="w3-bar-item w3-button" href="#">CDMX</a>
+                <a class="w3-bar-item w3-button" href="#">Puerto Vallarta</a>
+                <a class="w3-bar-item w3-button" href="#">Zipolite</a>
+                <a class="w3-bar-item w3-button" href="#">Veracruz</a>
+            </div>
+        </div>
+
+        <a class="w3-bar-item w3-button " href="#">Viajes 2021</a>
+        <a class="w3-bar-item w3-button" href="#">Opciones de pago</a>
+        <a class="w3-bar-item w3-button" href="#">Preguntas frecuentes</a>
+        <a class="w3-bar-item w3-button" href="#">Contacto</a>
+
+        <div id="TA_cdswritereviewlgvi944" class="TA_cdswritereviewlgvi">
+            <ul id="WAxv9muHRxs" class="TA_links DjwuLZvVZqOf">
+                <li id="KboR6jPta5c" class="v4xtDZZ">
+                    <a target="_blank" href="https://www.tripadvisor.com.mx/"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor" /></a>
+                </li>
+            </ul>
+        </div>
+        <script async src="https://www.jscache.com/wejs?wtype=cdswritereviewlgvi&amp;uniq=944&amp;locationId=21347352&amp;lang=es_MX&amp;lang=es_MX&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script>
+
+
+    </nav>
+
+
+
+
+
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px;">
+
+        <div id="myTop" class="w3-container w3-top w3-safety-blue w3-large">
+            <p><i class="fa fa-bars w3-button w3-safety-blue w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+                <span id="myIntro" class="w3-hide"> Xiiber</span></p>
+        </div>
+
+        <!-- 
+        <header class="w3-container w3-safety-blue" style="padding:64px 32px">
+            <h1 class="w3-xxxlarge">Xiiber Travel</h1>
+        </header> -->
+
+        <div class="w3-container" style="padding:32px">
+
+            <div class="w3-container w3-center">
+                <h2>Destinos</h2>
+                <p>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Tepozspa</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Acapulco</button> <br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">CDMX</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Puerto Vallarta</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Zipolite</button><br>
+                </p>
+            </div>
+
+            <div class="w3-container w3-center">
+                <h2>Tepozspa</h2>
+                <p>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Enero</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Febrero</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Marzo</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Abril</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Mayo</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Junio</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Julio</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Agosto</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Septiembre</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Octubre</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Noviembre</button>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Diciembre</button>
+                </p>
+            </div>
+
+            <div class="w3-container w3-center">
+                <h2>Febrero</h2>
+                <h3>Aniversario Tepozspa</h3>
+                <p>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Locker</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Vestidor</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Transporte ida</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Transporte regreso</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Acceso locker</button><br>
+                    <button class="w3-btn w3-white w3-border w3-round-large">Acceso vestidor</button><br>
+                </p>
+
+                <div class="w3-panel w3-pale-yellow w3-bottombar ">
+                    <p>Sujetos a disponibilidad</p>
+                </div>
+
+            </div>
+
+
+            <div class="w3-container">
+                <h2>Check list</h2>
+                <p>Para que no olvides nada el día del viaje, aquí te dejamos un checklist :</p>
+                <ul class="w3-ul w3-card-4">
+                    <li class="w3-display-container">Sandalias <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                    <li class="w3-display-container">Traje de baño<span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                    <li class="w3-display-container">Bloqueador <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                </ul>
+            </div>
+
+
+            <h2>What is W3.CSS?</h2>
+
+            <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
+                <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+                <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+            </div>
+
+            <div id="London" class="w3-container city">
+                <h2>London</h2>
+                <iframe src="https://www.xiiber.com/beach.html " width="100% " height="300 " style="border:none; " text-align="center " title="Contactos "> </iframe>
+            </div>
+
+            <div id="Paris" class="w3-container city" style="display:none">
+                <h2>Paris</h2>
+                <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Tokyo" class="w3-container city" style="display:none">
+                <h2>Tokyo</h2>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+
+            <div class="w3-container">
+                <h2>Card Content</h2>
+                <p>Add containers inside the card to create different sections:</p>
+
+                <div class="w3-card-4" style="width:100%;">
+                    <header class="w3-container w3-blue">
+                        <h1>Header</h1>
+                    </header>
+
+                    <div class="w3-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <footer class="w3-container w3-blue">
+                        <h5>Footer</h5>
+                    </footer>
+                </div>
+            </div>
+
+
+
+            <div class="w3-container">
+                <div class="w3-container">
+                    <h2>Card Content</h2>
+                    <p>Add containers inside the card to create different sections:</p>
+
+                    <div class="w3-card-4" style="width:100%;">
+                        <header class="w3-container w3-blue">
+                            <h1>Header</h1>
+                        </header>
+
+                        <div class="w3-container">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <footer class="w3-container w3-blue">
+                            <h5>Footer</h5>
+                        </footer>
+                    </div>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Modal Tabs</h2>
+
+
+
+
+                    <button class="w3-button w3-red" onclick="document.getElementById('id01show').style.display='block'">Show Panel</button>
+
+                    <div id="id01show" class="w3-panel w3-green w3-display-container" style="display:none">
+                        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-display-topright">x</span>
+                        <p>Click on the X to close this panel.</p>
+                        <p>Click on the X to close this panel.</p>
+                    </div>
+
+
+                    <div class="w3-panel w3-card ">
+                        <p>w3-card</p>
+                    </div>
+                    <div class="w3-panel w3-card-2 w3-yellow">
+                        <p>w3-card-2</p>
+                    </div>
+
+                    <div class="w3-container w3-border w3-large">
+                        <div class="w3-left-align">
+                            <p>Left aligned text.</p>
+                        </div>
+                        <div class="w3-right-align">
+                            <p>Right aligned text.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w3-panel w3-black">
+                    <h2 class="w3-opacity">Text Opacity</h2>
+                </div>
+
+                <div class="w3-container w3-center">
+                    <h2>Centered Content</h2>
+                    <img src="img_car.jpg" alt="car" style="width:80%;max-width:320px">
+                    <p>The w3-center class centers an element.</p>
+
+                    <div class="w3-panel w3-round-small w3-teal">
+                        <p>w3-round-small</p>
+                    </div>
+
+                    <div class="w3-panel w3-round w3-teal">
+                        <p>w3-round</p>
+                    </div>
+
+                    <div class="w3-panel w3-round-large w3-teal">
+                        <p>w3-round-large</p>
+                    </div>
+
+                    <div class="w3-panel w3-round-xlarge w3-teal">
+                        <p>w3-round-xlarge</p>
+                    </div>
+
+
+                    <div class="w3-panel w3-padding-large w3-blue">
+                        <h4>w3-padding-large</h4>
+                        <p>I have 12px top and bottom padding and 24px left and right padding.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pink">
+                        <h1 class="w3-opacity">
+                            <b>Text Opacity + Bold</b></h1>
+                    </div>
+
+                    <div class="w3-panel w3-pink">
+                        <h2 class="w3-opacity">Text Opacity</h2>
+                    </div>
+
+                    <div class="w3-panel w3-blue">
+                        <h2 class="w3-opacity">Text Opacity</h2>
+                    </div>
+
+                    <div class="w3-panel w3-orange">
+                        <h2 class="w3-opacity">Text Opacity</h2>
+                    </div>
+
+
+                    <div class="w3-panel w3-round-xxlarge w3-teal">
+                        <p>w3-round-xxlarge</p>
+                    </div>
+                </div>
+
+
+
+                <div class="w3-panel w3-blue w3-card-4">
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+                <div class="w3-panel w3-blue w3-round-xlarge">
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+
+                <div class="w3-panel w3-border w3-round-xxlarge">
+                    <p>I have xxlarge rounded borders.Ojo esta dentro del divclas</p>
+                </div>
+
+
+                <div class="w3-panel w3-border w3-round">
+                    <p>My borders are rounded.</p>
+                </div>
+
+                <div class="w3-panel w3-border w3-round-large">
+                    <p>I have large rounded borders.</p>
+                </div>
+
+                <div class="w3-panel w3-border w3-round-xlarge">
+                    <p>I have xlarge rounded borders.</p>
+                </div>
+
+                <div class="w3-panel w3-red w3-display-container">
+                    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-red w3-large w3-display-topright">x</span>
+                    <p>Click on the X to close this panel.</p>
+                    <p>Click on the X to close this panel.</p>
+                </div>
+
+                <div class="w3-container">
+                    <h1>Background Colors</h1>
+                    <p>The w3-color classes defines background colors for HTML elements:</p>
+                </div>
+
+                <div class="w3-container w3-red">
+                    <h2>London</h2>
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+                <div class="w3-container w3-teal">
+                    <h2>London</h2>
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+                <div class="w3-container w3-yellow">
+                    <h2>London</h2>
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+                <div class="w3-container w3-gray">
+                    <h2>London</h2>
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h1>Text Colors</h1>
+                    <p>The w3-text-color classes defines text colors for HTML elements:</p>
+
+                    <div class="w3-text-red">
+                        <h2>London</h2>
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-text-blue">
+                        <h2>London</h2>
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+                </div>
+
+
+                <p>Zoom in the modal with the w3-animate-zoom class, or slide in the modal from a specific direction using the w3-animate-top, w3-animate-bottom, w3-animate-left or w3-animate-right class:</p>
+                <h2>W3.CSS Animated Modal</h2>
+                <p>Zoom in the modal with the w3-animate-zoom class, or slide in the modal from a specific direction using the w3-animate-top, w3-animate-bottom, w3-animate-left or w3-animate-right class:</p>
+                <h2>W3.CSS Animated Modal</h2>
+                <p>Zoom in the modal with the w3-animate-zoom class, or slide in the modal from a specific direction using the w3-animate-top, w3-animate-bottom, w3-animate-left or w3-animate-right class:</p>
+
+                <p><button class="w3-btn w3-block w3-black">Button</button></p>
+
+                <button onclick="document.getElementById('id01modal').style.display='block'" class="w3-button w3-black">Open Animated Modal</button>
+
+                <div id="id01modal" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-top w3-card-4">
+                        <header class="w3-container w3-teal">
+                            <span onclick="document.getElementById('id01modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <h2>Modal Header</h2>
+                        </header>
+                        <div class="w3-container">
+                            <p>Some text..</p>
+                            <p>Some text..</p>
+                        </div>
+                        <footer class="w3-container w3-teal">
+                            <p>Modal Footer</p>
+                        </footer>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-blue">
+                    <h1>I am a Heading</h1>
+                    <p>I am a paragraph.</p>
+                    <p>Normally you will not have to change the default padding of a container, because paragraphs and heading provide margins that will simulate padding.</p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>With a Container</h2>
+                    <p>The w3-container class is one of the most important W3.CSS classes.</p>
+                    <p>It provides correct margins, padding, alignments, and more, to most HTML elements.</p>
+                </div>
+
+                <p>Change the background color when hovering over an element:</p>
+                <div class="w3-container w3-orange w3-hover-red">
+                    <h2>London</h2>
+                    <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+
+
+                <button onclick="document.getElementById('id01tab').style.display='block'" class="w3-button w3-black">Open Tabbed Modal</button>
+
+                <div id="id01tab" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                        <header class="w3-container w3-blue">
+                            <span onclick="document.getElementById('id01tab').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                            <h2>Header</h2>
+                        </header>
+
+                        <div class="w3-bar w3-border-bottom">
+                            <button class="tablink w3-bar-item w3-button" onclick="openCitymodaltab(event, 'Londonmodaltab')">London</button>
+                            <button class="tablink w3-bar-item w3-button" onclick="openCitymodaltab(event, 'Parismodaltab')">Paris</button>
+                            <button class="tablink w3-bar-item w3-button" onclick="openCitymodaltab(event, 'Tokyomodaltab')">Tokyo</button>
+                        </div>
+
+                        <div id="Londonmodaltab" class="w3-container citymodaltab">
+                            <h1>London</h1>
+                            <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div id="Parismodaltab" class="w3-container citymodaltab">
+                            <h1>Paris</h1>
+                            <p>Paris is the capital of France.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+
+                        <div id="Tokyomodaltab" class="w3-container citymodaltab">
+                            <h1>Tokyo</h1>
+                            <p>Tokyo is the capital of Japan.</p><br>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <footer class="w3-container w3-teal">
+                    <h5>Footer</h5>
+                </footer>
+
+
+
+
+
+                <div class="w3-container">
+                    <h2>Buttons (w3-button)</h2>
+                    <input type="button" class="w3-button w3-black" value="Input Button">
+                    <button class="w3-button w3-black">Button Button</button>
+                    <a href="#" class="w3-button w3-black">Link Button</a>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Buttons (w3-btn)</h2>
+                    <input type="button" class="w3-btn w3-black" value="Input Button">
+                    <button class="w3-btn w3-black">Button Button</button>
+                    <a href="#" class="w3-btn w3-black">Link Button</a>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Button Shapes</h2>
+                    <p><button class="w3-button w3-black w3-round-small">Round Small</button></p>
+                    <p><button class="w3-button w3-black w3-round">Round Normal</button></p>
+                    <p><button class="w3-button w3-black w3-round-large">Round Large</button></p>
+                    <p><button class="w3-button w3-black w3-round-xlarge">Round XLarge</button></p>
+                    <p><button class="w3-button w3-black w3-round-xxlarge">Round XXLarge</button></p>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Button Sizes</h2>
+                    <p><button class="w3-button w3-border w3-tiny">Tiny</button></p>
+                    <p><button class="w3-button w3-border w3-small">Small</button></p>
+                    <p><button class="w3-button w3-border w3-medium">Medium</button></p>
+                    <p><button class="w3-button w3-border w3-large">Large</button></p>
+                    <p><button class="w3-button w3-border w3-xlarge">XLarge</button></p>
+                    <p><button class="w3-button w3-border w3-xxlarge">XXLarge</button></p>
+                    <p><button class="w3-button w3-border w3-xxxlarge">XXXLarge</button></p>
+                    <p><button class="w3-button w3-border w3-jumbo">Jumbo</button></p>
+                    <p><button class="w3-btn w3-border w3-tiny">Tiny</button></p>
+                    <p><button class="w3-btn w3-border w3-small">Small</button></p>
+                    <p><button class="w3-btn w3-border w3-medium">Medium</button></p>
+                    <p><button class="w3-btn w3-border w3-large">Large</button></p>
+                    <p><button class="w3-btn w3-border w3-xlarge">XLarge</button></p>
+                    <p><button class="w3-btn w3-border w3-xxlarge">XXLarge</button></p>
+                    <p><button class="w3-btn w3-border w3-xxxlarge">XXXLarge</button></p>
+                    <p><button class="w3-btn w3-border w3-jumbo">Jumbo</button></p>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Button Borders</h2>
+                    <p>
+                        <button class="w3-button w3-white w3-border">Button</button>
+                        <button class="w3-button w3-yellow w3-border">Button</button>
+                        <button class="w3-button w3-white w3-border w3-round-large">Button</button>
+                        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Button</button>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-white w3-border">Button</button>
+                        <button class="w3-btn w3-yellow w3-border">Button</button>
+                        <button class="w3-btn w3-white w3-border w3-round-large">Button</button>
+                        <button class="w3-btn w3-white w3-border w3-border-red w3-round-large">Button</button>
+                    </p>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Buttons with Text Effects</h2>
+                    <p>
+                        <button class="w3-button w3-black">Normal</button>
+                        <button class="w3-button w3-black"><i>Italic</i></button>
+                        <button class="w3-button w3-black"><b>Bold</b></button>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-black">Normal</button>
+                        <button class="w3-btn w3-black"><i>Italic</i></button>
+                        <button class="w3-btn w3-black"><b>Bold</b></button>
+                    </p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Left and Right Buttons</h2>
+                    <div class="w3-bar w3-black">
+                        <button class="w3-button w3-left">Left</button>
+                        <button class="w3-button w3-right">Right</button>
+                    </div>
+
+                    <p>Used to create "previous/next" buttons:</p>
+                    <div class="w3-bar">
+                        <button class="w3-button w3-left w3-light-grey">&laquo; Previous</button>
+                        <button class="w3-button w3-right w3-green">Next &raquo;</button>
+                    </div>
+                </div>
+
+
+
+
+                <div class="w3-container">
+                    <h2>Buttons With Extra Padding</h2>
+                    <p>
+                        <button class="w3-button w3-black w3-padding-small">Button</button>
+                        <button class="w3-button w3-black">Button</button>
+                        <button class="w3-button w3-black w3-padding-large">Button</button>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-black w3-padding-small">Button</button>
+                        <button class="w3-btn w3-black">Button</button>
+                        <button class="w3-btn w3-black w3-padding-large">Button</button>
+                    </p>
+                </div>
+
+
+
+                <div class="w3-container">
+
+                    <h2>Full-width Buttons (w3-button)</h2>
+                    <p>The <strong>w3-block</strong> class creates a full-width button.</p>
+                    <p><button class="w3-button w3-block w3-black">Button</button></p>
+                    <p><button class="w3-button w3-block w3-teal">Button</button></p>
+                    <p><button class="w3-button w3-block w3-red w3-left-align">Button</button></p>
+
+                    <h2>Full-width Buttons (w3-btn)</h2>
+                    <p><button class="w3-btn w3-block w3-black">Button</button></p>
+                    <p><button class="w3-btn w3-block w3-teal">Button</button></p>
+                    <p><button class="w3-btn w3-block w3-red w3-left-align">Button</button></p>
+
+                </div>
+
+
+                <div class="w3-container">
+
+                    <h2>Full-width Buttons (w3-button)</h2>
+                    <p>The <strong>w3-block</strong> class creates a full-width button.</p>
+                    <p><button class="w3-button w3-block w3-black">Button</button></p>
+                    <p><button class="w3-button w3-block w3-teal">Button</button></p>
+                    <p><button class="w3-button w3-block w3-red w3-left-align">Button</button></p>
+
+                    <h2>Full-width Buttons (w3-btn)</h2>
+                    <p><button class="w3-btn w3-block w3-black">Button</button></p>
+                    <p><button class="w3-btn w3-block w3-teal">Button</button></p>
+                    <p><button class="w3-btn w3-block w3-red w3-left-align">Button</button></p>
+
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Disabled Buttons (w3-button)</h2>
+
+                    <p>Link buttons:</p>
+                    <a class="w3-button w3-black" href="#">Link Button</a>
+                    <a class="w3-button w3-black w3-disabled" href="#">Link Button</a>
+
+                    <p>Button buttons:</p>
+                    <button class="w3-button w3-teal">Button</button>
+                    <button class="w3-button w3-teal" disabled>Button</button>
+
+                    <p>Input buttons:</p>
+                    <input type="button" class="w3-button w3-red" value="Input Button">
+                    <input type="button" class="w3-button w3-red" value="Input Button" disabled>
+
+                    <h2>Disabled Buttons (w3-btn)</h2>
+
+                    <p>Link buttons:</p>
+                    <a class="w3-btn w3-black" href="#">Link Button</a>
+                    <a class="w3-btn w3-black w3-disabled" href="#">Link Button</a>
+
+                    <p>Button buttons:</p>
+                    <button class="w3-btn w3-teal">Button</button>
+                    <button class="w3-btn w3-teal" disabled>Button</button>
+
+                    <p>Input buttons:</p>
+                    <input type="button" class="w3-btn w3-red" value="Input Button">
+                    <input type="button" class="w3-btn w3-red" value="Input Button" disabled>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Button Groups</h2>
+                    <p>Two button groups on the same line (if enough space):</p>
+
+                    <div class="w3-show-inline-block">
+                        <div class="w3-bar">
+                            <button class="w3-btn w3-black">Button</button>
+                            <button class="w3-btn w3-teal">Button</button>
+                            <button class="w3-btn w3-border">Button</button>
+                        </div>
+                    </div>
+
+                    <div class="w3-show-inline-block">
+                        <div class="w3-bar">
+                            <button class="w3-btn w3-black">Button</button>
+                            <button class="w3-btn w3-teal">Button</button>
+                            <button class="w3-btn w3-border">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Button Bars</h2>
+                    <p>Buttons can be grouped together in a horizontal bar using the <strong>w3-bar</strong> class:</p>
+                    <div class="w3-bar">
+                        <button class="w3-button w3-black">Button</button>
+                        <button class="w3-button w3-teal">Button</button>
+                        <button class="w3-button w3-red">Button</button>
+                    </div>
+                </div>
+
+
+
+                <div class="w3-container">
+
+                    <h2>Buttons with Ripple Effect</h2>
+                    <p>Click on the buttons to see the effect:</p>
+                    <p>
+                        <button class="w3-button w3-ripple w3-black">Button</button>
+                        <button class="w3-button w3-ripple w3-red">Button</button>
+                        <button class="w3-button w3-ripple w3-yellow">Button</button>
+                    </p>
+                    <p>
+                        <button class="w3-btn w3-ripple w3-black">Button</button>
+                        <button class="w3-btn w3-ripple w3-red">Button</button>
+                        <button class="w3-btn w3-ripple w3-yellow">Button</button>
+                    </p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Notes</h2>
+                    <p>The w3-panel class can be used to display all sorts of notes:</p>
+
+                    <div class="w3-panel w3-yellow">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-border">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-light-grey w3-border w3-round">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-red w3-leftbar w3-rightbar w3-border-red">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-yellow w3-topbar w3-bottombar w3-border-yellow">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-green w3-bottombar w3-border-green w3-border">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-yellow w3-bottombar w3-border-amber">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-yellow w3-bottombar ">
+                        <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                    </div>
+
+                </div>
+
+                <div class="w3-container">
+                    <h2>Rounded Alerts</h2>
+                    <p>Use the w3-round classes if you want rounded alerts:</p>
+
+                    <div class="w3-panel w3-green w3-round">
+                        <h3>Success!</h3>
+                        <p>Here w3-round is used.</p>
+                    </div>
+
+                    <div class="w3-panel w3-green w3-round-large">
+                        <h3>Success!</h3>
+                        <p>Here w3-round-large is used.</p>
+                    </div>
+
+                    <div class="w3-panel w3-green w3-round-xxlarge">
+                        <h3>Success!</h3>
+                        <p>Here w3-round-xxlarge is used.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-green w3-round w3-border">
+                        <h3>Success!</h3>
+                        <p>Here w3-round is used.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-green w3-round-large w3-border">
+                        <h3>Success!</h3>
+                        <p>Here w3-round-large is used.</p>
+                    </div>
+
+                    <div class="w3-panel w3-pale-green w3-round-xxlarge w3-border">
+                        <h3>Success!</h3>
+                        <p>Here w3-round-xxlarge is used.</p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="w3-container">
+                    <h2>Closable List Items</h2>
+                    <p>To close/hide the list items, click on the "x":</p>
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-display-container">Jill <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                        <li class="w3-display-container">Adam <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                        <li class="w3-display-container">Eve <span onclick="this.parentElement.style.display='none'" class="w3-button w3-transparent w3-display-right">&times;</span></li>
+                    </ul>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Avatar List</h2>
+                    <p>You can combine w3-ul and the w3-bar classes to create an avatar list:</p>
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar">
+                            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+                            <img src="img_avatar2.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                            <div class="w3-bar-item">
+                                <span class="w3-large">Mike</span><br>
+                                <span>Web Designer</span>
+                            </div>
+                        </li>
+
+                        <li class="w3-bar">
+                            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+                            <img src="img_avatar5.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                            <div class="w3-bar-item">
+                                <span class="w3-large">Jill</span><br>
+                                <span>Support</span>
+                            </div>
+                        </li>
+
+                        <li class="w3-bar">
+                            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+                            <img src="img_avatar6.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                            <div class="w3-bar-item">
+                                <span class="w3-large">Jane</span><br>
+                                <span>Accountant</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Rounded Images</h2>
+                    <p>The w3-round classes add rounded corners to an image:</p>
+
+                    <p>w3-round-small:</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round-small" alt="Norway" style="width:30%">
+
+                    <p>w3-round:</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round" alt="Norway" style="width:30%">
+
+                    <p>w3-round-large:</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round-large" alt="Norway" style="width:30%">
+
+                    <p>w3-round-xlarge:</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round-xlarge" alt="Norway" style="width:30%">
+
+                    <p>w3-round-xxlarge:</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" class="w3-round-xxlarge" alt="Norway" style="width:30%">
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Image Text</h2>
+                    <p>Position content inside an image with the w3-display-<em>classes</em> - Note that we have added the w3-container class to get more padding:</p>
+
+                    <div class="w3-display-container w3-text-white">
+                        <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Lights" style="width:100%">
+                        <div class="w3-display-topleft w3-container">
+                            <p>Top Left</p>
+                        </div>
+                        <div class="w3-display-topright w3-container">
+                            <p>Top Right</p>
+                        </div>
+                        <div class="w3-display-bottomleft w3-container">
+                            <p>Bottom Left</p>
+                        </div>
+                        <div class="w3-display-bottomright w3-container">
+                            <p>Bottom Right</p>
+                        </div>
+                        <div class="w3-display-left w3-container">
+                            <p>Left</p>
+                        </div>
+                        <div class="w3-display-right w3-container">
+                            <p>Right</p>
+                        </div>
+                        <div class="w3-display-middle w3-large">Middle</div>
+                        <div class="w3-display-topmiddle w3-container">
+                            <p>Top Middle</p>
+                        </div>
+                        <div class="w3-display-bottommiddle w3-container">
+                            <p>Bottom Middle</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Responsive Image</h2>
+                    <p>An image can be set to automatically resize itself to fit the size of its container.</p>
+                    <p>All you have to do is set the image width to 100%.</p>
+                    <p>If you want to restrict a responsive image to a maximum size, use the max-width property:</p>
+                    <img src="" alt="Lights" style="width:100%;max-width:400px">
+                    <p>Resize the browser window to see the effect.</p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Opacity/Transparency</h2>
+                    <p>The w3-opacity classes adds transparency to an element.</p>
+
+                    <p>Normal (100% opacity):</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Forest" style="width:150px">
+                    <p>w3-opacity-min (75% opacity):</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Forest" class="w3-opacity-min" style="width:150px">
+                    <p>w3-opacity (60% opacity):</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Forest" class="w3-opacity" style="width:150px">
+                    <p>w3-opacity-max (25% opacity):</p>
+                    <img src="https://www.w3schools.com/w3css/img_lights.jpg" alt="Forest" class="w3-opacity-max" style="width:150px">
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Grayscale Effect</h2>
+                    <p>The w3-grayscale classes add a grayscale effect to an element.</p>
+                    <p><strong>Note:</strong> The w3-grayscale classes are not supported in IE 11 and earlier versions.</p>
+
+                    <p>Normal:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" alt="Snow" style="width:150px">
+                    <p>w3-grayscale-min:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" alt="Snow" class="w3-grayscale-min" style="width:150px">
+                    <p>w3-grayscale:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" alt="Snow" class="w3-grayscale" style="width:150px">
+                    <p>w3-grayscale-max (black and white):</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" alt="Snow" class="w3-grayscale-max" style="width:150px">
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Hover Effect</h2>
+                    <p>You can also add special effects on hover/mouse-over.</p>
+                    <p><strong>Note:</strong> The w3-hover-sepia and w3-hover-grayscale classes are not supported in IE 11 and earlier versions.</p>
+
+                    <p>w3-hover-opacity:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" class="w3-hover-opacity" style="width:150px">
+                    <p>w3-hover-grayscale:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" class="w3-hover-grayscale" style="width:150px">
+                    <p>w3-hover-sepia:</p>
+                    <img src="https://www.w3schools.com/w3css/img_workshop.jpg" class="w3-hover-sepia" style="width:150px">
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Hoverable Image</h2>
+
+                    <p>The w3-hover-opacity class adds transparency to the image when you move the mouse over it:</p>
+                    <img src="https://www.w3schools.com/w3css/img_snowtops.jpg" class="w3-hover-opacity" alt="Norway" style="width:50%">
+
+                    <p>The w3-hover-opacity-off class rempves transparency from an image when you move the mouse over it:</p>
+                    <img src="https://www.w3schools.com/w3css/img_snowtops.jpg" class="w3-opacity w3-hover-opacity-off" alt="Norway" style="width:50%">
+                </div>
+
+
+
+                <div class="w3-container w3-teal">
+                    <h1>Summer 2015</h1>
+                </div>
+
+                <div class="w3-row-padding w3-margin-top">
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>5 Terre</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>Monterosso</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>Vernazza</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row-padding w3-margin-top">
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>Manarola</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>Corniglia</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="w3-card">
+                            <img src="https://www.w3schools.com/w3css/img_manarola.jpg" style="width:100%">
+                            <div class="w3-container">
+                                <h5>Riomaggiore</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="w3-container">
+                    <h2>Badges in a List</h2>
+                    <ul class="w3-ul">
+                        <li><span class="w3-badge">1</span> Jill</li>
+                        <li><span class="w3-badge">2</span> Eve</li>
+                        <li><span class="w3-badge">3</span> Adam</li>
+                    </ul>
+                </div>
+
+
+                <div class="w3-container">
+
+                    <h2>Badges in Buttons</h2>
+
+                    <p>The w3-badge class can be used inside buttons:</p>
+
+                    <p><button class="w3-btn w3-black">Button
+              <span class="w3-badge w3-margin-left w3-white">1</span>
+              </button></p>
+
+                    <p><button class="w3-btn w3-red">Button
+              <span class="w3-badge w3-margin-left">2</span>
+              </button></p>
+
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>W3.CSS Badges</h2>
+                    <p>You can display single digit badges using UTF-8 Dingbats:</p>
+
+                    <div class="w3-xxlarge">
+                        &#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x2785; &#x2786; &#x2787; &#x2788; &#x2789;
+                    </div>
+
+                    <div class="w3-xxlarge">
+                        &#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x2785; &#x2786; &#x2787; &#x2788; &#x2789;
+                    </div>
+
+                    <div class="w3-xxlarge w3-text-red">
+                        &#x2776; &#x2777; &#x2778; &#x2779; &#x277A; &#x2785; &#x2786; &#x2787; &#x2788; &#x2789;
+                    </div>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Badges</h2>
+                    <p>You can use color classes to change the color of a badge:</p>
+                    <p>News <span class="w3-badge w3-green">6</span></p>
+                    <p>Comments <span class="w3-badge w3-red">8</span></p>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>W3.CSS Tags</h2>
+                    <p>The w3-tag class creates a rectangular tag (label or sign).</p>
+                    <p>The default color is black.</p>
+                    <p>Status: <span class="w3-tag">Done</span></p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>W3.CSS Tags</h2>
+                    <p>You can use a color class to change the color of a tag.</p>
+                    <p><span class="w3-tag w3-blue">New!</span></p>
+                    <p><span class="w3-tag w3-teal">More Later!</span></p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Large Tags (Labels or Signs)</h2>
+
+                    <p>
+                        <span class="w3-tag w3-xlarge w3-blue">66</span>
+                        <span class="w3-tag w3-xxlarge w3-blue">66</span>
+                        <span class="w3-tag w3-xxxlarge w3-blue">66</span>
+                    </p>
+
+                    <p>
+                        <span class="w3-tag w3-jumbo w3-blue">66</span>
+                        <span class="w3-tag w3-jumbo w3-blue w3-padding-large">66</span>
+                    </p>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Large Signs</h2>
+                    <span class="w3-tag w3-jumbo w3-green">
+              49<span class="w3-xlarge">,99</span>
+                    </span>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Large Signs</h2>
+                    <span class="w3-tag w3-xxlarge w3-padding w3-orange w3-center">
+                <strong>
+                IN CASE OF<br>
+                EMERGENCY<br>
+                RUN LIKE HELL !
+                </strong>
+              </span>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Displaying Road Signs</h2>
+
+                    <div class="w3-tag w3-round w3-green" style="padding:3px">
+                        <div class="w3-tag w3-round w3-green w3-border w3-border-white">
+                            Falcon Ridge Parkway
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Tags in a Row</h2>
+                    <span class="w3-tag w3-jumbo w3-red">S</span>
+                    <span class="w3-tag w3-jumbo">A</span>
+                    <span class="w3-tag w3-jumbo w3-yellow">L</span>
+                    <span class="w3-tag w3-jumbo">E</span>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Letters as Tags</h2>
+                    <span class="w3-tag w3-xlarge">A</span>
+                    <span class="w3-tag w3-xlarge">U</span>
+                    <span class="w3-tag w3-xlarge">G</span>
+                    <span class="w3-tag w3-xlarge">U</span>
+                    <span class="w3-tag w3-xlarge">S</span>
+                    <span class="w3-tag w3-xlarge">T</span>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying a Spinning Sign</h2>
+                    <span class="w3-tag w3-spin w3-large">
+              STOP
+              </span>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying a Rotated Sign</h2>
+                    <span class="w3-tag w3-xlarge w3-padding w3-red" style="transform:rotate(-10deg)">
+              STOP
+              </span>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Displaying Rounded Signs</h2>
+                    <span class="w3-tag w3-padding w3-round-large w3-red w3-center">
+              DO NOT<br>
+              BREATHE<br>
+              UNDER WATER
+              </span>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h1>Using Font Awesome Icons</h1>
+
+                    <div class="w3-padding w3-xlarge w3-teal">
+                        <i class="fa fa-home"></i>
+                        <i class="fa fa-search"></i>
+                        <i class="fa fa-cloud"></i>
+                        <i class="fa fa-trash"></i> Welcome!
+                    </div>
+
+                    <div class="w3-padding w3-xlarge w3-text-orange">
+                        <i class="fa fa-home"></i>
+                        <i class="fa fa-search"></i>
+                        <i class="fa fa-cloud"></i>
+                        <i class="fa fa-trash"></i> Welcome!
+                    </div>
+
+                    <ul class="w3-ul">
+                        <li><i class="fa fa-home"></i> Home</li>
+                        <li class="w3-large"><i class="fa fa-home"></i> Home</li>
+                        <li class="w3-xlarge"><i class="fa fa-home"></i> Home</li>
+                        <li class="w3-xxlarge"><i class="fa fa-home"></i> Home</li>
+                        <li class="w3-xxxlarge"><i class="fa fa-home"></i> Home</li>
+                        <li class="w3-jumbo w3-teal"><i class="fa fa-home"></i> Home</li>
+                    </ul>
+
+                    <p><button class="w3-btn w3-orange w3-xlarge">Button<i class="w3-margin-left fa fa-home"></i></button></p>
+
+                    <p><i class="w3-jumbo w3-spin fa fa-home"></i></p>
+                </div>
+
+
+                <div class="w3-container w3-center w3-animate-zoom">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-zoom class zooms in an element (from 0% to 100% in size).</p>
+                    <img src="https://www.w3schools.com/w3css/img_car.jpg" alt="Car" style="width:100%">
+                </div>
+
+                <div class="w3-container">
+                    <h2>Animate Fade In and Out</h2>
+                    <p>The w3-animate-fading class fades in and out elements every 10 seconds (continuously).</p>
+                    <img class="w3-animate-fading" src="https://www.w3schools.com/w3css/img_car.jpg" style="width:100%">
+                </div>
+                <div class="w3-container w3-center w3-animate-opacity">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-opacity class fades in an element (0 to 1 opacity in 0.8 seconds).</p>
+                    <img src="https://www.w3schools.com/w3css/img_car.jpg" alt="Car" style="width:100%">
+                </div>
+
+                <div class="w3-container">
+                    <h1>Spinning Elements</h1>
+                    <p>Use the w3-spin class to spin an element 360 degrees:</p>
+                    <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p>
+                </div>
+
+                <div class="w3-container w3-center w3-animate-right">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-right class slides in an element from the right.</p>
+                </div>
+
+                <div class="w3-container w3-center w3-animate-top">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-top class slides in an element from the top.</p>
+                </div>
+
+                <div class="w3-container w3-center w3-animate-left">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-left class slides in an element from left.</p>
+                </div>
+
+                <div class="w3-container w3-center w3-animate-bottom">
+                    <h1>Animation is Fun!</h1>
+                    <p>The w3-animate-bottom class slides in an element from the bottom.</p>
+                </div>
+
+                <div class="w3-content w3-section" style="max-width:400px">
+                    <img class="w3-animate-top" src="https://www.w3schools.com/w3css/img_rr_01.jpg" style="width:100%">
+                    <img class="w3-animate-zoom" src="https://www.w3schools.com/w3css/img_rr_01.jpg" style="width:100%">
+                    <img class="w3-animate-left" src="https://www.w3schools.com/w3css/img_rr_01.jpg" style="width:100%">
+                    <img class="w3-animate-bottom" src="https://www.w3schools.com/w3css/img_rr_01.jpg" style="width:100%">
+                </div>
+
+                <div class="w3-container">
+
+                    <h2>Pagination Size</h2>
+                    <p>Use w3-tiny, w3-small, w3-large, w3-xlarge, w3-xxlarge or w3-xxxlarge to change the size the pagination:</p>
+
+                    <div class="w3-bar w3-small">
+                        <a href="#" class="w3-button">&laquo;</a>
+                        <a href="#" class="w3-button">1</a>
+                        <a href="#" class="w3-button">2</a>
+                        <a href="#" class="w3-button">3</a>
+                        <a href="#" class="w3-button">4</a>
+                        <a href="#" class="w3-button">&raquo;</a>
+                    </div>
+
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Right-aligned Dropdown</h2>
+                    <p>Use the w3-right class to float the dropdown to the right, and use CSS to position the dropdown content (right:0 will make the dropdown menu go from right to left).</p>
+
+                    <div class="w3-dropdown-hover w3-right">
+                        <button class="w3-button w3-black">Dropdown</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
+                            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div class="w3-clear"></div>
+
+                    <p>Note: Remember to clear floats if you use w3-right or w3-left. Remove the div class="w3-clear" to understand why.</p>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <h2>Card Dropdowns</h2>
+                    <p>Move the mouse over "London" or "Tokyo":</p>
+
+                    <div class="w3-dropdown-hover">London
+                        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                            <img src="https://www.w3schools.com/w3css/img_tokyo.jpg" alt="London" style="width:100%">
+                            <div class="w3-container">
+                                <p>London is the capital city of England.</p>
+                                <p>It is the most populous city in the UK.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-dropdown-hover">Tokyo
+                        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                            <img src="https://www.w3schools.com/w3css/img_tokyo.jpg" alt="Tokyo" style="width:100%">
+                            <div class="w3-container">
+                                <p>Tokyo is the capital city of Japan.</p>
+                                <p>13 million inhabitants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w3-container">
+                    <h2>Dropdown Button</h2>
+                    <p>Move the mouse over the button to open the dropdown content.</p>
+                    <div class="w3-dropdown-hover">
+                        <button class="w3-button w3-black">Hover Over Me!</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-border">
+                            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-container">
+                    <h2>Dropdown Paragraph</h2>
+                    <p>Move the mouse over the paragraph to open the dropdown content.</p>
+
+                    <p class="w3-dropdown-hover">Hover over me!
+                        <span class="w3-dropdown-content w3-green w3-padding">Hello World!</span>
+                    </p>
+                </div>
+
+
+
+
+
+
+                <div class="w3-container">
+                    <h2>Slideshow Indicators</h2>
+                    <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
+                </div>
+
+                <div class="w3-content w3-display-container" style="max-width:800px">
+                    <img class="mySlides" src="https://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%">
+                    <img class="mySlides" src="https://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%">
+                    <img class="mySlides" src="https://www.w3schools.com/w3css/img_nature_wide.jpg" style="width:100%">
+                    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="w3-card-4 w3-margin">
+                    <img src="https://www.w3schools.com/w3css/img_woods.jpg" alt="Nature" style="width:100%">
+                    <div class="w3-container">
+                        <h3><b>TITLE HEADING</b></h3>
+                        <h5>Title description
+                            <span class="w3-opacity">April 7, 2014</span></h5>
+                    </div>
+                    <div class="w3-container">
+                        <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent
+                            tincidunt sed tellus ut rutrum. </p>
+                    </div>
+                </div>
+
+
+                <div class="w3-container w3-2018-red-pear">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-nebulas-blue">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-ultra-violet">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-cherry-tomato">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-arcadia">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-lime-punch">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-warm-sand">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-sargasso-sea">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+                <div class="w3-container w3-2018-chili-oil">
+                    <h1>W3.CSS Pro</h1>
+                    <p>With W3.CSS you can define your own colors.</p>
+                </div>
+
+
+
+                <div class="w3-container">
+                    <p>Flat Design often uses colors we know from marketing, road signs, and sticky notes:</p>
+                    <div class="w3-row">
+                        <div class="w3-quarter">
+                            <div class="w3-container w3-red w3-center">
+                                <p>Red</p>
+                            </div>
+                            <div class="w3-container w3-green w3-center">
+                                <p>Green</p>
+                            </div>
+                            <div class="w3-container w3-blue w3-center">
+                                <p>Blue</p>
+                            </div>
+                            <div class="w3-container w3-black w3-center">
+                                <p>Black</p>
+                            </div>
+                        </div>
+                        <div class="w3-quarter">
+                            <div class="w3-container w3-pink w3-center">
+                                <p>Pink</p>
+                            </div>
+                            <div class="w3-container w3-teal w3-center">
+                                <p>Teal</p>
+                            </div>
+                            <div class="w3-container w3-indigo w3-center">
+                                <p>Indigo</p>
+                            </div>
+                            <div class="w3-container w3-brown w3-center">
+                                <p>Brown</p>
+                            </div>
+                        </div>
+                        <div class="w3-quarter">
+                            <div class="w3-container w3-orange w3-center">
+                                <p>Orange</p>
+                            </div>
+                            <div class="w3-container w3-cyan w3-center">
+                                <p>Cyan</p>
+                            </div>
+                            <div class="w3-container w3-purple w3-center">
+                                <p>Purple</p>
+                            </div>
+                            <div class="w3-container w3-grey w3-center">
+                                <p>Grey</p>
+                            </div>
+                        </div>
+                        <div class="w3-quarter">
+                            <div class="w3-container w3-yellow w3-center">
+                                <p>Yellow</p>
+                            </div>
+                            <div class="w3-container w3-lime w3-center">
+                                <p>Lime</p>
+                            </div>
+                            <div class="w3-container w3-khaki w3-center">
+                                <p>Khaki</p>
+                            </div>
+                            <div class="w3-container w3-light-grey w3-center">
+                                <p>Light Grey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-container">
+                    <span class="emoji monkey" role="img" aria-label="monkey"></span> <br><br><br>
+                    <span class="emoji clock" role="img" aria-label="clock"></span><br><br><br>
+                    <span class="emoji mailbox" role="img" aria-label="mailbox"></span><br><br><br>
+                    <span class="emoji camera" role="img" aria-label="camera flash"></span><br><br><br>
+                    <span class="emoji hourglass" role="img" aria-label="hourglass"></span><br><br><br>
+                    <span class="emoji earth" role="img" aria-label="earth rotating"></span><br><br><br>
+                    <span class="emoji moon" role="img" aria-label="moon phases"></span><br><br><br>
+                    <span class="emoji bomb" role="img" aria-label="bomb exploding"></span><br><br><br>
+                    <span class="emoji hearts" role="img" aria-label="hearts"></span><br><br><br>
+                    <span class="emoji wave" role="img" aria-label="hand wave"></span><br><br><br>
+                    <span class="emoji inbox" role="img" aria-label="inbox tray"></span><br><br><br>
+                    <span class="emoji vomit" role="img" aria-label="face vomiting"></span><br><br><br>
+                </div>
+
+                <div class="w3-container">
+                    <h1>Using w3-colors-safety</h1>
+                </div>
+
+                <table class="w3-table-all w3-large">
+                    <tr>
+                        <td class="w3-safety-red">w3-safety-red</td>
+                    </tr>
+                    <tr>
+                        <td class="w3-safety-orange">w3-safety-orange</td>
+                    </tr>
+                    <tr>
+                        <td class="w3-safety-yellow">w3-safety-yellow</td>
+                    </tr>
+                    <tr>
+                        <td class="w3-safety-green">w3-safety-green</td>
+                    </tr>
+                    <tr>
+                        <td class="w3-safety-blue">w3-safety-blue</td>
+                    </tr>
+                    <tr>
+                        <td class="w3-safety-purple">w3-safety-purple</td>
+                    </tr>
+                </table>
+
+
+                <div class="w3-card-4">
+                    <div class="w3-container w3-theme w3-card">
+                        <h1>Blue</h1>
+                    </div>
+
+                    <div class="w3-container w3-text-theme">
+                        <h2>w3-text-theme</h2>
+                    </div>
+
+
+                    <button onclick="document.getElementById('id01modal').style.display='block'" class="w3-button w3-black">Open Animated Modal</button>
+
+                    <div id="id01modal" class="w3-modal">
+                        <div class="w3-modal-content w3-animate-top w3-card-4">
+                            <header class="w3-container w3-teal">
+                                <span onclick="document.getElementById('id01modal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                <h2>Modal Header</h2>
+                            </header>
+                            <div class="w3-container">
+                                <p>Some text..</p>
+                                <p>Some text..</p>
+                            </div>
+                            <footer class="w3-container w3-teal">
+                                <p>Modal Footer</p>
+                            </footer>
+                        </div>
+                    </div>
+
+
+
+                    <ul class="w3-ul w3-border-top">
+                        <li class="w3-theme-l5">
+                            <a class="w3-button w3-xlarge w3-circle w3-theme-action" style="position:fixed;top:48px;right:24px;">+</a>
+                            <p>w3-theme-l5 (w3-theme-light)</p>
+                        </li>
+                        <li class="w3-theme-l4">
+                            <p>w3-theme-l4</p>
+                        </li>
+                        <li class="w3-theme-l3">
+                            <p>w3-theme-l3</p>
+                        </li>
+                        <li class="w3-theme-l2">
+                            <p>w3-theme-l2</p>
+                        </li>
+                        <li class="w3-theme-l1">
+                            <p>w3-theme-l1</p>
+                        </li>
+                        <li class="w3-theme">
+                            <p>w3-theme</p>
+                        </li>
+                        <li class="w3-theme-d1">
+                            <p>w3-theme-d1</p>
+                        </li>
+                        <li class="w3-theme-d2">
+                            <p>w3-theme-d2</p>
+                        </li>
+                        <li class="w3-theme-d3">
+                            <p>w3-theme-d3</p>
+                        </li>
+                        <li class="w3-theme-d4">
+                            <p>w3-theme-d4 (w3-theme-dark)</p>
+                        </li>
+                        <li class="w3-theme-gradient">
+                            <p>w3-theme-gradient</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-container w3-flat-belize-hole">
+                    <h2>London</h2>
+                    <p>m as colors https://www.w3schools.com/w3css/w3css_color_flat.asp </p>
+                </div>
+
+                <div cla ss="w3-container w3-flat-wisteria">
+                    <h2> London</h2>
+                    <p>L ondon is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
+                </div>
+
+
+                <div class="w3-container">
+                    <h1>Using w3-display-container</h1>
+
+                    <div class="w3-display-container w3-green" style="height:300px;">
+                        <div class="w3-display-topleft">Top Left</div>
+                        <div class="w3-display-topright">Top Right</div>
+                        <div class="w3-display-bottomleft">Bottom Left</div>
+                        <div class="w3-display-bottomright">Bottom Right</div>
+                        <div class="w3-display-left">Left</div>
+                        <div class="w3-display-right">Right</div>
+                        <div class="w3-display-middle">Middle</div>
+                        <div class="w3-display-topmiddle w3-hide-small">Top Middle</div>
+                        <div class="w3-display-bottommiddle w3-hide-small">Bottom Middle</div>
+                    </div>
+                </div>
+
+                <div class="w3-container">
+                    <h1>Quote as Card</h1>
+
+                    <div class="w3-panel w3-card-4 w3-center" style="width:50%">
+                        <span style="font-size:100px">❝</span><br>
+                        <p style="margin-top:-60px"><i><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non massa vitae risus fermentum ullamcorper. Phasellus risus urna, ornare in aliquam id, porttitor sit amet sapien. Nulla facilisi.</b></i></p>
+                    </div>
+                </div>
+
+
+
+                <!-- cardflip2020 -->
+                <div class="box-containercardflip2020">
+
+                    <div class="box-itemcardflip2020">
+                        <div class="flip-boxcardflip2020">
+                            <div class="flip-box-frontcardflip2020 text-centercardflip2020" style="background-image: url('https://pbs.twimg.com/media/EjjzPLNXsAINz6A?format=jpg&name=large');">
+                                <div class="innercardflip2020 color-whitecardflip2020">
+                                    <br>
+                                    <br>
+                                    <h3 class="flip-box-headercardflip2020">Xiiber</h3>
+                                    <p>CG Travel ahora es Xiiber</p>
+                                    <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-imgcardflip2020">
+                                </div>
+                            </div>
+                            <div class="flip-box-backcardflip2020 text-centercardflip2020" style="background-image: url('https://pbs.twimg.com/media/EjjzPL9XYAAa5a3?format=jpg&name=large');">
+                                <div class="innercardflip2020 color-whitecardflip2020">
+                                    <br>
+                                    <br>
+                                    <h3 class="flip-box-headercardflip2020">Xiiber</h3>
+                                    <p>CG Travel ahora es Xiiber</p>
+                                    <button class="flip-box-buttoncardflip2020">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--cardflip2020 -->
+
+                <div class="icon-bar ">
+                    <a href="https://www.xiiber.com/" target="_blank"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber" width="39 " height="39 "></i>
+                        <a href="#" target="_blank"><i class="fa fa-calendar "></i></a>
+                        <a href="https://www.xiiber.com/" target="_blank"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber Travel " width="39 " height="39 "></i>
+                        </a>
+                        <a href="https://g.page/Xiiber" target="_blank"><i class=" fa fa-google-plus-square "></i></a>
+                        <a href="https://www.whatsapp.com/catalog/5215539793727?app_absent=" target="_blank" title=" Whatsapp "><i class=" fa fa-whatsapp "></i></a>
+                </div>
+            </div>
+
+            <!-- par  tial:index.partial.html -->
+            <div class="slidercarrusel">
+                <div class="slide-trackcarrusel">
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
+                    <div class="slide"><img src="https://pbs.twimg.com/media/EmLHZP8WMAUkhsQ?format=png&name=4096x4096" height="100" width="250" alt="Viaje Para solteros app" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
+
+
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2VWoAM-_CU?format=png&name=4096x4096" height="100" width="250" alt="Sugar daddy and sugar baby" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2mWkAcrCQO?format=jpg&name=4096x4096" height="100" width="250" alt="Recomendación CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQmXYAIpA2e?format=png&name=4096x4096" height="100" width="250" alt="Viaje en tangas" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZPhWoAIoQq3?format=jpg&name=4096x4096" height="100" width="250" alt="Viajemos todxs por México - color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZQ6X0AM03FD?format=png&name=4096x4096" height="100" width="250" alt="Viaje para solteros" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv2AXUAEpCBG?format=jpg&name=4096x4096" height="100" width="250" alt="Logo CGT-color" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLHZP8WMAUkhsQ?format=png&name=4096x4096" height="100" width="250" alt="Viaje Para solteros app" /></div>
+                    <div class="slidecarrusel"><img src="https://pbs.twimg.com/media/EmLLv1jX0AIAx_I?format=png&name=4096x4096" height="100" width="250" alt="Veracruz" /></div>
+
+                </div>
+            </div>
+            <!--    partial -->
+
+            <iframe src=" https://xiiber.github.io/maciel/3d-slider-pure-css.html " width="110% " height="200 " style="border:none; " text-align="center " title=" ">
+                </iframe>
+
+
+            <!-- partial:Social Icons vision 3D -->
+            <div class="flexico-centersocial-icons-vision-3d">
+                <i class="fa fa-phone fa-4x iconico-3d"></i>
+                <i class="fa fa-gitlab fa-4x iconico-3d"></i>
+                <i class="fa fa-bitbucket fa-4x iconico-3d"></i>
+                <br>
+                <i class="fa fa-git fa-4x iconico-3d"></i>
+                <i class="fa fa-twitter fa-4x iconico-3d"></i>
+                <i class="fa fa-facebook fa-4x iconico-3d"></i>
+                <br>
+                <i class="fa fa-instagram fa-4x iconico-3d"></i>
+                <i class="fa fa-whatsapp fa-4x iconico-3d"></i>
+            </div>
+            <!-- Social    Icons vision 3D -->
+
+            <iframe src=" http://tepozspa.xiiber.com/checklistsimple.html " width="100% " height="300 " style="border:none; " text-align="center " title=" ">
+                </iframe>
+
+
+
+
+            <div class="w3-bottom ">
+                <div class="icon-bar  ">
+                    <a href="https://www.xiiber.com/" target="_blank"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber" width="39 " height="39 "></i>
+                        <a href="#" target="_blank"><i class="fa fa-calendar "></i></a>
+                        <a href="https://www.xiiber.com/" target="_blank"><img src="https://pbs.twimg.com/media/EjksCYwXkAIpges?format=png&name=4096x4096 " alt="Xiiber Travel " width="39 " height="39 "></i>
+                        </a>
+                        <a href="https://g.page/Xiiber" target="_blank"><i class=" fa fa-google-plus-square "></i></a>
+                        <a href="https://www.whatsapp.com/catalog/5215539793727?app_absent=" target="_blank" title=" Whatsapp "><i class=" fa fa-whatsapp "></i></a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <script>
+            // Open and close the sidebar on medium and small screens
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+
+            // Change style of top container on scroll
+            window.onscroll = function() {
+                myFunction()
+            };
+
+            function myFunction() {
+                if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+                    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+                } else {
+                    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+                    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+                }
+            }
+
+            // Accordions
+            function myAccordion(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                    x.previousElementSibling.className += " w3-theme";
+                } else {
+                    x.className = x.className.replace("w3-show", "");
+                    x.previousElementSibling.className =
+                        x.previousElementSibling.className.replace(" w3-theme", "");
+                }
+            }
+        </script>
+
+</body>
+
+</html>
