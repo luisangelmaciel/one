@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" media="screen" href="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/application-1660e6a2643d9f0fe369b8a6091d6e8bffd929fd04eb50990d09cdddc3154e69.css">
+    <link href="https://codepen.io/BuddyLReno/pen/aPaMqR" rel="stylesheet" />
+
+    <link rel='stylesheet' href='https://codepen.io/BuddyLReno/pen/aPaMqR.css'>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /********************/
+        /* Styles for hero image + shadow + caption */
+        
+        .hero {
+            position: relative;
+            background-color: #0091D9;
+            z-index: 0;
+            padding-bottom: 80px;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            line-height: 1.5;
+            color: white;
+        }
+        
+        .hero h5 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 16px;
+            color: white;
+        }
+        
+        .hero h6 {
+            letter-spacing: 1px;
+            font-size: 12px;
+            color: white;
+        }
+        
+        .hero-course-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            width: 100vw;
+            max-height: 800px;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 1248px;
+            margin: 10vh auto 0;
+        }
+        
+        @media (min-width: 600px) {
+            .container {
+                margin: 150px auto 0;
+            }
+        }
+        
+        .hero-course-details {
+            padding: 0 24px;
+            max-width: 670px;
+        }
+        
+        .course-logo {
+            height: auto;
+            display: block;
+            max-width: 350px;
+            width: 100%;
+            width: 65vw;
+        }
+        
+        .hero .shadow {
+            background-image: radial-gradient(farthest-side at 73% 21%, transparent, rgb(0, 145, 217));
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        /********************/
+        /* Generic Styles that don't matter */
+        
+        body {
+            font-family: canada-type-gibson, Arial, sans-serif;
+        }
+        
+        .button-rounded {
+            background-color: white;
+            color: #0091D9;
+            padding: 16px 24px;
+            border-radius: 100px;
+            min-width: 200px;
+            margin: 40px 0;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.2s ease-in-out 0s;
+        }
+        
+        .button-rounded:hover {
+            opacity: .9;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <main>
+
+        <div class="hero">
+            <div class="hero-course-image">
+                <!--       <img src="https://cdn.ramseysolutions.net/media/ramsey-plus/app/test/course-hero-fpu.jpg"> -->
+                <div class="shadow"></div>
+                <video poster="https://pbs.twimg.com/media/Eh2SlfgWkAAgr6X?format=png&name=360x360" autoPlay="autoPlay" loop="loop" muted="muted" preload="auto" width="100%" objectFit="cover" objectPosition="50% 50%" src="alberca_tepozspa.mp4" />
+            </div>
+
+
+            <div class="container">
+                <div class="hero-course-details">
+                    <img class="course-logo" srcset="
+                                         https://pbs.twimg.com/media/Eh2SlfgWkAAgr6X?format=png&name=360x360">
+                    <a class="button-rounded" href="http://www.xiiber.com/">Experiencias</a>
+
+                    <h5>Viajes y experiencias para hombres gay</h5>
+                    <h6>CG Travel ahora es Xiiber Travel </h6>
+                </div>
+            </div>
+
+
+            <!--     <img src="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/slash_8_degrees_blue_40-e548531cfdc986b4c4a3b5aabed791940af41b4790e7f3e90fb48a3c4dcc4dfd.svg">
+   -->
+        </div>
+
+    </main>
+    <script src="//use.typekit.net/qfq3avj.js"></script>
+    <script>
+        try {
+            Typekit.load();
+        } catch (e) {}
+    </script>
+
+</body>
+
+</html>
