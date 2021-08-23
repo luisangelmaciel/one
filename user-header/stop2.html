@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .top-container {
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header {
+            padding: 10px 16px;
+            background: #555;
+            color: #f1f1f1;
+        }
+        
+        .content {
+            padding: 16px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .sticky+.content {
+            padding-top: 102px;
+        }
+    </style>
+    <style>
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 1s all;
+            opacity: 0;
+        }
+        
+        .loading.show {
+            opacity: 1;
+        }
+        
+        .loading .spin {
+            border: 3px solid hsla(185, 100%, 62%, 0.2);
+            border-top-color: #3cefff;
+            border-radius: 50%;
+            width: 3em;
+            height: 3em;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <style>
+            .w3-cell {
+            display: table-cell
+        }
+        
+        .w3-cell-top {
+            vertical-align: top
+        }
+        
+        .w3-cell-middle {
+            vertical-align: middle
+        }
+        
+        .w3-cell-bottom {
+            vertical-align: bottom
+        }
+        
+        .w3-hide {
+            display: none!important
+        }
+        
+        .w3-show-block,
+        .w3-show {
+            display: block!important
+        }
+        
+        .w3-show-inline-block {
+            display: inline-block!important
+        }
+        
+        @media (max-width:1205px) {
+            .w3-auto {
+                max-width: 95%
+            }
+        }
+        
+        @media (max-width:600px) {
+            .w3-modal-content {
+                margin: 0 10px;
+                width: auto!important
+            }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Style the body */
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        .left {
+            float: left;
+        }
+        
+        .right {
+            float: right;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        h1 {
+            font-size: 18px;
+        }
+        
+        h6 {
+            font-size: 13px;
+        }
+        
+        .profile-card {
+            width: 260px;
+            min-height: 100%;
+            margin: 2rem;
+            background: white;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            box-shadow: 0px 1px 5px -1px #000;
+            -webkit-box-shadow: 0px 1px 5px -1px #000;
+            -moz-box-shadow: 0px 1px 5px -1px #000;
+            align-content: center;
+            display: initial;
+        }
+        
+        .profile-card .profile-cover {
+            background: url('fondo.jpg') no-repeat center;
+            position: relative;
+            height: 260px;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            filter: url(filters.svg#grayscale);
+            /* Firefox 3.5+ */
+            filter: gray;
+            /* IE6-9 */
+            -webkit-filter: grayscale(1);
+            /* Google Chrome & Safari 6+ */
+            transition: all .5s;
+            -moz-transition: all .5s;
+            /* Firefox 4 */
+            -webkit-transition: all .5s;
+            /* Safari and Chrome */
+            -o-transition: all .5s;
+            /* Opera */
+        }
+        
+        .profile-card .profile-cover:hover {
+            filter: none;
+            filter: none;
+            -webkit-filter: none;
+        }
+        
+        .profile-card .profile-cover .profile-avatar {
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            border: 5px solid #ffffff;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            margin: 25px auto 0;
+            overflow: hidden;
+            left: 0;
+            right: 0;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            /* Firefox 4 */
+            -webkit-transition: all .5s;
+            /* Safari and Chrome */
+            -o-transition: all .5s;
+            /* Opera */
+        }
+        
+        .profile-card .profile-cover .profile-avatar:hover {
+            margin-top: 23px;
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container {
+            position: relative;
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links {
+            position: absolute;
+            top: 110px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            display: none;
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a {
+            display: inline-block;
+            background: #ffffff;
+            text-decoration: none;
+            padding: 5px;
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a img {
+            display: block;
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.zoom-avatar {
+            background: rgba(103, 186, 144, 0.7);
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.zoom-avatar:hover {
+            background: rgba(103, 186, 144, 1);
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.read-more {
+            background: rgba(231, 76, 60, 0.7);
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.read-more:hover {
+            background: rgba(231, 76, 60, 1);
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.view-map {
+            background: rgba(157, 177, 218, 0.7);
+        }
+        
+        .profile-card .profile-cover .profile-avatar .btns-container .profile-links a.view-map:hover {
+            background: rgba(157, 177, 218, 1);
+        }
+        
+        .profile-card .profile-cover .profile-details {
+            background: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: bold;
+            padding: 5px 0 7px;
+        }
+        
+        .profile-card .profile-cover .profile-details h6 {
+            font-weight: normal;
+        }
+        
+        .profile-card .profile-info {
+            background: #e74c3c;
+            color: #ffffff;
+            padding: 10px;
+            font-family: Arial;
+            text-align: justify;
+        }
+        
+        .profile-card .profile-info h1 {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 3px;
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .profile-card .profile-info .info-area {
+            padding: 0 10px 5px;
+        }
+        
+        .profile-card .profile-map {
+            border-top: 1px solid #cccccc;
+            float: left;
+            width: 100%;
+        }
+        
+        .profile-card .profile-content {
+            background: #ffffff;
+            /* Old browsers */
+            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+            background: url(https://www.xiiber.com/favicon.png);
+            background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+            /* IE6-8 */
+            border: 1px solid #cccccc;
+            border-top: none;
+            -webkit-border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .profile-card .profile-content ul li {
+            float: left;
+            padding: 10px 32px;
+            text-align: center;
+            border-right: 1px solid #eeeeee;
+            border-left: 1px solid #ffffff;
+        }
+        
+        .profile-card .profile-content ul li:first-child {
+            border-left: none;
+        }
+        
+        .profile-card .profile-content ul li:last-child {
+            border-right: none;
+        }
+        
+        .profile-card .profile-content ul li .digits {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .menu-container {
+            position: relative;
+            margin: 10px 0 0 10px;
+            float: left;
+        }
+        
+        .menu-container .list-icon {
+            background: url('https://dl.dropboxusercontent.com/s/zgj5vdngzkemvpe/list-icon.png') no-repeat;
+            height: 18px;
+            width: 24px;
+            display: block;
+            opacity: 0.5;
+            transition: all .5s;
+            -moz-transition: all .5s;
+            /* Firefox 4 */
+            -webkit-transition: all .5s;
+            /* Safari and Chrome */
+            -o-transition: all .5s;
+            /* Opera */
+        }
+        
+        .menu-container .list-icon.active,
+        .menu-container .list-icon:hover {
+            opacity: 1;
+        }
+        
+        .menu-container .profile-actions {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .menu-container .profile-actions li {
+            border-bottom: 1px solid #000000;
+        }
+        
+        .menu-container .profile-actions li:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-container .profile-actions li a {
+            display: block;
+            width: 100px;
+            padding: 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font: 10px Arial;
+        }
+        
+        .menu-container .profile-actions li a:hover {
+            background: rgba(221, 221, 221, 0.2);
+        }
+        
+        .menu-container .profile-actions li:first-child a {
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        .menu-container .profile-actions li:last-child a {
+            -webkit-border-bottom-right-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    </style>
+    <style>
+        /*  TABS   */
+        
+        body {
+            font-family: Arial;
+        }
+        /* Style the tab */
+        
+        .tab {
+            overflow: hidden;
+            border: 1px solid rgb(255, 255, 255);
+            background-color: #f1f1f1;
+            align-content: center;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            height: auto;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab button:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        /* Create an active/current tablink class */
+        
+        .tab button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        
+        .div 500px {
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+        
+        .card {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            padding: 0;
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            min-width: 300px;
+            height: 375px;
+            -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            overflow: hidden;
+            background: #ffffff;
+            -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+            -webkit-transition: box-shadow 0.3s linear 0s;
+            -moz-transition: box-shadow 0.3s linear 0s;
+            transition: box-shadow 0.3s linear 0s;
+        }
+        
+        @media all and (min-width: 380px) {
+            .card {
+                height: 420px;
+            }
+        }
+        
+        .card.active {
+            -webkit-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card:hover .thumbnail img,
+        .hover .thumbnail img {
+            opacity: .6;
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        
+        .card .thumbnail {
+            background: #000000;
+            height: 420px;
+            overflow: hidden;
+        }
+        
+        .card .thumbnail .date {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            width: 55px;
+            height: 55px;
+            padding: 12.5px 0;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: #33a7d8;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+        }
+        
+        .card .thumbnail .date .day {
+            font-size: 18px;
+        }
+        
+        .card .thumbnail .date .month {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        
+        .card .thumbnail img {
+            display: block;
+            width: 120%;
+            -webkit-transition: all 0.3s linear 0s;
+            -moz-transition: all 0.3s linear 0s;
+            transition: all 0.3s linear 0s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="top-container">
+        <div class="500px">
+
+            <div class="profile-card">
+                <div class="profile-cover">
+                    <div class="menu-container">
+                        <a class="list-icon" title="Expand" href="javascript:void(0);"></a>
+                        <ul class="profile-actions" style="display: none;">
+                            <li><a href="#">Follow</a></li>
+                            <li><a href="#">Add as Friend</a></li>
+                            <li><a href="#">Like</a></li>
+                        </ul>
+                    </div>
+                    <div class="profile-avatar">
+                        <div class="btns-container">
+                            <div class="profile-links">
+                                <a class="zoom-avatar" href="#"><img src="https://www.xiiber.com/favicon.png"></a>
+                                <a class="read-more" href="#"><img src="https://www.xiiber.com/favicon.png"></a>
+                                <a class="view-map" href="#"><img src="https://www.xiiber.com/favicon.png"></a>
+                            </div>
+                        </div>
+                        <a href="#"><img src="https://www.xiiber.com/favicon.png" alt="Anis M" /></a>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Anis M</h1>
+                        <h6>@anismashku</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- partial:index.partial.html -->
+
+    <div class="500px">
+
+        <div class="profile-card">
+
+            <div class="profile-info" style="display: none;">
+                <h1>About Me</h1>
+                <div class="info-area">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.Stet clita kasd gubergren, no sea takimata sanctus est.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                    diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="profile-map" style="display: none;">
+                <iframe width="100%" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Saveology+New+York&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=40.052282,86.572266&amp;t=h&amp;ie=UTF8&amp;hq=Saveology&amp;hnear=New+York&amp;ll=40.552027,-74.420902&amp;spn=0.357117,0.912844&amp;iwloc=near&amp;output=embed"></iframe>
+                <div class="clear"></div>
+            </div>
+            <div class="profile-content">
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- Loading Javascript -->
+    <script>
+        // Loading
+        var Loading = (loadingDelayHidden = 0) => {
+            let loading = null;
+            const myLoadingDelayHidden = loadingDelayHidden;
+            let imgs = [];
+            let lenImgs = 0;
+            let counterImgsLoading = 0;
+
+            function incrementCounterImgs() {
+                counterImgsLoading += 1;
+                if (counterImgsLoading === lenImgs) {
+                    hideLoading()
+                }
+            }
+
+            function hideLoading() {
+                if (loading !== null) {
+                    loading.classList.remove('show');
+                    setTimeout(function() {
+                        loading.remove()
+                    }, myLoadingDelayHidden)
+                }
+            }
+
+            function init() {
+                document.addEventListener('DOMContentLoaded', function() {
+                    loading = document.querySelector('.loading');
+                    imgs = Array.from(document.images);
+                    lenImgs = imgs.length;
+                    if (imgs.length === 0) {
+                        hideLoading()
+                    } else {
+                        imgs.forEach(function(img) {
+                            img.addEventListener('load', incrementCounterImgs, false)
+                        })
+                    }
+                })
+            }
+            return {
+                'init': init
+            }
+        }
+
+        Loading(1000).init();
+    </script>
+
+
+
+    <script>
+        // TABS
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('.menu-container').hover(
+                function() {
+                    $('.profile-actions').slideDown('fast');
+                    $('.list-icon').addClass('active');
+                },
+                function() {
+                    $('.profile-actions').slideUp('fast');
+                    $('.list-icon').removeClass('active');
+                }
+            );
+            $('.profile-card').mouseleave(function() {
+                $('.profile-actions').slideUp('fast');
+                $('.profile-info').slideUp('fast');
+                $('.profile-map').slideUp('fast');
+            });
+
+            $('.profile-avatar').hover(
+                function() {
+                    $('.profile-links').fadeIn('fast');
+                },
+                function() {
+                    $('.profile-links').hide();
+                }
+            );
+            $('.read-more').click(function() {
+                $('.profile-map').slideUp('fast');
+                $('.profile-info').slideToggle('fast');
+                return false;
+            });
+            $('.view-map').click(function() {
+                $('.profile-info').slideUp('fast');
+                $('.profile-map').slideToggle('fast');
+                return false;
+            });
+        });
+    </script>
+
+
+
+
+    <div class="header" id="myHeader">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        </div>
+        <!-- FIN TABS -->
+    </div>
+
+    <div class="content">
+        <!-- TAB 1 -->
+        <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+
+            <figure class="thumbnail">
+                <div class="date">
+                    <div class="day">24</div>
+                </div>
+                <img src="http://res.cloudinary.com/dpcloudinary/image/upload/v1510380468/cat.jpg" />
+            </figure>
+
+
+
+            <p>The header will stick to the top when you reach its scroll position.</p>
+            <p>Scroll back up to remove the sticky effect.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        </div>
+        <!-- TAB 1 A 2  -->
+        <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+        </div>
+        <!-- TAB 2 A 3  -->
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+        <!-- TAB 3 -->
+
+
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
