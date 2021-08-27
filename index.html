@@ -1,40 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<title>One</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .mySlides {
+        display: none;
+    }
+    
+    .lamp-ONE {
+        display: none
+    }
+    
+    .containerx {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .change .bar2 {
+        opalamp-ONE: 0;
+    }
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+</style>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Before After 3 Layer Image Slider</title>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
-    <link rel='stylesheet' href='https://codepen.io/nosurprisethere/pen/rJzKOe.css'>
-    <link rel="stylesheet" href="./before-after-3-layerstyle.css">
-
-</head>
 
 <body>
-    <!-- partial:index.partial.html -->
-    <div id="page">
-        <div class="wrapper">
-            <div class="bottom">
 
-                <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" draggable="false" />
-            </div>
-            <div class="middle">
-                <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" draggable="false" />
-            </div>
-            <div class="scroller scroller-middle">
-                <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0 50 37 68 37 32 0 50" style="fill:#FFCCBC"/><polygon points="100 50 64 32 64 68 100 50" style="fill:#FFCCBC"/></svg>
-            </div>
-            <div class="top">
-                <img src="https://pbs.twimg.com/profile_images/1295581953333383168/eycuAhWy_400x400.png" draggable="false" />
-            </div>
-            <div class="scroller scroller-top">
-                <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0 50 37 68 37 32 0 50" style="fill:#FFAB91"/><polygon points="100 50 64 32 64 68 100 50" style="fill:#FFAB91"/></svg>
+    <!-- Inicio MODAL -->
+    <div class="w3-container">
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-animate-opalamp-ONE ">
+
+                <div class="w3-bar w3-border-bottom ">
+                    <button class="tablink w3-bar-item w3-button" onclick="openlamp-ONE(event, 'js')">JS</button>
+                    <button class="tablink w3-bar-item w3-button" onclick="openlamp-ONE(event, 'css')">CSS</button>
+                    <button class="tablink w3-bar-item w3-button" onclick="openlamp-ONE(event, 'contact')">Contacto</button>
+                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button  w3-display-topright">&times;</span>
+
+                </div>
+
+                <div id="js" class="w3-container lamp-ONE">
+                    <br>
+                    <a href="https://luisangelmaciel.github.io/one/codigo-alien/ ">Código [code] alien </a>
+                    <br><br><br>
+                </div>
+
+                <div id="css" class="w3-container lamp-ONE">
+                    <br>
+                    <a href="https://luisangelmaciel.github.io/one/jquery-break-animate-warping-text-paragraph-example/">jQuery, texto dislexico </a>
+                    <br><br><br>
+                </div>
+
+                <div id="contact" class="w3-container lamp-ONE">
+                    <br><br><br>
+                </div>
+
             </div>
         </div>
     </div>
-    <!-- partial -->
-    <script src='https://codepen.io/nosurprisethere/pen/rJzKOe.js'></script>
-    <script src="./before-after-3-layerscript.js"></script>
+    <!-- Final MODAL -->
+
+
+
+
+    <!-- Inicio SLIDES -->
+    <div class=" w3-display-container">
+        <iframe id="codigo-alien " class=" mySlides " src="https://luisangelmaciel.github.io/one/codigo-alien/ " name="iframe_a " height="750px " width="100% " title="Código alien " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+        <iframe id="tepozspa " class=" mySlides " src="https://luisangelmaciel.github.io/one/jquery-break-animate-warping-text-paragraph-example/ " name="iframe_a " height="750px " width="100% " title="Ejemplo jQuery, texto dislexico" allowfullscreen=" " frameborder="0 "
+            style="border:0; "></iframe>
+        <iframe id="cdmx" class="mySlides " src="https://cdmx.xiiber.com " name="iframe_a " height="750px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe>
+
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button  w3-display-topright  ">
+            <div class="containerx" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+
+        <button class="w3-button w3-xxxlarge w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button   w3-xxxlarge w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <!-- Final SLIDES -->
+
+
+
+    <!-- MODAL -->
+    <script>
+        document.getElementsByClassName("tablink")[0].click();
+
+        function openlamp - ONE(evt, lamp - ONEName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("lamp-ONE");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("w3-light-grey");
+            }
+            document.getElementById(lamp - ONEName).style.display = "block";
+            evt.currentTarget.classList.add("w3-light-grey");
+        }
+    </script>
+    <!-- SLIDES -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <!-- TOGGLE X -->
+    <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
 
 </body>
 
