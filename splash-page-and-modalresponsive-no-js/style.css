@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 1rem;
+    /* background-image: url('https://raw.githubusercontent.com/DevTips/splash-page-and-modal/master/andrew-marks/images/background.jpg'); */
+    background: linear-gradient(to top, #afad1a, #eeeb2a, #afad1a, #f0ed30, #afad1a);
+    background-size: cover;
+    background-position: 50% 20%;
+    line-height: 1.2;
+}
+
+@media (max-width: 440px) {
+    body {
+        font-size: 4.54vw;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+.hero {
+    font-size: 2.25vmax;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40em;
+    max-width: 100%;
+    padding: 5em 1em 0 1em;
+    height: 19em;
+}
+
+.hero .question>span,
+.hero .action {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.hero .question {
+    display: block;
+    width: 100%;
+    max-width: 19em;
+    margin: 0 0 0 auto;
+}
+
+.hero .question>span {
+    display: inline-block;
+    font-size: 4em;
+    font-weight: bold;
+    background-color: black;
+    color: hsl(52, 98%, 49%);
+}
+
+.hero .action {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    background-color: hsl(51, 88%, 43%);
+    ;
+}
+
+input.hidden {
+    position: fixed;
+    left: -100vw;
+}
+
+input[type="checkbox"]:checked+.overlay,
+input[type="checkbox"]:checked+.overlay+.modal {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: 0.25s transform ease-in, 0.25s opacity ease-in;
+}
+
+.overlay {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(52, 100%, 50%, 0.9);
+    transition: 0.25s opacity ease-in, 0.25s visibility step-end;
+    opacity: 0;
+}
+
+.modal {
+    visibility: hidden;
+    transform: translate3d(0, -1rem, 0);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 30px;
+    width: 660px;
+    max-width: 100%;
+    height: 420px;
+    transition: 0.25s transform ease, 0.25s opacity ease, 0.25s visibility step-end;
+}
+
+.modalcontent {
+    max-width: 600px;
+    max-height: 360px;
+    background-color: white;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.modal .calltoaction {
+    position: relative;
+    overflow: hidden;
+    /* expand to contain floats */
+}
+
+.modal .closebutton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url('https://raw.githubusercontent.com/DevTips/splash-page-and-modal/master/andrew-marks/images/x.png');
+    right: 0;
+    top: 0;
+}
+
+.modalcontent .pitch {
+    width: 100%;
+    max-width: 320px;
+    float: left;
+    min-height: 280px;
+    padding: 1rem;
+}
+
+.modalcontent .photo {
+    width: calc(100% - 360px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url('https://luisangelmaciel.github.io/luisangelmaciel/logos/lamp-martech.svg');
+    background-size: cover;
+}
+
+.modalcontent .title {
+    padding: 0;
+    margin: 0 0 1rem;
+    font-size: 2.25em;
+}
+
+.modalcontent .form {
+    height: 80px;
+    clear: both;
+    background-color: black;
+    overflow: hidden;
+}
+
+.modalcontent .form input {
+    float: left;
+    height: calc(80px - 2rem);
+    margin: 1rem 0 1rem 1rem;
+    border: none;
+}
+
+.modalcontent .form .email {
+    width: calc(100% - 9rem);
+    margin-right: 0;
+    padding: 0 1rem;
+}
+
+.modalcontent .form .button {
+    width: 6rem;
+    color: black;
+    font-weight: bold;
+    background-color: hsl(52, 98%, 49%);
+    text-transform: uppercase;
+}

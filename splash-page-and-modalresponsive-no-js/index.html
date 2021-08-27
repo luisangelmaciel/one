@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Splash page and modal - responsive. No js</title>
+    <meta name="description" content="Splash page and modal - responsive, no js">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="hero">
+        <label for="showmodal" class="question">
+    <span>Good at</span>
+    <span>business?</span>
+    <div class="action">Learn more now &gt;</div>
+  </label>
+    </div>
+
+    <input type="checkbox" id="showmodal" class="hidden">
+    <label class="overlay" for="showmodal"></label>
+    <div class="modal">
+        <div class="modalcontent">
+            <label class="closebutton" for="showmodal"></label>
+            <div class="calltoaction">
+                <div class="pitch">
+                    <h1 class="title">Business stuff in your inbox, all the time.</h1>
+                    <div>Sign up for our newsletter to download the 200+ page <strong>Secrets of Business</strong> PDF!</div>
+                </div>
+                <div class="photo"></div>
+            </div>
+            <div class="form">
+                <input type="email" class="email" placeholder="Email address">
+                <input type="submit" value="Submit" class="button">
+            </div>
+        </div>
+    </div>
+    <!-- partial -->
+
+</body>
+
+</html>
