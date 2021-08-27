@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - HTML 5 Microphone Visualizer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg preserveAspectRatio="none" id="visualizer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+
+                <mask id="mask">
+                    <g id="maskGroup">
+                  </g>
+                </mask>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+                    <stop offset="40%" style="stop-color:#ff0000;stop-opacity:1" />
+                    <stop offset="80%" style="stop-color:#ffff00;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#00ff00;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#gradient)" mask="url(#mask)"></rect>
+        </svg>
+
+<h1>In <a href="https://codepen.io/zapplebee/full/gbNbZE/">Full Page view</a>, please allow the use of your microphone</h1>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
