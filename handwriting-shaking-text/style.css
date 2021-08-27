@@ -1,0 +1,18 @@
+@import 'https://csshake.surge.sh/csshake.min.css';
+@import 'https://fonts.googleapis.com/css?family=Rock+Salt';
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #e4e4e4;
+  font-family: sans-serif;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  margin: 20% auto;
+  font-family: "Rock Salt";
+}
