@@ -1,0 +1,37 @@
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #083D77, #017db0);
+    height: 100%;
+    overflow: hidden;
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border: 15px solid #017db0;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px #000 inset;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+p {
+    color: #fff;
+    font-size: 22px;
+    width: 85%;
+    margin: 110px auto 40px;
+}
+
+#count {
+    color: #fff;
+    font-size: 70px;
+}
