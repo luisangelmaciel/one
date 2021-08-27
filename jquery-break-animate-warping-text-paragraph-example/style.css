@@ -1,0 +1,201 @@
+.dislexico {
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    padding: 20px;
+    color: #444;
+}
+
+
+/*Center the weird text*/
+
+#weirdtext {
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+
+/*Just the CSS for the quote citation*/
+
+author {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+    text-align: right;
+    opacity: .4;
+}
+
+
+/*all spans have to be block or inline block to transform*/
+
+#weirdtext span {
+    display: inline-block;
+}
+
+
+/*When JS finds a space, it replaces it with a span with .space class*/
+
+
+/*I did this so you can do stuff with the spaces if you want.*/
+
+.space {
+    width: 15px;
+}
+
+
+/*These classes are added to each letter/span using JS so they animate*/
+
+.effect1 {
+    animation: zoom 6s linear infinite;
+    -webkit-animation: zoom 6s linear infinite;
+}
+
+.effect2 {
+    animation: bounce 3s linear infinite;
+    -webkit-animation: bounce 3s linear infinite;
+}
+
+.effect3 {
+    animation: squash 2s linear infinite;
+    -webkit-animation: squash 2s linear infinite;
+}
+
+.effect4 {
+    animation: rot 5s linear infinite;
+    -webkit-animation: rot 5s linear infinite;
+}
+
+.effect5 {
+    animation: fade2 4s linear infinite;
+    -webkit-animation: fade2 4s linear infinite;
+}
+
+
+/*Here's a bunch of animations*/
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(1px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+    }
+}
+
+@keyframes squash {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes squash {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(1, 1.2);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(9deg);
+    }
+    50% {
+        transform: rotate(-9deg);
+    }
+    100% {
+        transform: rotate(9deg);
+    }
+}
+
+@-webkit-keyframes rot {
+    0% {
+        -webkit-transform: rotate(9deg);
+    }
+    50% {
+        -webkit-transform: rotate(-9deg);
+    }
+    100% {
+        -webkit-transform: rotate(9deg);
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        transform: scale(.8);
+        opacity: .7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(.8);
+        opacity: .7;
+    }
+}
+
+@-webkit-keyframes fade2 {
+    0% {
+        -webkit-transform: scale(.8);
+        opacity: .7;
+    }
+    50% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(.8);
+        opacity: .7;
+    }
+}
