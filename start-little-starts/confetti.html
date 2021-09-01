@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="es-mx">
+<div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confeti</title>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js">
+    </script>
     <style>
-        * {
+        .confetti {
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             -webkit-tap-highlight-color: transparent;
             box-sizing: border-box;
@@ -16,7 +12,7 @@
             font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen-Sans, Ubuntu, Cantarell, helvetica neue, sans-serif;
         }
         
-        button {
+        .buttonconfetti {
             width: 100%;
             display: block;
             margin: 10px 0;
@@ -29,21 +25,18 @@
             cursor: pointer;
         }
         
-        button:active {
+        .buttonconfetti:active {
             transform: scale(.9);
         }
         
-        body {
+        .bodyconfetti {
             text-align: center;
-            /* background-image: url("https://cdn.shopify.com/s/files/1/2930/2308/products/custom-step-and-repeat-moustache-for-father_s-day-photography-backdrop_82aa95ea-7418-4dc4-884a-3e3fee10b625_1024x1024.jpg?v=1535704616"); */
         }
     </style>
-</head>
 
-<body>
-    <div style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;backdrop-filter: blur(3px);">
+    <div class="confetti" style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;backdrop-filter: blur(3px);">
         <div style=" position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-            <button onclick="throwConfetti()">🎉</button>
+            <button class="buttonconfetti" onclick="throwConfetti()">🎉</button>
         </div>
     </div>
 
@@ -63,6 +56,4 @@
             });
         }
     </script>
-</body>
-
-</html>
+</div>
