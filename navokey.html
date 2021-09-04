@@ -1,0 +1,427 @@
+<div>
+    <style>
+        .logo-neon {
+            text-align: center;
+            width: 65%;
+            height: 250px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            user-select: none;
+        }
+        
+        .logo-neon b {
+            font: 400 19vh "Vibur";
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #017db0, 0 0 0.5em #0674a0, 0 0 0.1em #19a1d6, 0 10px 3px #000;
+        }
+        
+        .logo-neon b span {
+            animation: blink linear infinite 1s;
+        }
+        
+        .logo-neon b span:nth-of-type(2) {
+            animation: blink linear infinite 2s;
+        }
+        
+        @keyframes blink {
+            78% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+            79% {
+                color: #333;
+            }
+            80% {
+                text-shadow: none;
+            }
+            81% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+            82% {
+                color: #333;
+                text-shadow: none;
+            }
+            83% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+            92% {
+                color: #333;
+                text-shadow: none;
+            }
+            92.5% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+        }
+        
+        #btn-center-botton {
+            clear: both;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-family: sans-serif;
+            font-size: 14px;
+            width: 18em;
+            padding: 5px 10px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            opacity: 0.4
+        }
+        
+        #btn-twtr-center-botton:hover {
+            color: rgb(0, 0, 0);
+            opacity: 1
+        }
+    </style>
+
+
+    <div class="logo-neon"><b>H<span>ola</span></div>
+</div>
+
+<div>
+
+
+    <style>
+        #btn-center-bottonm {
+            clear: both;
+            color: #fff;
+            border: 2px solid;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-family: sans-serif;
+            font-size: 14px;
+            width: 18em;
+            padding: 5px 10px;
+            font-weight: 600;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 0px 3px rgba(0, 0, 0, 0.2);
+            opacity: 0.4
+        }
+        
+        #btn-twtr-center-botton:hover {
+            color: rgb(0, 0, 0);
+            opacity: 1
+        }
+    </style>
+
+    <div id="btn-center-botton" target="_b">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+        <link rel="stylesheet" href="./style.css">
+        <style>
+            #mydiv {
+                position: absolute;
+            }
+            
+            #mydivheader {
+                cursor: move;
+            }
+            
+            @import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:300');
+            .material-icons {
+                font-family: 'Material Icons';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 32px;
+                /* Preferred icon size */
+                display: inline-block;
+                color: rgba(0, 0, 0, 0.527);
+                line-height: 1;
+                text-transform: none;
+                letter-spacing: normal;
+                word-wrap: normal;
+                white-space: nowrap;
+                direction: ltr;
+                /* Support for all WebKit browsers. */
+                -webkit-font-smoothing: antialiased;
+                /* Support for Safari and Chrome. */
+                text-rendering: optimizeLegibility;
+                /* Support for Firefox. */
+                -moz-osx-font-smoothing: grayscale;
+                /* Support for IE. */
+                font-feature-settings: 'liga';
+            }
+            
+            .FABMenu {
+                position: absolute;
+            }
+            
+            .FABMenu input {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 80px;
+                height: 80px;
+                z-index: 20;
+                border-radius: 80px;
+                opacity: 0;
+                cursor: pointer;
+            }
+            
+            .hamburger {
+                position: absolute;
+                top: 30%;
+                left: 80%;
+                width: 80px;
+                height: 80px;
+                border-radius: 80%;
+                z-index: 20;
+                cursor: pointer;
+            }
+            
+            .dots span {
+                position: absolute;
+                top: 50%;
+                width: 4px;
+                height: 3px;
+                border-radius: 3px;
+                background: rgba(0, 0, 0, 0.616);
+                z-index: 10;
+                transition: all .3s ease-in-out;
+            }
+            
+            .first {
+                margin-left: 1em;
+            }
+            
+            .second {
+                margin-left: 2.3em;
+            }
+            
+            .third {
+                margin-left: 3.6em;
+            }
+            
+            .FABMenu input:checked~.hamburger .dots .first {
+                top: 20px;
+                height: 60px;
+                transform-origin: top;
+                transform: rotate(-45deg);
+                transition: all .3s ease-in-out;
+            }
+            
+            .FABMenu input:checked~.hamburger .dots .third {
+                top: 20px;
+                height: 60px;
+                transform-origin: top;
+                transform: rotate(45deg);
+                transition: all .3s ease-in-out;
+            }
+            
+            .action_items_bar {
+                position: absolute;
+                top: 4.5%;
+                left: 25%;
+                width: 380px;
+                height: 60px;
+                /*  background-color: rgba(0, 0, 0, 0.15); */
+                border-radius: 60px;
+                /*     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15); */
+                z-index: 5;
+                /*   animation-name: expand-the-bar;
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out; */
+                transform: scaleX(0);
+                transition: all .3s ease-in-out;
+            }
+            
+            .FABMenu input:checked~.action_items_bar {
+                transform: scaleX(1);
+            }
+            
+            .action_items span {
+                position: absolute;
+                top: 25%;
+                width: 20px;
+                padding-left: 35px;
+                opacity: 0;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+            }
+            
+            .first_item {
+                left: -25%;
+            }
+            
+            .second_item {
+                left: 35%;
+            }
+            
+            .third_item {
+                left: 20%;
+            }
+            
+            .fourth_item {
+                left: -10%;
+            }
+            
+            .FABMenu input:checked~.action_items_bar .action_items .first_item {
+                opacity: 1;
+                transition-delay: .45s;
+            }
+            
+            .FABMenu input:checked~.action_items_bar .action_items .second_item {
+                opacity: 1;
+                transition-delay: .40s;
+            }
+            
+            .FABMenu input:checked~.action_items_bar .action_items .third_item {
+                opacity: 1;
+                transition-delay: .40s;
+            }
+            
+            .FABMenu input:checked~.action_items_bar .action_items .fourth_item {
+                opacity: 1;
+                transition-delay: .45s;
+            }
+            
+            .modal-input {
+                display: none;
+            }
+            
+            .modal-input:checked+.modal {
+                visibility: visible;
+                opacity: 1;
+            }
+            
+            .modal {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+                background-color: #fff;
+            }
+            
+            .modal-close {
+                position: fixed;
+                right: 10%;
+                font-size: 3rem;
+                line-height: 2;
+            }
+        </style>
+
+
+
+
+        <input id="modal-1" name="modal" type="checkbox" class="modal-input" />
+        <div class="modal">
+            <label for="modal-1" class="modal-close">&times;</label>
+            <div class="content">
+                <iframe src="mapa-de-sitio.html" name="iframe_a " height="600px " width="100% " title="Iframe Example " allowfullscreen=" " frameborder="0 " style="border:0; "></iframe> . </div>
+        </div>
+
+
+        <div id="mydiv">
+            <div class="FABMenu" id="mydivheader">
+                <input type="checkbox" checked/>
+                <div class="hamburger">
+                    <div class="dots" style=" border-radius: 80%;
+                    box-shadow: 0px 0px 50px rgba(248, 0, 0, 0.15);">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </div>
+                </div>
+                <div class="action_items_bar">
+                    <div class="action_items">
+                        <span class="first_item">
+                            <label for="modal-1"><i class="material-icons"> format_list_bulleted </i></label>  
+                        </span>
+                        <span class="second_item">
+            <i class="material-icons">
+                home
+            </i>
+          </span>
+                        <span class="third_item">
+            <i class="material-icons">
+                arrow_forward
+            </i>
+          </span>
+                        <span class="fourth_item">
+            <i class="material-icons">
+                arrow_back
+            </i>
+          </span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <script>
+            //Make the DIV element draggagle:
+            dragElement(document.getElementById("mydiv"));
+
+            function dragElement(elmnt) {
+                var pos1 = 0,
+                    pos2 = 0,
+                    pos3 = 0,
+                    pos4 = 0;
+                if (document.getElementById(elmnt.id + "header")) {
+                    /* if present, the header is where you move the DIV from:*/
+                    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                } else {
+                    /* otherwise, move the DIV from anywhere inside the DIV:*/
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                }
+
+                function closeDragElement() {
+                    /* stop moving when mouse button is released:*/
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+        </script>
+    </div>
+
+
+
+</div>
