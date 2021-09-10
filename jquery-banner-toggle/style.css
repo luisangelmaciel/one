@@ -1,0 +1,101 @@
+/* Global */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	background: #FAFAFA;
+	overflow: hidden;
+}
+
+/* Banner */
+.banner {
+	position: absolute;
+	width: 300px;
+	top: 50px;
+	right: 0;
+	background: rgba(255,255,255,1);
+	box-shadow: 
+	  0 15px 35px rgba(50,50,90,0.1), 
+	  0 5px 15px rgba(0,0,0,0.07);
+}
+
+/* Image */
+.image-box, 
+.image-box img {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+/* Button */
+.button {
+  position: absolute;
+  right: 15px;
+  bottom: -27px;
+  padding: 20px;
+  background: #68EFAD;
+  border-radius: 100%;
+  box-shadow: 1px 1px 8px 1px rgba(1,1,1,.3);
+  cursor: pointer;
+  transition: ease .2s;
+}
+
+.circle {
+	width: 14px;
+	height: 14px;
+	background: #00695C;
+	border-radius: 100%;
+}
+
+/* Header */
+.date-box p {
+	margin: 0;
+	padding: 12px 20px;
+	font-size: .84em;
+	color: #B39DDB;
+	background: #5E35B1;
+}
+
+.title-box h3 {
+	margin: 0;
+	padding: 14px 20px;
+	font-size: 1.6em;
+	line-height: 1.3em;
+	font-weight: 300;
+	letter-spacing: .06em;
+	color: #B39DDB;
+	background: #673AB7;
+}
+
+/* Content */
+.content-box {
+	padding: 20px 20px;
+}
+
+.content-box p {
+	margin: 0;
+	padding: 6px 0;
+	font-size: .84em;
+}
+
+.content-box a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	margin: 10px 0;
+	padding: 8px;
+	font-size: .9em;
+	color: #5E35B1;
+	border: 1px solid #5E35B1;
+	transition: ease .8s;
+}
+
+.content-box a:hover {
+	color: #ffffff;
+	background: #9575CD;
+}
