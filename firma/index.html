@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Firma</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <article>
+        <h1>How to create a pop-up without JavaScript</h1>
+        <p>Ever wanted a pop-up mechanism on your website, but you don't want to use JavaScript? Here's how:</p>
+        <ol>
+            <li>Add a <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> to your document</li>
+            <li>Insert a <code>&lt;div&gt;</code> to your <code>&lt;details&gt;</code> element</li>
+            <li>Add a scaling animation to this <code>&lt;div&gt;</code></li>
+            <li>Add this animation to the <code>&lt;div&gt;</code> when the <code>[open]</code> attribute is toggled on the <code>&lt;details&gt;</code> element</li>
+        </ol>
+        <p>Toggle the <strong>How it works</strong> button for more info.</p>
+
+    </article>
+
+    <details>
+        <summary>
+
+
+
+
+
+            @luisangelmaciel<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><circle cx="128" cy="180" r="12"></circle><path d="M127.9995,144.0045v-8a28,28,0,1,0-28-28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg></summary>
+        <div>
+            <p>The scaling effect you see when you open this <code>&lt;details&gt;</code> element is created by using a keyframe animation.</p>
+            <p><pre><code>@keyframes scale { 
+&nbsp;0% {
+&nbsp;&nbsp;transform: scale(0);
+&nbsp;}
+&nbsp;100% {
+&nbsp;&nbsp;transform: scale(1);
+&nbsp;}
+}</code></pre> </p>
+            <p>This animation is added to the <code>&lt;div&gt;</code>, but only when the <code>[open]</code> attribute is toggled.</p>
+            <p><pre><code>details[open] div { 
+&nbsp;animation: scale .15s ease;
+}</code></pre></p>
+
+
+
+
+
+
+            <!-- firma -->
+            <center>
+                <script src="https://use.fontawesome.com/dca02e5d5b.js"></script>
+
+                <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+                <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" type="text/css">
+
+
+                <style>
+                    @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+                    .poppins {
+                        font-family: "Poppins", sans-serif;
+                        font-size: 1em;
+                    }
+                    
+                    .lato {
+                        font-family: "Lato", sans-serif;
+                    }
+                    
+                    .oswald {
+                        font-family: 'Oswald', sans-serif;
+                    }
+                    
+                    .heartbeat {
+                        color: #e80d2e;
+                        text-shadow: 1px 1px 2px rgb(14, 13, 13), 0 0 35px rgb(61, 11, 11), 0 0 5px rgb(29, 27, 28);
+                        animation: heartbeat 36s infinite;
+                    }
+                    
+                    .heartbeat:hover {
+                        color: #017db0;
+                        animation: heartbeat 36s infinite;
+                    }
+                    /*Beating heart animation keyframe*/
+                    
+                    @keyframes heartbeat {
+                        0% {
+                            transform: scale(1.0);
+                        }
+                        5% {
+                            transform: scale(1.3);
+                        }
+                        10% {
+                            transform: scale(1.1);
+                        }
+                        20% {
+                            transform: scale(1.5);
+                        }
+                        30% {
+                            transform: scale(1.0);
+                        }
+                        100% {
+                            transform: scale(1.0);
+                        }
+                    }
+                    
+                    .text-toxel {
+                        color: #017db0;
+                    }
+                    
+                    a {
+                        color: rgb(255, 255, 255);
+                        text-decoration: none;
+                    }
+                    
+                    a::after {
+                        color: rgb(255, 255, 255);
+                    }
+                </style>
+
+
+                <footer>
+                    <br><br><br><br><i class="fa fa-heart heartbeat "></i>
+                    <a href="https://twitter.com/luisangelmaciel" target="_blank"><b class="poppins">@luisangel<span class="text-toxel">maciel</b></span></a>
+                </footer>
+            </center>
+            <!-- firma -->
+
+
+        </div>
+    </details>
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
