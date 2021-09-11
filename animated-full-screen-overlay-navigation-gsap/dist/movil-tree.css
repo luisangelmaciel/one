@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+.html-tree {
+    font-family: forma-djr-banner, sans-serif;
+    overflow: hidden;
+    font-size: 12px;
+    height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+.body-tree {
+    background: #fff;
+    color: #000;
+    line-height: 1.3;
+    overflow: hidden;
+    height: 100%;
+}
+
+#home {
+    box-shadow: inset 0 -200vh rgba(0, 0, 0, 0.4);
+    transition: all 0.6s;
+    height: 100%;
+}
+
+.nav-tree {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+}
+
+.nav-tree a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.035em;
+    -webkit-text-decoration-color: rgba(255, 255, 255, 0.3);
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-tree a[href="#info"] {
+    display: none;
+}
+
+.section-tree {
+    text-align: center;
+    color: #fff;
+}
+
+.section-tree h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    letter-spacing: 0.025em;
+    text-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.section-tree h1 span {
+    mix-blend-mode: overlay;
+    position: relative;
+    display: inline-block;
+}
+
+.section-tree p {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.05;
+    margin: 1rem 0 2rem;
+    display: block;
+}
+
+.section-tree button {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem auto 0;
+    padding: 0 0.5rem 0rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 100rem;
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    font-family: inherit;
+    line-height: 0;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    z-index: 10;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.section-tree button .material-icons {
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    line-height: 0;
+}
+
+.section-tree button:hover {
+    transform: translate3d(-50%, 0, 0) scale(1.05) rotate(-3deg);
+    background: #000;
+    color: #fff;
+}
+
+[data-samples] {
+    background: #000;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+    padding: 2rem 0.5rem 3rem;
+    border-radius: 1.5rem;
+    max-width: 25rem;
+    margin: 3.5rem auto 3rem;
+    position: relative;
+}
+
+[data-samples]:before {
+    content: "";
+    box-shadow: inset 0.5rem 0 0 #000, inset -0.5rem 0 0 #000, inset 0 1.5rem 0 #000, inset 0 -3rem 0 #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 1.5rem;
+}
+
+[data-samples] ul {
+    display: flex;
+    width: 500%;
+    transition: all 0.6s;
+}
+
+[data-samples] ul li {
+    color: #fff;
+    border-radius: 0.5rem;
+    flex-basis: 20%;
+    min-height: 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    opacity: 0.5;
+    transform: scale(0.85) translate3d(0, 0rem, 0);
+    transition: all 0.6s;
+}
+
+[data-samples] ul li.current {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-power] {
+    position: absolute;
+    background: #000;
+    height: 5rem;
+    width: 0.5rem;
+    top: 7rem;
+    right: -0.25rem;
+}
+
+[data-volume-up] {
+    position: absolute;
+    background: #000;
+    height: 5rem;
+    width: 0.5rem;
+    top: 7rem;
+    left: -0.25rem;
+}
+
+[data-volume-down] {
+    position: absolute;
+    background: #000;
+    height: 5rem;
+    width: 0.5rem;
+    top: 13rem;
+    left: -0.25rem;
+}
+
+[data-speaker] {
+    border-radius: 100rem;
+    position: absolute;
+    background: #444;
+    height: 0.5rem;
+    width: 5rem;
+    top: 0.75rem;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+
+[data-camera] {
+    border-radius: 100rem;
+    position: absolute;
+    background: #555;
+    height: 0.5rem;
+    width: 0.5rem;
+    top: 0.75rem;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(3rem, 0, 0);
+}
