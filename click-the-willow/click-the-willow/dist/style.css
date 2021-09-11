@@ -1,0 +1,165 @@
+body {
+    background: #ddd;
+    font-family: 'Open Sans'
+}
+
+.total-wrap {
+    /* box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1); */
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 25px auto;
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+    perspective: 1000px;
+    display: grid;
+}
+
+.total-wrap * {
+    transition: all 0.5s;
+}
+
+.total-wrap .btn-wrap {
+    position: relative;
+    background: #d3175c;
+    color: #fff;
+    text-align: center;
+    z-index: 5;
+    width: 150px;
+    cursor: pointer;
+    transition-delay: 0.5s;
+    display: grid;
+}
+
+.total-wrap .btn-wrap i {
+    font-size: 52px;
+    position: absolute;
+    top: 30px;
+    left: 35%;
+}
+
+.total-wrap .btn-wrap span {
+    display: block;
+    padding: 100px 0 34px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.total-wrap .cont-wrap {
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background: url(http://ak.picdn.net/shutterstock/videos/1431019/preview/stock-footage-old-globe-with-old-book.jpg) no-repeat;
+    z-index: 4;
+    transform-origin: left center;
+    transition-delay: 0.5s;
+    /*transform: rotateY(180deg);*/
+    left: -400px;
+    opacity: 0;
+}
+
+.total-wrap .cont-wrap h3 {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 88px 0 30px 25px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.total-wrap .cont-wrap h3:before {
+    content: '80';
+    border-top: 4px solid #fff;
+    position: absolute;
+    bottom: 35px;
+    color: transparent;
+    text-shadow: none;
+}
+
+.total-wrap .dd-content {
+    padding: 25px;
+    padding-top: 35px;
+    line-height: 24px;
+    background: #f4f4f4;
+    margin-bottom: 25px;
+    transition-delay: 0s;
+    transform-origin: center top;
+    transform: rotateX(-180deg);
+    opacity: 0;
+}
+
+.total-wrap .dd-content p {
+    padding-bottom: 25px;
+    font-size: 14px;
+}
+
+
+/*opened*/
+
+.total-wrap.open {
+    width: 550px;
+    height: 717px;
+    transition-delay: 0;
+}
+
+.total-wrap.open .btn-wrap {
+    width: 150px;
+    background: #fff;
+    color: #d3175c;
+}
+
+.total-wrap.open .btn-wrap span:before,
+.total-wrap.open .btn-wrap span:after {
+    background: #d3175c;
+}
+
+.total-wrap.open .cont-wrap {
+    /* transform: rotateY(0deg); */
+    left: 150px;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.total-wrap.open .dd-content {
+    transform-origin: center top;
+    transform: rotateX(0deg);
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+
+/*willow hover*/
+
+.total-wrap .btn-wrap:hover i {
+    top: 20px;
+}
+
+.total-wrap .btn-wrap span:after,
+.total-wrap .btn-wrap span:before {
+    content: '';
+    display: block;
+    width: 0.1%;
+    opacity: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.total-wrap .btn-wrap span:before {
+    bottom: 55px;
+    right: 0;
+    left: auto;
+}
+
+.total-wrap .btn-wrap:hover span:after,
+.total-wrap .btn-wrap:hover span:before {
+    width: 100%;
+    opacity: 0.2;
+}
