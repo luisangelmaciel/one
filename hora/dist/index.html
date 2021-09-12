@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>La hora es... </title>
+
+
+</head>
+
+<body>
+
+
+    <div id='reloj'></div>
+
+    <script>
+        var time = [, , , ];
+        var fecha = new Date();
+        var reloj = document.getElementById('reloj');
+        time[0] = fecha.getHours();
+        time[1] = fecha.getMinutes();
+        time[2] = fecha.getSeconds();
+
+        var id = setInterval(update, 1000);
+
+        //reloj.innerHTML='<div id="hora">'+time[0]+':'+time[1]+':'+time[2]+'</div>';
+        function update() {
+            fecha = new Date();
+            time[0] = modtime(fecha.getHours());
+            time[1] = modtime(fecha.getMinutes());
+            time[2] = modtime(fecha.getSeconds());
+            reloj.innerHTML = '<span class="square" id="h">' + time[0] + '</span><span class="point">:</span><span class="square" id="m">' + time[1] + '</span><span class="point">:</span><span class="square" id="s">' + time[2] + '</span>';
+
+        }
+
+        function modtime(hora) {
+            return (hora < 10 ? '0' + hora : hora);
+        }
+    </script>
+
+</body>
+
+</html>
