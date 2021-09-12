@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="es-mx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>open links Popup </title>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <script type="text/javascript">
+        var windowObjectReference = null; // global variable
+
+        function openFFPromotionPopup() {
+            if (windowObjectReference == null || windowObjectReference.closed)
+            /* if the pointer to the window object in memory does not exist
+               or if such pointer exists but the window was closed */
+
+            {
+                windowObjectReference = window.open("http://www.spreadfirefox.com/",
+                    "PromoteFirefoxWindowName", "resizable,scrollbars,status");
+                /* then create it. The new window will be created and
+                   will be brought on top of any other window. */
+            } else {
+                windowObjectReference.focus();
+                /* else the window reference must exist and the window
+                   is not closed; therefore, we can bring it back on top of any other
+                   window with the focus() method. There would be no need to re-create
+                   the window or to reload the referenced resource. */
+            };
+        }
+    </script>
+
+    (...)
+
+    <p><a href="http://www.spreadfirefox.com/" target="PromoteFirefoxWindowName" onclick="openFFPromotionPopup(); return false;" title="This link will create a new window or will re-use an already opened one">Promote Firefox adoption</a></p>
+    <p><a href="http://wkx.com/" target="PromoteFirefoxWindowName" onclick="openFFPromotionPopup(); return false;" title="This link will create a d one">otra cosa</a></p>
+
+    <script type="text/javascript">
+        var windowObjectReference = null; // global variable
+        var PreviousUrl;
+        /* global variable which will store the
+                                           url currently in the secondary window */
+
+        function openRequestedSinglePopup(strUrl) {
+            if (windowObjectReference == null || windowObjectReference.closed) {
+                windowObjectReference = window.open(strUrl, "SingleSecondaryWindowName",
+                    "resizable,scrollbars,status");
+            } else if (PreviousUrl != strUrl) {
+                windowObjectReference = window.open(strUrl, "SingleSecondaryWindowName",
+                    "resizable=yes,scrollbars=yes,status=yes");
+                /* if the resource to load is different,
+                   then we load it in the already opened secondary window and then
+                   we bring such window back on top/in front of its parent window. */
+                windowObjectReference.focus();
+            } else {
+                windowObjectReference.focus();
+            };
+
+            PreviousUrl = strUrl;
+            /* explanation: we store the current url in order to compare url
+               in the event of another call of this function. */
+        }
+    </script>
+
+    (...)
+
+    <p><a href="http://www.spreadfirefox.com/" target="SingleSecondaryWindowName" onclick="openRequestedSinglePopup(this.href); return false;" title="This link will create a new window or will re-use an already opened one">Promote Firefox adoption</a></p>
+
+    <p><a href="http://www.mozilla.org/support/firefox/faq" target="SingleSecondaryWindowName" onclick="openRequestedSinglePopup(this.href); return false;" title="This link will create a new window or will re-use an already opened one">Firefox FAQ</a></p>
+
+
+
+
+</body>
+
+</html>
