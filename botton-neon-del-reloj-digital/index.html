@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ver más</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+</head>
+
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolata");
+        body {
+            background: #000;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-repeat: none;
+            background-size: cover;
+        }
+        
+        .btn-okey {
+            border-radius: 10px;
+            padding: 10px;
+            color: #333;
+            box-shadow: 1px 1px 10px 2px #1cefff;
+            -webkit-animation: glow 2s infinite;
+            animation: glow 2s infinite;
+            background: #1cefff;
+            font-size: 1.5em;
+            font-family: "Inconsolata", monospace;
+        }
+        
+        @-webkit-keyframes glow {
+            50% {
+                box-shadow: 1px 1px 30px 10px lightseagreen;
+            }
+        }
+        
+        @keyframes glow {
+            50% {
+                box-shadow: 1px 1px 30px 10px lightseagreen;
+            }
+        }
+    </style>
+    <h1 class="btn-okey">Ver más</h1>
+
+    <link rel="stylesheet" media="screen" href="/" type="text/css" />
+    <div id='reloj'></div>
+
+    <script>
+        var time = [, , , ];
+        var fecha = new Date();
+        var reloj = document.getElementById('reloj');
+        time[0] = fecha.getHours();
+        time[1] = fecha.getMinutes();
+        time[2] = fecha.getSeconds();
+
+        var id = setInterval(update, 1000);
+
+        //reloj.innerHTML='<div id="hora">'+time[0]+':'+time[1]+':'+time[2]+'</div>';
+        function update() {
+            fecha = new Date();
+            time[0] = modtime(fecha.getHours());
+            time[1] = modtime(fecha.getMinutes());
+            time[2] = modtime(fecha.getSeconds());
+            reloj.innerHTML = '<span class="square" id="h">' + time[0] + '</span><span class="point">:</span><span class="square" id="m">' + time[1] + '</span><span class="point">:</span><span class="square" id="s">' + time[2] + '</span>';
+
+        }
+
+        function modtime(hora) {
+            return (hora < 10 ? '0' + hora : hora);
+        }
+    </script>
+
+</body>
+
+</html>
