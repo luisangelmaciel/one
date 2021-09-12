@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - LevelOne番茄鐘簡易操作</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" :class="status==='mainPage' && !isWorkingFinised?'mainbgcolor':status==='mainPage' && isWorkingFinised ?'breakingbgcolor':'elsebgcolor'">
+    
+<!--  音效區    -->
+    <div>
+      <audio v-if="workingRingtoneSrc" id="workingMyAudio" loop="loop">
+        <source :src=workingRingtoneSrc>
+     </audio>
+      <audio v-if="breakingRingtoneSrc" id="breakingMyAudio" loop="loop">
+        <source :src=breakingRingtoneSrc>
+     </audio>
+    </div>
+    
+    <div id="messageBox"><i class="material-icons">
+done_outline
+</i><span>add it successfully.</span></div>
+    
+    <div id="messageBoxStop"><i class="material-icons">
+error_outline
+</i><span>please pause working task first.</span></div>
+    
+     <div id="messageBoxPlay"><i class="material-icons">
+error_outline
+</i><span>please change to work status.</span></div>
+    
+    <div v-show="status === 'mainPage'" id="mainPage">
+       <div id="leftArea" :class="isWorkingFinised?'bgc-lighterblue':'bgc-pink'">
+        <div class="addList">
+          <input v-model="worklist" v-if="!isWorkingFinised" type="text" placeholder="add a new mission..." @keyup.13="addList(worklist)">
+           <input v-model="worklist" id="input-break" v-if="isWorkingFinised" type="text" placeholder="add a new mission..." @keyup.13="addList(worklist)">
+          <i :id="isWorkingFinised?'i-break':''" class="material-icons" @click="addList">add</i>
+        </div>
+        <div id="runningList">
+          <div id="runningTitle"><span id="pre-circle" :class="isWorkingFinised?'':'addPointer'" @click="getListDone(workingList,'mainPage')">
+            <i class="material-icons">done</i></span>{{workingList}}
+          </div>
+          <div id="progress"><span v-for="tomato in progressArr" :style="tomato.full?'background-color:#FF4384':''" :class=`progress_circle_${tomato.tomato}`></span></div>
+           <div id="timeer" :class="isWorkingFinised?'text-blue':'text-pink'">
+             <span id="moment">{{formatMinute}}</span> <span>:</span>
+              <span id="second">{{formatSecond}}</span>
+          </div>
+        </div>
+        <div id="headthreeList">
+          <ul v-for="(list,index) in listArr" :key="index">
+            <li v-if="index > 0 && index< 4"><span class="pre-circle"></span>{{list.name}}<span class="play-circle" @click="changeWorkingList(list)"></span></li>
+          </ul>
+          <div v-if="listArr.length > 1" id="listMore" :class="isWorkingFinised?'text-blue':'text-pink'" @click="getMoreList">more</div>
+        </div>
+        <div v-if="!isWorkingFinised" id="bigPlayCircle" :class="isWorking?'bgc-white-b-pink':''">
+          <div id="mainButton" :class="isWorking?'bgc-deeppink':''" @click="getWorking">
+             <span :class="isWorking?'pause':'play'"></span>
+            </div>
+        </div>
+        <div v-if="isWorkingFinised" id="bigPlayCircle-break" :class="isWorking?'bgc-white-b-blue':''">
+            <div id="mainButton" :class="isWorking?'bgc-blue':''" @click="getWorking">
+              <span :class="isWorking?'pause-break':'play-break'"></span>
+           </div>
+         </div>
+         <div  v-if="!isWorkingFinised">
+            <div id="mask"></div>
+            <div id="leftPlayCircle"></div>
+            <div id="rightPlayCircle"></div>
+         </div>
+         <div  v-if="isWorkingFinised">
+            <div id="mask-break"></div>
+            <div id="leftPlayCircle-break"></div>
+            <div id="rightPlayCircle-break"></div>
+         </div>
+         
+      </div>
+      <div id="rightArea">
+          <div id="iconArea">
+            <i :id="icon" v-for="icon in iconArr" class="material-icons" @click="enterSubMenu(icon)">{{icon}}</i>
+          </div>
+          <div class="pomodoro">
+            <div id="leave-outter">
+              <div id="top-leaves"></div>
+              <div id="bottom-leaves"></div>
+          </div>
+            pomodoro</div>
+      </div>
+    </div>
+    
+     <div  v-show="status !== 'mainPage'" id="detailPage">
+         <div id="firstPart">
+          <div id="iconList">
+           <ul>
+             <li :id="icon" :class="icon === status?'text-pink':''" v-for="(icon,index) in iconArr" :key="index" @click="enterSubMenu(icon)"><i :class="icon === status?'text-pink':''" class="material-icons">{{icon}}</i>
+               {{icon==='list'?'to-do-list':icon==='assessment'?'analytics':'ringtones'}}
+             </li>
+           </ul>
+          </div>
+         
+          <div id="playingList">
+            <div id="playingTimer"><span :class="isWorking?'pause':'play'" @click="enterMainPage"></span>{{formatMinute}}:{{formatSecond}}</div>
+            <div id="playingTitle">{{workingList}}</div>
+          </div>
+       </div>
+        
+         <div v-if="status==='list'" id="toDoListArea">
+           <div class="addList">
+            <input v-model="worklist" type="text" placeholder="add a new mission..." @keyup.13="addList">
+             <i class="material-icons" @click="addList">add</i>
+           </div>
+           <div id="todolistArea">
+             <div class="subtitle">to-do</div>
+             <div class="listArea">
+               <ul v-for="(list,index) in listArr" :key="index">
+                   <li v-if="listArr.length>0">
+                     <span class="pre-circle_work" @click="getListDone(list.name,'detailPage')"></span>
+                     {{list.name}}
+                     <span class="play-circle"></span>
+                 </li>
+              </ul>
+             </div>
+             
+             <div class="subtitle">done</div>
+              <div class="listArea">
+               <ul v-for="(list,index) in donelistArr" :key="index">
+                  <li v-if="donelistArr.length>0">
+                    <div>
+                      <span class="pre-circle_done"><i class="material-icons">done</i></span>
+                      <span>{{list.name}}</span>
+                    </div>
+                    <div id="doneProgress"><span v-for="tomato in list.progressArr" :style="tomato.full?'background-color:#FF4384':''" :class="tomato.full? `doneProgress_circle_${tomato.tomato}`:''"></span></div>
+                    
+                 </li>
+              </ul>
+             </div>
+           </div>
+         </div>
+       
+         <div v-if="status==='assessment'" id="analyticsArea">
+           <div>
+             <div class="subtitle">focus time</div>
+             <div id="focusTime">
+               <div id="focusTime_today">
+                 <span>today</span>
+                 <span>20</span>
+               </div>
+               <div id="focusTime_week">
+                 <span>week</span>
+                 <span>180</span>
+               </div>
+             </div>
+           </div>
+           <div>
+             <div class="subtitle">
+               <span>chart</span>
+               <span id="chart_date"><2019.7.1 - 2019.7.7></span>
+             </div>
+            </div>
+         </div>
+       
+         <div v-if="status==='library_music'" id="ringtonesArea">
+             <div class="subtitle">work</div>
+             <div id="work_rington">
+               <div id="work_rington_input" v-for="workRingtone in workRingToneArr" :key="workRingtone.name">
+                   <input type="radio" v-model="workingRingtone" :value="workRingtone.name" @click="getWorkingRingtone(workRingtone)"/><label @click="getWorkingRingtone(workRingtone)">{{workRingtone.name}}</label>
+               </div>
+             </div>
+             <div class="subtitle">break</div>
+             <div id="break_rington">
+               <div id="break_rington_input" v-for="breakRingtone in breakRingToneArr" :key="breakRingtone.name">
+                   <input type="radio" v-model="breakingRingtone" :value="breakRingtone.name"/><label  @click="getBreakingRingtone(breakRingtone)">{{breakRingtone.name}}</label>
+               </div>
+             </div>
+         </div>     
+      
+         <div id="closeArea">
+           <i class="material-icons" @click="enterMainPage">close</i>
+             <div class="pomodoro">
+               <div id="leave-outter">
+               <div id="top-leaves"></div>
+               <div id="bottom-leaves"></div>
+             </div>
+               pomodoro</div>
+         </div>
+     </div>
+    
+  </div>
+</body>
+</html>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
