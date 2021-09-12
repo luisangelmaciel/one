@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cursor</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+
+
+    <section>
+        <style>
+            .okey1:before {
+                content: "(= ";
+            }
+            
+            #fin:after {
+                content: "  =) ";
+            }
+        </style>
+        con class y luego id
+        <div class="okey1">
+            <a onclick="window.open(this.href, 'twittershare', 'status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0,height=300,width=500'); return false;" href="https://twitter.com/share?url=https%3A%2F%2Fwww.xiiber.com%2F&amp;text=He+leido+el+Navega+feliz%3A+Online.+Sin+preocupaciones.+%C2%A1Actualiza+tu+navegador+hoy%21"
+                title="Comparte en Twitter">Twitter</a>
+            <a onclick="window.open(this.href, 'fbshare', 'status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0,height=325,width=540'); return false;" href="https://www.facebook.com/dialog/feed?app_id=180651631983617&link=https://www.xiiber.com/&picture=https://www.xiiber.com/favicon.png&name=Vamonos+de+viaje.&message=Xiiber.+%C2%A1Vámonos+de+viaje%21&display=popup&redirect_uri=https://www.xiiber.com/"
+                title="Comparte en Facebook">Facebook</a>
+            <span id="fin"></span>
+        </div>
+    </section>
+
+    <br>
+
+    <section>
+        <style>
+            #okey2:before {
+                content: " ⊙⩌⨀  ";
+            }
+            
+            .acaba:after {
+                content: "   ˆ⩌ˆ  ";
+            }
+        </style>
+        Con id y terminando con class
+        <div id="okey2"> Animo <span class="acaba"></span></div>
+    </section>
+
+    <br>
+
+</body>
+
+</html>
