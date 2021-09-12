@@ -1,0 +1,50 @@
+*{
+  outline: none;
+}
+
+h1{ text-align: center; }
+
+div{ text-align: center; }
+
+button{
+  background-color: #4267b2;
+  border: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 2px 18px;
+  font-size: 17px;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+}
+
+button:hover{
+  background-color: #365899;
+  cursor: pointer;
+}
+
+.post{
+  display: block;
+  font-size: 30px;
+  padding: 10px;
+  margin: 20px auto;
+  word-wrap: break-word;
+  min-height: 150px;
+  width: 400px;
+  overflow: hidden;
+}
+
+section{ position: relative; }
+
+span {
+  position: absolute;
+  text-align: right;
+  right: 15px;
+  top: 40px;
+  font-size: 12px;
+}
+
+.new {
+  font-size: 28px;
+  text-align: right;
+}
