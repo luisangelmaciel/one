@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, html {
+  text-align:left;
+  font-family:'Abril Fatface', cursive;
+  font-size: 1em;
+  width: 100%;
+/*   max-width: 1280px; */
+  margin: 0 auto;
+}
+
+/** ------ Top Half ------ */
+
+.black-font {
+  text-transform: uppercase;
+}
+
+.mind-open {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 50px 50px 50px 90px;
+/*   padding-left: 90px; */
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+}
+
+.open {
+  font-size: 120px;
+  text-transform: none;
+  line-height: 80%;
+}
+
+p {
+  font-size: 30px;
+  margin-left: -40px;
+}
+
+.possibilities {
+  padding-left: 100px;
+}
+
+/** ------ Ampersand ------ **/
+
+#and {
+  font-size: 120px;
+  float: left;
+  position: relative;
+  bottom: 70px;
+  color: #ffffff;
+  background: -webkit-linear-gradient(90deg,#ffffff 50%, #000000 50%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  left: 47px;
+  bottom: 80px;
+}
+
+
+
+/** ------ Bottom Half ------ */
+
+.white-font {
+  color: #ffffff;
+  position: relative;
+  bottom: 40px;
+  padding-top: 20px;
+}
+
+.mind-closed {
+  background-color: #000000;
+  padding: 50px 50px 50px 90px;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  display: block;
+
+
+}
+
+.closed {
+  font-size: 120px;
+  text-transform: none;
+  line-height: 80%;
+}
+
+.your {
+  position: relative;
+  padding: 0 auto;
+  left: -47px;
+  letter-spacing: 6px;
+  font-size: 35px;
+}
+
+.you-dont-know {
+  font-size: 25px;
+  float: right;
+  width: 20%;
+  padding-left: 765px;
+  position: absolute;
+  bottom: 7px;
+}
