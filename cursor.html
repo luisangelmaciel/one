@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-Mx">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cursor desliza</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+    <style>
+        .hi-desliza {
+            animation: swipe .7s ease-in-out infinite;
+            color: rgb(241, 4, 4);
+            font-size: 45px;
+            left: calc(20% - 50px);
+            opacity: .5;
+            position: absolute;
+            transform-origin: bottom;
+            top: calc(auto- 50px)
+        }
+        
+        @keyframes swipe {
+            0% {
+                transform: translate(-100%) rotate(-15deg);
+            }
+            100% {
+                transform: translate(100%) rotate(0deg);
+            }
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+        <i class="hi-desliza fa fa-hand-pointer-o "></i>
+
+    </body>
+
+
+
+</html>

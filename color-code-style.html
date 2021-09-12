@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="utf-8">
+    <title>Code color style</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+
+
+
+    <section>
+        <style>
+            .html-code {
+                font-family: 'Courier New', Courier, monospace;
+                color: blue;
+                visibility: visible;
+            }
+            
+            .html-code .div:before {
+                color: black;
+                content: "<div";
+            }
+            
+            .html-code .class:before {
+                color: red;
+                content: "class";
+            }
+            
+            .html-code .igual:before {
+                color: black;
+                content: "=";
+            }
+            
+            .html-code .divx:before {
+                color: black;
+                content: " > </div> ";
+            }
+            
+            .html-nota {
+                font-family: 'Courier New', Courier, monospace;
+                visibility: visible;
+                color: green;
+            }
+            
+            .html-nota:before {
+                content: " <!-- ";
+            }
+            
+            .html-nota .notax:before {
+                content: " --> ";
+            }
+        </style>
+        <div class="html-code">
+            <span class="div"></span>
+            <span class="class"></span>
+            <span class="igual"></span>"Maciel Padilla"
+            <span class="divx"></span>
+        </div>
+
+        <div class="html-nota">
+            Falta poner boton
+            <span class="notax"></span>
+        </div>
+    </section>
+
+</html>
