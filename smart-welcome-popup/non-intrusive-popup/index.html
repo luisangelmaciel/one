@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Non-Intrusive Popup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://www.invitationsbydawn.com/styles/theme.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+            <h1 class="text-center">Non-Intrusive Popup</h1>
+
+            <p>Google is cracking down on mobile popups. Popups are annoying and distruptive to the user experience. This option will still allow you to have a newsletter popup that is compliant with Google's new algorithm (January 2017 update).</p>
+  
+  <p><a href="https://daveberning.io/how-to-stay-ahead-of-googles-non-intrusive-popup-update" target="_blank">Read my blog post</a> detailing this update.</p>
+  
+            <img class="img-responsive" src="http://parsecdigital.io/codepen/intrusive.png">
+            <img class="img-responsive" src="http://parsecdigital.io/codepen/non-intrusive.png">
+              
+            <p>Below is an example of a non-instrusive popup that tries to seek the user's attention if ignored.</p>
+            
+            
+  
+            <div class="popup">
+                <div class="popup-container">
+                    <div class="popup-form">
+                        <h1 class="text-center">Signup For Special Offers</h1>
+                        <p class="text-center">Signup to recieve our newsletter and get the latest news and deals from [Company Name]!</p>
+                        <span class="js-popup-toggle popup-close"><i class="fa fa-close"></i></span>
+                        <form>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                            </div>
+                          <button class="btn btn-block btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="cta js-popup-toggle text-center newsletter-attention">
+                        <p><i class="fa fa-pencil-square-o"></i> Newsletter Signup | (<span class="popup-dismiss">Dismiss</span>)</p>
+                    </div>
+                </div>
+            </div><!-- popup -->
+        </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://use.fontawesome.com/29081410fc.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
