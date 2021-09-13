@@ -1,0 +1,315 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+/* CSS Code */
+
+.popup-nuevo {
+    z-index: 10;
+    width: 450px;
+    height: 580px;
+    position: relative;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    -moz-background-clip: padding;
+    -o-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    /* prevents bg color from leaking outside the border */
+    background-color: #fff;
+    /* layer fill content */
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+    /* drop shadow */
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+    /* drop shadow */
+    -o-box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+    /* drop shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .18);
+    /* drop shadow */
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation: iconosani 1.2s forwards;
+    animation: iconosani 1.2s forwards;
+    -moz-animation: iconosani 1.2s forwards;
+    -o-animation: iconosani 1.2s forwards;
+}
+
+@-webkit-keyframes iconosani {
+    0% {
+        -webkit-transform: perspective(800px) rotateX(-90deg);
+        -moz-transform: perspective(800px) rotateX(-90deg);
+        -o-transform: perspective(800px) rotateX(-90deg);
+        opacity: 1;
+    }
+    40% {
+        -webkit-transform: perspective(800px) rotateX(30deg);
+        -moz-transform: perspective(800px) rotateX(30deg);
+        -o-transform: perspective(800px) rotateX(30deg);
+        opacity: 1;
+    }
+    70% {
+        -webkit-transform: perspective(800px) rotateX(-10deg);
+        -moz-transform: perspective(800px) rotateX(-10deg);
+        -o-transform: perspective(800px) rotateX(-10deg);
+    }
+    100% {
+        -webkit-transform: perspective(800px) rotateX(0deg);
+        -moz-transform: perspective(800px) rotateX(0deg);
+        -o-transform: perspective(800px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.popScroll h1 {
+    height: 60px;
+    position: relative;
+    color: #fff;
+    font: 25px/60px sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    background: #3D79D0;
+}
+
+.popScroll form {
+    margin: 10px auto;
+}
+
+.subscribe-widget .email-form {
+    font-size: 13px;
+    color: #999999;
+    padding-left: 6px;
+    width: 270px;
+    border: 1px solid #e0e0e0;
+    padding: 5px 0 5px 5px;
+    line-height: 25px;
+}
+
+.subscribe-widget .button {
+    background: #3D79D0;
+    padding: 6px 15px;
+    color: #fff;
+    border: none;
+    line-height: 25px;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+.popScroll p {
+    padding: 1px 5px;
+    font-family: 'Open Sans';
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#option {
+    position: relative;
+}
+
+.boxi {
+    display: inline-block;
+    width: 169px;
+    line-height: 42px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+}
+
+#home {
+    background: #3D79D0;
+}
+
+#close {
+    background: #D21111;
+}
+
+.popScroll em {
+    width: 42px;
+    display: inline-block;
+    position: relative;
+    margin: 0 -20px;
+    line-height: 42px;
+    background: #fff;
+    color: #777;
+    text-align: center;
+    border-radius: 50px;
+}
+
+#home:hover {
+    background: #1852C7;
+}
+
+#close:hover {
+    background: #B30E0E;
+}
+
+.ribbon {
+    position: absolute;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.ribbon.top-left {
+    top: -2.6px;
+    left: -5px;
+}
+
+.ribbon.top-left.ribbon-primary>small {
+    *zoom: 1;
+    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF428BCA', endColorstr='#FF2A6496');
+    background-image: -moz-linear-gradient(top, #428bca 0%, #2a6496 100%);
+    background-image: -webkit-linear-gradient(top, #428bca 0%, #2a6496 100%);
+    background-image: linear-gradient(to bottom, #428bca 0%, #2a6496 100%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 65%;
+    color: white;
+    background-color: #428bca;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -moz-box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.5);
+    top: 16px;
+    left: -27px;
+}
+
+.ribbon.top-left.ribbon-primary>small:before,
+.ribbon.top-left.ribbon-primary>small:after {
+    position: absolute;
+    content: " ";
+}
+
+.ribbon.top-left.ribbon-primary>small:before {
+    left: 0;
+}
+
+.ribbon.top-left.ribbon-primary>small:after {
+    right: 0;
+}
+
+.ribbon.top-left.ribbon-primary>small:before,
+.ribbon.top-left.ribbon-primary>small:after {
+    bottom: -3px;
+    border-top: 3px solid #0e2132;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.adstext {
+    margin-top: 20px;
+    color: #000;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .popup {
+        width: 370px;
+        height: 480px;
+    }
+    .popScroll h1 {
+        height: 40px;
+        font: 18px/40px sans-serif;
+    }
+    .subscribe-widget .email-form {
+        width: 210px;
+    }
+    .adstext {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .popup {
+        width: 350px;
+        height: 480px;
+    }
+    .popScroll h1 {
+        height: 40px;
+        font: 18px/40px sans-serif;
+    }
+    .subscribe-widget .email-form {
+        width: 210px;
+    }
+    .adstext {
+        margin-top: 20px;
+    }
+}
+
+input.email-form:active,
+input.email-form:focus {
+    -webkit-animation: fade 0.55s ease-in;
+    -moz-animation: fade 0.55s ease-in;
+    animation: fade 0.55s ease-in;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    66% {
+        box-shadow: 0 0 0 10px #3D79D0, 0 0 0 12px white;
+    }
+    100% {
+        box-shadow: 0 0 0 20px transparent, 0 0 0 22px transparent;
+    }
+}
+
+@-moz-keyframes fade {
+    0% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    66% {
+        box-shadow: 0 0 0 10px #3D79D0, 0 0 0 12px white;
+    }
+    100% {
+        box-shadow: 0 0 0 20px transparent, 0 0 0 22px transparent;
+    }
+}
+
+@-o-keyframes fade {
+    0% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    66% {
+        box-shadow: 0 0 0 10px #3D79D0, 0 0 0 12px white;
+    }
+    100% {
+        box-shadow: 0 0 0 20px transparent, 0 0 0 22px transparent;
+    }
+}
+
+@keyframes fade {
+    0% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+    66% {
+        box-shadow: 0 0 0 10px #3D79D0, 0 0 0 12px white;
+    }
+    100% {
+        box-shadow: 0 0 0 20px transparent, 0 0 0 22px transparent;
+    }
+}
+
+
+/* POPUP */
+
+
+/*****************
+Section 
+******************/

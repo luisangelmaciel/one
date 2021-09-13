@@ -1,0 +1,169 @@
+img {
+    margin: 0 auto;
+}
+
+.popup {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    transition: all 1s ease;
+}
+
+.popup .popup-container {
+    height: 80px;
+}
+
+.popup-active {
+    overflow: hidden;
+}
+
+.popup-active .popup {
+    height: 100%;
+    width: 100%;
+}
+
+.popup-active .popup-form {
+    top: 0;
+    height: calc(100% - 49px);
+}
+
+.popup-active .popup-form * {
+    opacity: 1;
+}
+
+.popup-active .popup-form {
+    top: 0;
+}
+
+.popup-form {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    color: #252525;
+    padding: 15px;
+    transition: all 0.5s ease;
+    background: #e0e0e0;
+}
+
+.popup-form form {
+    margin-top: 30px;
+}
+
+.popup-form input {
+    margin-bottom: 15px;
+}
+
+.popup-form * {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+}
+
+.popup-close {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #252525;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.cta {
+    background: #F65D7C;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+}
+
+.cta p {
+    margin: 0;
+}
+
+.cta.newsletter-attention {
+    -webkit-animation: newsletter-attention 1s infinite;
+    /* Safari 4+ */
+    /* Fx 5+ */
+    /* Opera 12+ */
+    animation: newsletter-attention 1s infinite;
+    /* IE 10+, Fx 29+ */
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+}
+
+@-webkit-keyframes newsletter-attention {
+    0% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    8% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    11% {
+        padding: 25px 15px;
+        background: #f8849b;
+    }
+    13% {
+        padding: 10px;
+        background: #F65D7C;
+    }
+    15% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    17% {
+        padding: 12px;
+        background: #F65D7C;
+    }
+    19% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    100% {
+        padding: 15px;
+    }
+}
+
+@keyframes newsletter-attention {
+    0% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    8% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    11% {
+        padding: 25px 15px;
+        background: #f8849b;
+    }
+    13% {
+        padding: 10px;
+        background: #F65D7C;
+    }
+    15% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    17% {
+        padding: 12px;
+        background: #F65D7C;
+    }
+    19% {
+        padding: 15px;
+        background: #F65D7C;
+    }
+    100% {
+        padding: 15px;
+    }
+}
