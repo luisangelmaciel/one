@@ -1,0 +1,19 @@
+@import "compass";
+
+body {
+  background: #DCDCDC;
+  overflow: hidden;
+}
+
+figure { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+svg {
+  padding: 5vw;
+  width: 90vw;
+}
