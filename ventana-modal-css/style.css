@@ -1,0 +1,50 @@
+.body-page{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.boton{
+  text-decoration:none;
+  color: #fff;
+  background-color: steelblue;
+  padding: .5em 1em;
+  border-bottom-color: #222;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  align-self:center;
+}
+#vmodal { 
+  background-color:#000;
+  color: #fff;
+  position: fixed;
+  top:0;
+  left:-100vw;
+  width:100vw;
+  height: 100vh;
+  transition: all .5s;
+  font-family:'Roboto';
+
+}
+#vmodal:target{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  left:0;
+}
+.cerrar{
+  display:flex;
+  position:absolute;
+  top:0;
+  right:0;
+  padding:.5em;
+  background-color: tomato;
+  color:#fff;
+  text-decoration:none;
+  font-size:.7em;
+  box-sizing:border-box;
+}
+.parrafo{
+  width:70%;
+  text-align:justify;
+}
