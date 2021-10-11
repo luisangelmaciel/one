@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Toxel Neon Glow &amp; countdown chronometer</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<div>
+    <!-- partial:index.partial.html -->
+    <div id="container-neon">
+        <div class="container-leyendo light-neon">
+            <div id="chronometer" class="chronometer">
+                <div class="time">
+                    <div class="counter-down">
+                        <div class="box a-light-neon">
+                            <div id="hour-first-digit" class="left" style="font-size: 1.5em;">0</div>
+                            <div id="hour-second-digit" class="right" style="font-size: 1.5em;">2</div>
+                        </div>
+                        <div class="description a-light-neon">hrs</div>
+                    </div>
+                    <div class="counter-down a-light-neon">
+                        <div class="box">
+                            <div id="minute-first-digit" class="left" style="font-size: 1.5em;">0</div>
+                            <div id="minute-second-digit" class="right" style="font-size: 1.5em;">7</div>
+                        </div>
+                        <div class="description">min</div>
+                    </div>
+                    <div class="counter-down a-light-neon">
+                        <div class="box">
+                            <div id="second-first-digit" class="left" style="font-size: 1.5em;">1</div>
+                            <div id="second-second-digit" class="right" style="font-size: 1.5em;">9</div>
+                        </div>
+                        <div class="description">seg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .container-leyendo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container-leyendo .chronometer {
+            width: 50%;
+            font-family: sans-serif;
+            transition: all 0.5s;
+        }
+        
+        .container-leyendo .chronometer .time {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .container-leyendo .chronometer .time .counter-down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 12px;
+        }
+        
+        .container-leyendo .chronometer .time .counter-down .box {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .container-leyendo .chronometer .time .counter-down .box .left,
+        .container-leyendo .chronometer .time .counter-down .box .right {
+            position: relative;
+            font-size: 14px;
+            /*     border-radius: 10%;
+        box-shadow: 0 1px 0px 0 #d456ca, 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        text-shadow: 0 0 6px #d456ca;
+        background-color: #751195;
+        color: white; */
+            transition: all 0.5s;
+        }
+        
+        .container-leyendo .chronometer .time .counter-down .box .left::before,
+        .container-leyendo .chronometer .time .counter-down .box .right::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            /*  background-color: #751195; */
+            position: absolute;
+            right: 0;
+            top: 48%;
+            transition: all 0.5s;
+        }
+        
+        .container-leyendo .chronometer .time .counter-down .description {
+            /*    color: #751195;
+        letter-spacing: 0.75px;
+        text-shadow: 0 0 2px #d456ca; */
+            transition: all 0.5s;
+        }
+    </style>
+    <script src="./tiempo-que-llevas-leyendo-esto.js"></script>
+
+</div>
+
+</html>
