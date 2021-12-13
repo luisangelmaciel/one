@@ -1,0 +1,97 @@
+<!doctype html>
+<title>¿Cómo tener interactividad desde otras páginas a Twitter</title>
+<script type="text/javascript " charset="utf-8 " src="https://platform.twitter.com/widgets.js" async></script>
+<meta name="twitter:widgets:autoload" content="off">
+<link rel="canonical" href="https://developer.twitter.com/en/docs/twitter-for-websites/tools-and-libraries">
+<link rel="me " href="https://twitter.com/luisangelmaciel">
+<meta name="twitter:widgets:border-color" content="#ff00ff">
+<meta name="twitter:widgets:theme" content="dark">
+<meta name="twitter:dnt" content="on">
+
+
+<html>
+
+<body>
+
+    <main>
+        <article>
+            <section>
+                <h1>Interactividad desde otros sitios a Twitter</h1>
+                <p>Hoy en día es muy importante la experiencia de usuario e interacción con otras plataformas. </p>
+                <p>Twitter ofrece soluciones bastante sencillas y muy utiles.</p>
+                <h2>Empezemos con lo basico: Javascript</h2>
+                <p>Antes que nada, habra que insertar el script correcpondiente de la plataforma de Twitter: Widget.js, que dará vida a los botones. Una vez copiado y pegado, empezemos con los ejemplos.</p>
+                <code>
+        &#60;script type="text/javascript " async src="https://platform.twitter.com/widgets.js ">&#60;/script>
+    </code>
+            </section>
+            <hr>
+            <section>
+                <h3>Enviar Twitt</h3>
+                <p>Algunas de las aplicaciones pueden ser: </p>
+                <ul>
+                    <li>
+                        <p>Para twittear un post de blog que te gustara</p>
+                    </li>
+                    <li>
+                        <p>Citar una frase</p>
+                    </li>
+                    <li>
+                        <p>Compartir que se celebra tal evento y tu apoyas por medio de un hashtag</p>
+                    </li>
+                </ul>
+
+                <h4>Twitt sin username</h4>
+                <a class="twitter-share-button " href="https://twitter.com/intent/tweet?text=Hello%20world%20this%20is%20a%20#experiment ">Compartir este post </a><br>
+                <a class="twitter-hashtag-button" href="https://twitter.com/intent/tweet?button_hashtag=TwitterStories"> #TwitterStories</a>
+                <h4>Twitt con username</h4>
+                <p>se tiene que usar la siguiente etiqueta</p>
+                <code>
+                    &#60;link rel="me " href="https://twitter.com/luisangelmaciel">
+                </code>
+                <br>
+                <a class="twitter-share-button " href="https://twitter.com/intent/tweet?text=Hello%20world%20this%20is%20a%20experiment%20@xiibertravel%20:%20)%20 "> Hello world </a>
+                <link rel="me " href="https://twitter.com/luisangelmaciel">
+
+            </section>
+            <hr>
+            <section>
+                <h3>Intent follow</h3>
+                <p>Muchos solemos firmar nuestro trabajo con algun enlace a nuestras redes sociales. Twitter da la opción de que al clickear dicho enlace, te de la opción inmediata de "seguir" o cancelar desde el primer momento que esta cargada la pagina
+                    destino, ¿genial, verdad?. Veamos un ejemplo: </p>
+                <a href="https://twitter.com/intent/follow?screen_name=luisangelmaciel">follow/@luisangelmaciel</a>
+                <br>
+                <p>La opción "user" es muy similar a la opción "follow":</p>
+                <a href="https://twitter.com/intent/user?screen_name=luisangelmaciel ">user/@luisangelmaciel</a>
+                <br>
+                <a href="https://twitter.com/intent/tweet?in_reply_to=463440424141459456 ">Respuesta a un twitter</a>
+                <br>
+                <a href="https://twitter.com/intent/like?tweet_id=463440424141459456 ">Me gusta</a>
+                <br>
+                <a href="https://twitter.com/intent/retweet?tweet_id=463440424141459456 ">Retweet</a>
+                <br>
+                <a href="https://twitter.com/intent/like?tweet_id=463440424141459456 ">Like</a>
+                <br>
+                <a href="https://twitter.com/messages/compose?recipient_id=54042586 " class="twitter-dm-button " data-screen-name="@luisangelmaciel ">Enviar un mensaje </a>
+                <br>
+                <a href="https://twitter.com/messages/compose?recipient_id=54042586&text=Hello%20world " class="twitter-dm-button " data-screen-name="@luisangelmaciel " data-size="large ">Enviar mensaje con texto predeterminado a @luisangelmaciel </a>
+                <br>
+                <a href="https://twitter.com/messages/compose?recipient_id=114626374&text=Hello%20world " class="twitter-dm-button " data-screen-name="@xiibertravel " data-size="large ">Enviar mensaje con texto predeterminado a @xiibertravel </a>
+                <br>
+                <a href="https://twitter.com/intent/tweet?screen_name=XiiberTravel&ref_src=twsrc%5Etfw " class="twitter-mention-button " data-show-count="false ">Enviar mensaje con el username ya cargado </a>
+                <br>
+                <FONT SIZE=4 COLOR="#017db0">@luisangelmaciel</FONT>
+                <br>
+        </article>
+    </main>
+
+
+
+
+
+
+</body>
+
+</html>
+
+</html>
