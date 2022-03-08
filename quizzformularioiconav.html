@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<title>Quizz Xiiber</title>
+<meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Google Sans" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d1ac0f47f7.js" crossorigin="anonymous"></script>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body {
+font-family:Google Sans,sans-serif;
+line-height:1.3;
+font-size:16px;
+background:#f5f5f5;
+color:#333;
+}
+button {
+ display:inline-block;
+ outline:none;
+ border:none;
+ padding:10px 25px;
+ transition: 300ms ease-in;
+}
+img {
+ max-width:100%;
+}
+section {
+ min-height:100vh;
+ width:100%;
+ max-width:420px;
+ margin:0 auto;
+ padding:20px;
+}
+.sec2 ,.sec3 ,.sec4 ,.sec5 {
+ display:none;
+}
+.sec1, .sec2{
+ background:#fff;
+ text-align:center;
+}
+.sec1 p, .sec2 p{
+ font-size:19px;
+ color:#1;
+ margin-bottom:30px;
+}
+.input {
+ outline:none;
+ border:2px solid #f05577;
+ width:100%;
+ padding:10px;
+ font-size:16px;
+ margin-bottom:25px;
+}
+.sec1 h3 {
+ margin-top:-25px;
+ margin-bottom:10px;
+ color:#f05577;
+ font-size:24px;
+}
+.sec3 {
+ background:linear-gradient(252deg, rgba(69, 69, 69, 0.03) 0%, rgba(69, 69, 69, 0.03) 50%,rgba(47, 47, 47, 0.03) 50%, rgba(47, 47, 47, 0.03) 100%),linear-gradient(335deg, rgba(66, 66, 66, 0.09) 0%, rgba(66, 66, 66, 0.09) 50%,rgba(188, 188, 188, 0.09) 50%, rgba(188, 188, 188, 0.09) 100%),linear-gradient(223deg, rgba(194, 194, 194, 0.08) 0%, rgba(194, 194, 194, 0.08) 50%,rgba(0, 0, 0, 0.08) 50%, rgba(0, 0, 0, 0.08) 100%),linear-gradient(82deg, rgba(27, 27, 27, 0.01) 0%, rgba(27, 27, 27, 0.01) 50%,rgba(197, 197, 197, 0.01) 50%, rgba(197, 197, 197, 0.01) 100%),linear-gradient(281deg, rgba(3, 3, 3, 0.09) 0%, rgba(3, 3, 3, 0.09) 50%,rgba(198, 198, 198, 0.09) 50%, rgba(198, 198, 198, 0.09) 100%),linear-gradient(319deg, rgba(47, 47, 47, 0.01) 0%, rgba(47, 47, 47, 0.01) 50%,rgba(89, 89, 89, 0.01) 50%, rgba(89, 89, 89, 0.01) 100%),linear-gradient(278deg, rgba(243, 243, 243, 0.06) 0%, rgba(243, 243, 243, 0.06) 50%,rgba(63, 63, 63, 0.06) 50%, rgba(63, 63, 63, 0.06) 100%),linear-gradient(38deg, rgba(81, 81, 81, 0.09) 0%, rgba(81, 81, 81, 0.09) 50%,rgba(201, 201, 201, 0.09) 50%, rgba(201, 201, 201, 0.09) 100%),linear-gradient(33deg, rgba(168, 168, 168, 0.08) 0%, rgba(168, 168, 168, 0.08) 50%,rgba(129, 129, 129, 0.08) 50%, rgba(129, 129, 129, 0.08) 100%),linear-gradient(0deg, #1b9efe,#46f3e7);
+}
+.box {
+ width:100%;
+ background:#fcfcfc;
+ padding:20px;
+ border-radius:10px;
+ margin-top:50px;
+ text-align:center;
+}
+.box__header {
+ display:flex;
+ justify-content: space-between;
+ margin-bottom:50px;
+ font-size:14px;
+ color:#555;
+ font-weight:bold;
+}
+.box__header div {
+ padding:5px 0;
+}
+.question {
+ margin-bottom:30px;
+}
+ul{
+ list-style:none;
+}
+.quiz li {
+ padding:15px;
+ margin-bottom:12px;
+ border-radius:8px;
+ color:#666;
+ background:#fff;
+ box-shadow:0 0 2px rgba(0,0,0,0.2);
+ transition: 300ms ease-in;
+}
+.quiz li.select {
+ background:#68c9c6;
+ color:#fff;
+ animation:zoomOut 300ms ease;
+}
+
+@keyframes zoomOut{
+ 0% ,100%{
+  transform:scale(1);
+ }
+ 50% {
+ transform:scale(0.8);
+ }
+}
+.submit {
+width:100%;
+padding:15px;
+margin-bottom:12px;
+border-radius:8px;
+color:#fff;
+background:#f05577;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+.certificate {
+ position:relative;
+ width:100%;
+ height:220px;
+ width:320px;
+ background:url("https://lh3.googleusercontent.com/Tdg5gO-E1sBANRsV_dtv8Xnyt2LadK4-E_bzk48pGuWoq3T5U94cyKjEyoqQlsC2yFtbqQrzCOyWVyIOcXxaTE2Clep8zwOPTMDdawd2sicfmFOyO8E=w1280");
+ background-size:cover;
+ background-position:center center;
+ margin:20px 0;
+ padding:20px;
+ text-align:center;
+ color:#555;
+}
+.certificate h4 {
+ margin-top:36px;
+ color:#000;
+ margin-bottom:8px;
+}
+#date {
+ position:absolute;
+ left:40px;
+ bottom:25px;
+ font-size:12px;
+ }
+ .sin {
+ position:absolute;
+ right:40px;
+ bottom:25px;
+ font-family:cursive;
+ text-decoration:underline;
+ }
+.btn {
+ padding:10px 20px;
+ margin-bottom:12px;
+ border-radius:2px;
+ color:#fff;
+ background:#f05577;
+ text-transform:uppercase;
+ margin-bottom:20px;
+}
+button:hover {
+ opacity:0.9;
+ animation:zoomOut 300ms ease;
+}
+.red {
+ color:#f00;
+}
+.green {
+ color:#00ff04;
+}
+.ans-list {
+ margin:20px 0;
+}
+.ans-list li{
+ padding:15px;
+ margin-bottom:15px;
+ border-radius:2px;
+ color:#666;
+ background:#fff;
+ box-shadow:0 0 2px rgba(0,0,0,0.2);
+ line-height:1.4;
+}
+.flex {
+ display:flex;
+ justify-content: space-between;
+ font-size:16px;
+ margin-bottom:15px;
+}
+
+.box__header .toast {
+ display:inline-block;
+ background:#f05577;
+ padding:5px 15px;
+ border-radius:20px;
+ color:#fff;
+ opacity:0.7;
+ display:none;
+}
+.btn1 {
+ background:#f05577;
+ color:#000;
+ font-weight:bold;
+ border-radius:20px;
+ padding:12px 25px;
+}
+.des {
+ margin:15px 0;
+ text-align:left;
+}
+.mb-1 {
+ margin-bottom:1rem;
+}
+h3.mb-1 {
+ color:#f05577;
+ text-transform:capitalize;
+ border-bottom:1px solid #999;
+ padding-bottom:5px;
+ display:inline-block;
+ font-size:20px;
+}
+.great {
+ text-align:center;
+ font-size:4rem;
+ color:#f05577;
+ opacity:0.7;
+}
+// del mailing e icobar
+
+* body {
+font-family:Google Sans,sans-serif;
+line-height:1.3;
+font-size:16px;
+background:#f5f5f5;
+color:#333;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: #737373;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+
+*form {
+  border: 8px solid #f1f1f1;
+  font-family: Arial;
+}
+
+.container {
+  padding: 5px;
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  background-color: #f05577;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+</style>
+
+</head>
+<body>
+  <section class="sec1" >
+  <div>
+    <img src="https://lh4.googleusercontent.com/VuRp9ELDmGo1XdpCQGOtnpUrdmdHc2XsnhfwC53QvEnD-S3foUFYCFiUArPMZ4qIm7U9O3rQ9Zsala1EiscXX0ri5lIkYH7d9YYH8g5eJzvdN5eYLqw=w1280" width="300" heiht="300" alt="Quizz Pro" >
+    </div>
+    <br>
+    <r>
+  <div><br>
+    <h3>HarryPotteriano Certificado</h3>
+    <p>Eres fan de corazon del mundo de Harry Potter Vamos a poner en prueba tus habilidades y certificate como HarryPotterniano de corazón</p>
+     <button class="btn btn1 continue-btn" >Expecto Patronum</button>
+  </div>
+  </section>
+
+<!-- asecc -->
+<section class="sec2" >
+  <div>
+   <img src="https://lh4.googleusercontent.com/WBx-hob6aciRPSE9aMq9cvDgzQir4qkHmy-fbEKrMhOZQmdI05CmilgQHBZPQ2TXrU8_WQP_=w1280" alt="Hello my name is" >
+  </div>
+   <p>Bienvenido. Antes de iniciar, dinos como te llamas y tu examen aparecera delante de ti! </p>
+  <div>
+    <input type="text" class="input" placeholder="Draco Malfloy" >
+  </div>
+  <button class="btn btn1 start-quiz" >Comencemus</button>
+</section>
+
+<section class="sec3" >
+  <div class="box" >
+    <div class="box__header" >
+      <div class="index" >1/10</div>
+      <div class="toast" ></div>
+      <div class="time" >00:01</div>
+    </div>
+    <h3 class="question" ></h3>
+    <ul class="quiz" >
+    </ul>
+    <button class="submit">Siguiente</button>
+  </div>
+</section>
+
+<!-- amardeep kesharwani -->
+<section class="sec4">
+  <div class="des" >
+  <h3 class="mb-1 name" >nameplayer</h3>
+  <p class="mb-1" >En hora buena!🎉🎉 <br> no sabias ni que poner verdad, ya las vi ahi diciendo de "que es esto" pero terminaron que es lo bueno </p>
+  
+ </div>
+  <button class="check-ans btn" >Revisa tus respuestas</button>
+  <!-- <h3> Tu certificado</h3> --> 
+  <div class="certificate" >
+    <h4>Potteriano de Corazón</h4>
+    <p id="name">Name</p>
+    <p id="score">Score: 50%</p>
+    <small id="id">Test Id : 737373</small>
+    <small id="date">7-5-2020</small>
+    <small class="sin" >MacielTech</small>
+  </div>
+  <h1 class="great" >Excellent</h1>
+  
+<form id="test-form"> 
+  <div class="container" >
+    <h4>El proximo quizz será: Equis tema</h4>
+    <p>¿Quieres ser el primero en responderlo dejanos tu email.</p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="hello@xiiber.com" name="mail" required>
+    <label>
+     
+  <div class="container">
+    <input type="submit" id="submit-form" value="Claro que quiero ser el primero">
+  </div> </form>
+
+
+
+
+
+
+
+<form id="test-form">
+  
+  <div>
+    <label>Mail</label>
+    <input type="text" name="mail" placeholder="Mail"/>
+  </div>
+
+  
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+
+</form>
+
+
+
+
+
+<div class="icon-bar">
+  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+  <a href="#"><i class="fa fa-envelope"></i></a> 
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a> 
+</div> 
+</div>
+
+
+
+  <!-- revisiones -->
+</section>
+<section class="sec5" >
+  <div class="flex" >
+  <h2>Tus respuestas</h2>
+  <h2 class="sc" ></h2>
+  </div>
+  <p class="mb-1" >Información Extra</p>
+  <ul class="ans-list" >
+  </ul>
+  <button class="btn back-btn" >Regresar</button>
+  
+  
+  <form id="test-form">
+  
+  <div>
+    <label>Email</label>
+    <input type="text" name="mail" placeholder="Email"/>
+  </div>
+
+  
+  <div>
+    <button type="submit" id="submit-form" class="btn back-btn">Submit</button>
+  </div>
+
+</form>
+
+   
+<div class="icon-bar">
+   <a class="active"><i class="fa fa-home" href="btn back-btn"></i></a> 
+  <a href="#"><i class="fa fa-search"></i></a> 
+  <a href="#"><i class="fa fa-envelope"></i></a> 
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a> 
+</div>  
+  
+ 
+  
+  
+  
+</section>
+<!-- script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script>
+//Do not see the answer se pueden agregar más
+
+ const ques=[{que:"Cual es el torno de Quidditch official",option:["Quidich Team Sports ","Quidiichsot","Olimpiadas Mundiales","OnlyQuidicsh"],
+crt:0},{que:"y así deben poner sus prguntas",option:["correcta","mala","posible","posible"],
+crt:2},{que:"la oopcion correcta es la 3",option:["correcta","mala","posible","posible"],
+
+
+
+
+
+crt:3}]; let score = 0, index = 0, name = "",answer = [], times;
+  
+ $(document).ready(function(){
+   $(".continue-btn").click(function(){
+     $(".sec1").fadeOut();
+     $(".sec2").fadeIn();
+   });
+   $(".start-quiz").click(function(){
+     name = $(".input").val();
+     if(name === '') {
+      alert("Sugerencia, si quieres por hoy te llamaremos: Harry Potter, va.")
+      return;
+     }
+     $(".sec2").fadeOut();
+     $(".sec3").fadeIn();
+     newQuestion()
+     startTimes()
+   });
+   $(".quiz").on("click","li", function(){
+     $(".quiz .select").removeClass("select");
+     $(this).addClass("select");
+   })
+   $(".submit").click(function(){
+    const select = $(".quiz li").hasClass("select");
+    if(!select) {
+     alert("Para continuar, selecciona una opción");
+     return;
+    }
+    const key = $(".quiz .select").attr("data-key");
+    checkAns(key)
+   })
+   $(".check-ans").click(function(){
+     $(".sec4").fadeOut();
+     $(".sec5").fadeIn();
+     showYourAns()
+   });
+   $(".back-btn").click(function(){
+     $(".sec5").fadeOut();
+     $(".sec4").fadeIn();
+   });
+   
+ });
+ 
+ let s = 0, m = "0"+0;
+ function showTime(){
+  s++
+  if(s >= 60) {
+   s = 0;
+   m++
+   m = m < 10 ? "0" + m : m;
+  }
+  s = s < 10 ? "0" + s : s;
+  $(".time").text(m+":"+s);
+ }
+ function startTimes(){
+   times = setInterval(showTime,1000)
+ }
+ function newQuestion(){
+   const que = ques[index];
+   showIndex()
+   $(".question").text(que.que);
+   $(".quiz").html("");
+   que.option.forEach((q,i) => {
+    const li = document.createElement('li');
+    li.setAttribute('data-key',i);
+    li.textContent = q;
+    $(".quiz").append(li)
+   })
+ }
+ 
+ function checkAns(key) {
+  const que = ques[index];
+  answer.push(key);
+  if(que.crt == key) {
+   score++;
+   makeToast("Correcto")
+  } else{
+   makeToast("Incorrecto")
+  }
+  index++;
+  if(index < ques.length) {
+   newQuestion()
+  } else{
+   showResult()
+   clearInterval(times)
+  }
+ }
+ 
+ function showIndex(){
+  $(".index").text(1 + index+"/"+ques.length)
+ }
+ 
+ function showResult(){
+  $(".sec3").fadeOut();
+  $(".sec4").fadeIn();
+  $("#name").text(name);
+  $(".name").text(name);
+  const scores = Math.round(score / ques.length * 100);
+  const grt = scores < 25 ? "Reprebado" : scores < 50 ? "Bien" : scores < 76 ? "Muy bien" : "Excellente";
+  $("#score").text("Score : "+ scores +"%");
+  $("#id").text("Test Id : "+ Math.ceil(Math.random() * 20000));
+  let date = new Date();
+  let today = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+  $("#date").text(today);
+  $(".great").text(grt);
+ }
+
+ 
+ function showYourAns() {
+  $(".ans-list").html("");
+  $(".sc").text(score+ "/"+ques.length)
+  ques.forEach((que,i) => {
+   const li = document.createElement('li');
+   const p = document.createElement('p');
+   const span = document.createElement('span');
+   p.textContent = 1+i +" : "+ que.que;
+   const chrt = que.crt == answer[i] ? '👉' : '❌';
+   span.textContent = chrt +" "+ que.option[answer[i]];
+   const cls = que.crt == answer[i] ? 'blue' : 'red';
+   span.classList.add(cls);
+   li.appendChild(p)
+   li.appendChild(span)
+   $(".ans-list").append(li);
+  })
+ }
+ 
+ function makeToast(txt) {
+  $(".toast").text(txt);
+  $(".toast").fadeIn();
+  setTimeout(() => $(".toast").fadeOut(),1000)
+ }
+ 
+
+ 
+ var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbySub_A0NrZrQPnSXLIKjKrkKt_NfKAcXvsWQxg7H0EoVbOAw/exec' 
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+ 
+ 
+</script>
+</body>
+</html>

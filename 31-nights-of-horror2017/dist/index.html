@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 31 Nights of Horror - 2017</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab" rel="stylesheet">
+
+<script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-105607247-1', 'auto');
+    ga('send', 'pageview');
+  </script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='root'>
+    <header>
+      <div class='container'>
+        <div class='header-container'>
+          <img class='logo' src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/31-nights-of-horror-2017-logo.svg' alt='31 Nights of Horror - 2017' />
+          <nav>
+            <ul>
+              <li>
+                <a href='http://www.danyuschick.com/31-nights-of-horror/' target='_blank'>2016</a>
+              </li>
+              <li>
+                <a href='https://yuschick.github.io/31-Nights-of-Horror-2015/' target='_blank'>2015</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class='loading-icon-container'>
+        <img class='loading-icon' src="http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-loading.svg" alt="Loading" />
+      </div>
+    </main>
+  </div>
+
+  <script id='trailer-template' type='text/x-handlebars-template'>
+    <iframe class='trailer' src="https://www.youtube.com/embed/{{trailer}}?rel=0&amp;controls=0&amp;autoplay=1&amp;showinfo=0?ecver=2" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+    <div class='close-icon'>
+      <img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-close.svg' alt="Close Trailer" />
+    </div>
+  </script>
+
+  <script id='movie-template' type='text/x-handlebars-template'>
+    <section id='{{id}}' class='day-outer-container' data-movie='{{label}}'>
+      <div class='trailer-container'></div>
+      <section class='container day-inner-container'>
+        <div class='date-display-outer-container'>
+          <div class='date-display-column-container'>
+            {{#if arrows.top}}
+            <a href="#{{prev id}}"><svg class='arrow is-flipped' xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 7.6 8.5" xml:space="preserve">
+              <title>Navigation Arrow - Up</title>
+              <description>An arrow icon to navigate to the previous day of the calendar.</description>
+              <path d="M3.6 5.6l0.3 1.3h0l0.3-1.3L6.4 0h1.2L4.1 8.5H3.5L0 0h1.3L3.6 5.6z"></path>
+            </svg></a> {{/if}}
+            <div class='day-bar-container'>
+              <div class='date-container'>
+                <span>Oct</span>
+                <span>{{id}}</span>
+              </div>
+              <div class='theme-container'>
+                <span>{{date.theme}}</span> {{#unless date.happyhalloween}}
+                <span>{{date.day}}</span> {{/unless}} {{#if date.happyhalloween}}
+                <span>{{date.happyhalloween}}</span> {{/if}}
+              </div>
+            </div>
+            {{#if arrows.bottom}}
+            <a href="#{{next id}}"><svg class='arrow' xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 7.6 8.5" xml:space="preserve">
+              <title>Navigation Arrow - Down</title>
+              <description>An arrow icon to navigate to the next day of the calendar.</description>
+              <path d="M3.6 5.6l0.3 1.3h0l0.3-1.3L6.4 0h1.2L4.1 8.5H3.5L0 0h1.3L3.6 5.6z"></path>
+            </svg></a> {{/if}}
+          </div>
+        </div>
+
+        <div class='container primary-movie-container'>
+          <div class='play-icon-container' data-id='{{id}}' data-movie='{{label}}' data-trailer='{{links.trailer}}'>
+            <img class='play-icon' src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-play.svg' alt='Play {{title}} Trailer' />
+          </div>
+          <section class='movie-card-container'>
+            <h2>{{title}}</h2>
+            <div class='movie-details-container'>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background='new 0 0 256 256' xml:space="preserve">
+                <title>Calendar Icon</title>
+                <description>The release date of {{title}} was {{details.release}}</description>
+                <path d="M21,76v158.7c0,5.2,4.2,9.3,9.3,9.3h195.4c5.1,0,9.3-4.2,9.3-9.3V76H21z M76.8,225.3H39.6V188h37.2V225.3z M76.8,178.7H39.6v-37.3h37.2V178.7z M76.8,132H39.6V94.7h37.2V132z M123.4,225.3H86.1V188h37.2V225.3z M123.4,178.7H86.1v-37.3 h37.2V178.7z M123.4,132H86.1V94.7h37.2V132z M169.9,225.3h-37.2V188h37.2V225.3z M169.9,178.7h-37.2v-37.3h37.2V178.7z M169.9,132 h-37.2V94.7h37.2V132z M216.4,225.3h-37.2V188h37.2V225.3z M216.4,178.7h-37.2v-37.3h37.2V178.7z M216.4,132h-37.2V94.7h37.2V132z M235,48.3V67H21V48.3c0-5.1,4.2-9.3,9.3-9.3H67V10h20v29h82V10h20v29h36.7C230.8,39,235,43.2,235,48.3z"/>
+              </svg>
+              <span>{{details.release}}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 20 17.5" xml:space="preserve">
+                <title>Language Icon</title>
+                <description>The language of {{title}} is {{details.language}}</description>
+                <polygon fill='none' stroke-miterlimit='10' stroke-width='2' points="0.5 0.5 0.5 13.5 4.5 13.5 4.5 16.5 8.5 13.5 19.5 13.5 19.5 0.5 "/>
+              </svg>
+              <span>{{details.language}}</span>
+            </div>
+            <div class='movie-card-content-container'>
+              <div class='movie-cover-container'>
+                <img src='http://yuschick.github.io/31-Nights-of-Horror-2017/{{images.cover}}' alt='{{title}} - Movie Cover' />
+              </div>
+              <div class='synopsys-container'>
+                <p>
+                  {{details.description}}
+                </p>
+                <div class='icons-container'>
+                  <div class='stream-icon' data-type='imdb' data-id='{{id}}'>
+                    <a href='http://www.imdb.com/title/{{links.imdb}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-imdb.jpg' alt='View {{title}} on IMDB' /></a>
+                  </div>
+                  {{#if links.amazon}}
+                  <div class='stream-icon' data-type='amazon' data-id='{{id}}'>
+                    <a href='{{links.amazon}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-amazon.jpg' alt='Watch {{title}} on Amazon' /></a>
+                  </div>
+                  {{/if}} {{#if links.hulu}}
+                  <div class='stream-icon' data-type='hulu' data-id='{{id}}'>
+                    <a href='{{links.hulu}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-hulu.jpg' alt='Watch {{title}} on Hulu' /></a>
+                  </div>
+                  {{/if}} {{#if links.netflix}}
+                  <div class='stream-icon' data-type='netflix' data-id='{{id}}'>
+                    <a href='{{links.netflix}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-netflix.jpg' alt='Watch {{title}} on Netflix' /></a>
+                  </div>
+                  {{/if}} {{#if links.shudder}}
+                  <div class='stream-icon' data-type='shudder' data-id='{{id}}'>
+                    <a href='{{links.shudder}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-shudder.jpg' alt='Watch {{title}} on Shudder' /></a>
+                  </div>
+                  {{/if}}{{#if links.youtube}}
+                  <div class='stream-icon' data-type='youtube' data-id='{{id}}'>
+                    <a href='{{links.youtube}}' target='_blank'><img src='http://yuschick.github.io/31-Nights-of-Horror-2017/dist/images/icon-youtube.jpg' alt='Watch {{title}} on Youtube' /></a>
+                  </div>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </section>
+    </section>
+  </script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+<script src='https://www.gstatic.com/firebasejs/4.3.1/firebase.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

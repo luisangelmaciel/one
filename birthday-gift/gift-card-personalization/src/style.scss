@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
+
+.overlay-bg {
+  background: rgba(0,0,0,.60);
+  height: 200%;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  position: fixed;
+  z-index: -999;
+}
+
+.popup {
+  height: 630px;
+  width: 448px;
+  background: white;
+  z-index: 999;
+  display: block;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+#card-image {
+  width: 100%;
+  height: 416px;
+  background-image: url('http://i.imgur.com/g9entTN.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #f1f1f1;
+}
+
+#card-text {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 4em;
+  letter-spacing: 1px;
+  line-height: 1;
+  max-width: 100%;
+  height: 196px;
+  border: none;
+  resize: none;
+  padding-top: 48px;
+  overflow-y: hidden;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: regular;
+    color: white;
+    background: rgba(0,0,0,.6);
+    padding: 180px 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+.custom-file-upload:hover {
+  display: inline-block;
+  opacity: 1; 
+}

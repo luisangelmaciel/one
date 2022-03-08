@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  /* 
+  background: url(somePicture.jpg);
+  background-size: cover;
+  ***remove background color when using this part if you want***
+  */
+  font-family: 'Poppins', sans-serif;
+  background: pink;
+}
+
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section .scroll{
+  width: 100%;
+  display: flex;
+}
+
+section .scroll div{
+  color: #000;
+  font-size: 4em;
+  background: #fff;
+  white-space: nowrap;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: animate 40s linear infinite;
+  animation-delay: -40s;
+}
+
+section .scroll div:nth-child(2){
+  animation: animate2 40s linear infinite;
+  animation-delay: -20s;
+}
+
+section .scroll div span{
+  -webkit-text-stroke: 2px #000;
+  color: transparent;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+}
+
+section .scroll.text1{
+  transform: rotate(30deg) translateY(200px) translateX(-200px);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  width: 100%;
+}
