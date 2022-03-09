@@ -1,0 +1,79 @@
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+#Button-explosive {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    background: #0000002a;
+    border-radius: 50%;
+    color: #ececec;
+    z-index: 1;
+}
+
+.Nav-explosive {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 302px;
+    height: 302px;
+    font-size: 0;
+    transform: scale(0);
+    transition: transform 0.8s;
+    box-shadow: 0px 0px 10px #999;
+    z-index: 1;
+}
+
+.a-explosive {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    font-size: 28px;
+    text-decoration: none;
+    line-height: 150px;
+    text-align: center;
+    /*   text-shadow: 2px 2px 4px #666;  */
+    color: #fff;
+}
+
+.a-explosive:nth-of-type(odd) {
+    margin-right: 2px;
+}
+
+.a-explosive:nth-child(1) {
+    margin-bottom: 2px;
+    background: #1abc9c;
+}
+
+.a-explosive:nth-child(2) {
+    background: #2ecc71;
+}
+
+.a-explosive:nth-child(3) {
+    background: #3498db;
+}
+
+.a-explosive:nth-child(4) {
+    background: #9b59b6;
+}
+
+.active {
+    transform: scale(1);
+}
+
+canvas {
+    position: fixed;
+}
+
+.bg-black-negro {
+    background-color: rgb(2, 9, 27);
+}
