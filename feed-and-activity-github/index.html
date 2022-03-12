@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Feed & activity Github</title>
+    <link rel="stylesheet" href="octicons.css">
+    <link rel="github-activity.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="mustache.min.js"></script>
+    <script type="text/javascript" src="github-activity.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
+
+    <script>
+        function updateFeed(username) {
+            GitHubActivity.feed({
+                username: username,
+                selector: '#feed'
+            });
+        }
+
+        $(document).ready(function() {
+            updateFeed('hihellomonster');
+
+            $('#update').click(function() {
+                updateFeed($("#username").val());
+            });
+            $("#username").keypress(function(e) {
+                if (e.which === 13) {
+                    updateFeed($("#username").val());
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="feed"></div>
+
+</body>
+
+</html>

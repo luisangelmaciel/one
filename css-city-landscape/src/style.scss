@@ -1,0 +1,324 @@
+$hue: 210;
+$bg1: hsl($hue, 15%, 15%);
+$bg2: hsl($hue, 15%, 10%);
+$mo1: hsl($hue, 25%, 75%);
+$mo2: hsl($hue, 10%, 50%);
+$win: hsl($hue, 10%, 50%);
+$fir: hsl($hue, 10%, 20%);
+$bor: hsl($hue, 15%,  8%);
+$txt: hsl($hue, 20%, 65%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  content: '';
+  position: absolute;
+}
+
+html,
+body {
+  height: 100vh;
+  font: 10px/1 'Avenir Next', sans-serif;
+  background: $bg2;
+}
+
+.back {
+  position: relative;
+  min-width: 1400px;
+  height: calc(100vh - 100px);
+  background: $bg1;
+}
+
+.back::after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(transparent, $bg1);
+}
+
+.inner {
+  position: relative;
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.tower {
+  position: absolute;
+  bottom: 0;
+  width: 130px;
+  background: $bg2;
+  box-shadow:
+    inset 2px 0 0 $bor,
+    inset -2px 0 0 $bor,
+    inset 0 3px 0 $bor,
+    inset 0 -20px 0 $bor;
+}
+
+@for $i from 1 through 7 {
+  .tower:nth-child(#{$i}) {
+    &::after {
+      width: 100%;
+      height: 100%;
+      background: rgba($bg1, .8);
+    }
+  }
+}
+
+@for $i from 8 through 13 {
+  .tower:nth-child(#{$i}) {
+    &::after {
+      width: 100%;
+      height: 100%;
+      background: rgba($bg1, .4);
+    }
+  }
+}
+
+.tower:nth-child(1)  { width: 150px; height: 400px; left:  400px; }
+.tower:nth-child(2)  { width: 140px; height: 380px; left:  850px; }
+.tower:nth-child(3)  { width: 150px; height: 200px; left:    0px; }
+.tower:nth-child(4)  { width: 150px; height: 310px; left:  200px; }
+.tower:nth-child(5)  { width: 180px; height: 350px; left:  610px; }
+.tower:nth-child(6)  { width: 170px; height: 310px; left: 1030px; }
+.tower:nth-child(7)  { width: 150px; height: 200px; right:   0px; }
+.tower:nth-child(8)  { width: 160px; height: 230px; left:  120px; }
+.tower:nth-child(9)  { width: 140px; height: 280px; left:  340px; }
+.tower:nth-child(10) { width: 160px; height: 260px; left:  530px; }
+.tower:nth-child(11) { width: 180px; height: 240px; left:  750px; }
+.tower:nth-child(12) { width: 140px; height: 250px; left: 1000px; }
+.tower:nth-child(13) { width: 160px; height: 160px; left: 1170px; }
+.tower:nth-child(14) { width: 230px; height: 110px; left:   70px; }
+.tower:nth-child(15) { width: 180px; height: 140px; left:  390px; }
+.tower:nth-child(16) { width: 110px; height: 190px; left:  620px; }
+.tower:nth-child(17) { width: 180px; height: 140px; left:  780px; }
+.tower:nth-child(18) { width: 250px; height:  80px; left: 1040px; }
+
+.radio {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 20px;
+  height: 5px;
+  margin-left: -10px;
+  background: darken($bg1, 2%);
+}
+
+.radio::before {
+  top: -90px;
+  left: 9px;
+  width: 2px;
+  height: 90px;
+  background: darken($bg1, 2%);
+}
+
+.radio::after {
+  $c: red;
+  top: -70px;
+  left: 9px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  box-shadow:
+    0 5px 0 $c, 0 5px 5px $c, 0 5px 10px $c,
+    0 25px 0 $c, 0 25px 5px $c, 0 25px 10px $c,
+    0 45px 0 $c, 0 45px 5px $c, 0 45px 10px $c;
+  animation: 2s radio infinite;
+}
+
+.tower:nth-child(2) .radio::after {
+  animation-delay: .2s;
+}
+
+@keyframes radio {
+   50% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+.win {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 27px);
+  overflow: hidden;
+}
+
+@function win($c,$h,$v) {
+  $val: 0px 0px $c;
+  @for $i from 0 through $h {
+    @for $j from 0 through $v {
+      $da: random(25);
+      $op: random(9);
+      $val: #{$val}, #{$i * 7}px #{$j * 10}px rgba(darken($c, $da + 0%), 1 / $op);
+    }
+  }
+  @return $val;
+}
+
+.win::after {
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 3px;
+  background: $fir;
+}
+
+.tower:nth-child(1)  .win::after { box-shadow: win($win, 20, 37); }
+.tower:nth-child(2)  .win::after { box-shadow: win($win, 19, 35); }
+.tower:nth-child(3)  .win::after { box-shadow: win($win, 20, 17); }
+.tower:nth-child(4)  .win::after { box-shadow: win($win, 20, 28); }
+.tower:nth-child(5)  .win::after { box-shadow: win($win, 25, 32); }
+.tower:nth-child(6)  .win::after { box-shadow: win($win, 23, 28); }
+.tower:nth-child(7)  .win::after { box-shadow: win($win, 20, 17); }
+.tower:nth-child(8)  .win::after { box-shadow: win($win, 22, 20); }
+.tower:nth-child(9)  .win::after { box-shadow: win($win, 19, 25); }
+.tower:nth-child(10) .win::after { box-shadow: win($win, 22, 23); }
+.tower:nth-child(11) .win::after { box-shadow: win($win, 25, 21); }
+.tower:nth-child(12) .win::after { box-shadow: win($win, 19, 22); }
+.tower:nth-child(13) .win::after { box-shadow: win($win, 22, 13); }
+.tower:nth-child(14) .win::after { box-shadow: win($win, 32,  8); }
+.tower:nth-child(15) .win::after { box-shadow: win($win, 25, 11); }
+.tower:nth-child(16) .win::after { box-shadow: win($win, 15, 16); }
+.tower:nth-child(17) .win::after { box-shadow: win($win, 25, 11); }
+.tower:nth-child(18) .win::after { box-shadow: win($win, 35,  5); }
+
+@function floor($c) {
+  $val: 0px 0px $c;
+  @for $i from 0 through 36 {
+    $val: #{$val}, 0 #{$i * 10}px $c;
+  }
+  @return $val;
+}
+
+.win::before {
+  $floor: rgba($bor, .4);
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: $floor;
+  box-shadow: floor($floor);
+}
+
+.moon {
+  position: absolute;
+  left: 970px;
+  bottom: 280px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient($mo1, $mo2);
+}
+
+.front .inner {
+  top: -100px;
+  height: 100px;
+}
+
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200px;
+  height: 43px;
+  margin-left: -100px;
+  text-align: center;
+    background: lighten($bg2, .5%);
+  box-shadow: 0 0 0 2px $bg2;
+}
+
+.welcome h1 {
+  margin: 5px 0;
+  font-size: 10px;
+  letter-spacing: 12px;
+  color: $fir;
+}
+
+.welcome h2 {
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: $txt;
+}
+
+.welcome h2 span {
+  color: $fir;
+  text-shadow: 0 0 0;
+  animation: 3s letter infinite;
+}
+
+@keyframes letter {
+    4% { color: $fir; }
+    8% { color: $txt; }
+   12% { color: $fir; }
+   16% { color: $txt; }
+   20% { color: $fir; }
+  100% { color: $fir; }
+}
+
+.welcome::before,
+.welcome::after {
+  top: -10px;
+  left: -8px;
+  width: 8px;
+  height: 110px;
+  border-left: 2px solid $bg2;
+  border-right: 2px solid $bg2;
+  background-image: repeating-linear-gradient(transparent, transparent 8px, $bg2 8px, $bg2 16px);
+}
+
+.welcome::after {
+  left: auto;
+  right: -8px;
+}
+
+.trees {
+  width: 100%;
+}
+
+.tree {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  height: 30px;
+  background: $bg2;
+}
+
+@for $i from 1 through 15 {
+  .tree:nth-child(#{$i}) {
+    left: $i * 35 + 0px;
+  }
+}
+
+@for $i from 16 through 30 {
+  .tree:nth-child(#{$i}) {
+    left: $i * 35 + 310px;
+  }
+}
+
+.tree::before {
+  top: -15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  border-radius: 25px 0 25px 0;
+  background: $bg2;
+  transform: rotate(-45deg);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

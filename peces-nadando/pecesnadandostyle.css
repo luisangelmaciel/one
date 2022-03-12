@@ -1,0 +1,27 @@
+body { margin: 0; }
+
+digital-art {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+digital-art canvas {
+  display: block;
+  width: 100%;
+  image-rendering: pixelated;
+  height: 100%;
+}
+
+.credit{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 10px;
+}
+
+.credit a {
+	color: #fff
+}

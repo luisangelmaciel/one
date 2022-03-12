@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Templete blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.xiiber.com/css/xiibicon-style.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <style>
+        /*  PRINCIPAL   */
+        
+        @font-face {
+            font-family: ModernaSans-Light;
+            src: url(https://dragvesti.xiiber.com/font/ModernaSans-Light.ttf);
+        }
+        
+        @font-face {
+            font-family: ModernaSans-Medium;
+            src: url(https://dragvesti.xiiber.com/font/ModernaSans-Medium.ttf);
+        }
+        
+        @font-face {
+            font-family: ModernaSans-BlackIt;
+            src: url(https://dragvesti.xiiber.com/font/ModernaSans-BlackIt.ttf);
+        }
+        
+        @font-face {
+            font-family: ModernaSans-Bold;
+            src: url(https://dragvesti.xiiber.com/font/ModernaSans-Bold.ttf);
+        }
+        /* Style the body */
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        /* Header/logo Title */
+        
+        .headerx {
+            padding: 50px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+        }
+        /* Increase the font size of the heading */
+        
+        .headerx h1 {
+            font-size: 40px;
+        }
+        /* Style the top navigation bar */
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        /* Style the navigation bar links */
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        /* Right-aligned link */
+        
+        .navbar a.right {
+            float: right;
+        }
+        /* Change color on hover */
+        
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        /* Column container */
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE10 */
+            flex-wrap: wrap;
+        }
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        
+        .side {
+            -ms-flex: 15%;
+            /* IE10 */
+            flex: 15%;
+            background-color: #white;
+            padding: 00px;
+        }
+        
+        .sideOne {
+            -ms-flex: 25%;
+            /* IE10 */
+            flex: 25%;
+            background-color: #white;
+            padding-bottom: 20px;
+            padding-top: 64px;
+            padding-left: 20px;
+        }
+        /* Main column */
+        
+        .main {
+            -ms-flex: 60%;
+            /* IE10 */
+            flex: 60%;
+            background-color: white;
+            padding-bottom: 90px;
+            padding-left: 20px;
+            padding-right: 15px
+        }
+        /* Fake image, just for this example */
+        
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        /* Footer */
+        
+        .footer {
+            text-align: center;
+        }
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+        /*  ICOBAR TOP    */
+        
+        .icon-bar {
+            width: 100%;
+            background-color: #005677;
+            overflow: auto;
+            font-size: 30px;
+        }
+        
+        .icon-bar a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .icon-bar a:hover {
+            background-color: #004966;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .active {
+            background-color: 00558c;
+            font-weight: bold;
+            color: white;
+        }
+        /* MODAL  */
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* TABS    */
+        
+        body {
+            font-family: Arial;
+        }
+        /* Style the tab */
+        
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        /* CARD  */
+        
+        .cardTravel {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.10s;
+            width: 96.5%;
+            border-radius: 5px;
+            float: center;
+        }
+        
+        .cardTravel:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 200px;
+            height: 150px;
+        }
+        
+        .containerTravel {
+            padding: 10px 20px 15px 20px;
+        }
+        /*  BUTTON   */
+        
+        .btn {
+            background-color: #004966;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition: 0.3s;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 0px;
+        }
+        
+        .btn:hover {
+            background-color: #005677;
+            color: white;
+            font-weight: bold;
+        }
+        /*  FOOTER   */
+        
+        .icon-barfooter {
+            width: 100%;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            font-size: 30px;
+        }
+        
+        .icon-barfooter a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 14px 12px;
+            transition: all 0.3s ease;
+            color: #003d66;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .icon-barfooter a:hover {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .activefooter {
+            background-color: #ffffff;
+            font-weight: bold;
+            color: #002c49;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        /* Create two equal columns that sits next to each other */
+        
+        .column {
+            -ms-flex: 25%;
+            /* IE 10 */
+            flex: 25%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 6px;
+            vertical-align: middle;
+        }
+        /*  grupo de botones    */
+        
+        .btn-group button {
+            background-color: #04AA6D;
+            /* Green background */
+            border: 1px solid green;
+            /* Green border */
+            color: white;
+            /* White text */
+            padding: 10px 24px;
+            /* Some padding */
+            cursor: pointer;
+            /* Pointer/hand icon */
+            width: 50%;
+            /* Set a width if needed */
+            display: block;
+            /* Make the buttons appear below each other */
+        }
+        
+        .btn-group button:not(:last-child) {
+            border-bottom: none;
+            /* Prevent double borders */
+        }
+        /* Add a background color on hover */
+        
+        .btn-group button:hover {
+            background-color: #017dbb;
+        }
+        /*  PROGRESS container     */
+        
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgb(255, 255, 255);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            width: 0%;
+            background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+            background-position: center 0%;
+            animation: background-slide 25s infinite linear;
+        }
+        
+        div.gallery {
+            border: 0px solid #ccc;
+        }
+        
+        div.gallery:hover {
+            border: 0px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 20%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 20%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 25%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .font {
+            font-size: 30px;
+        }
+        
+        .button-auto {
+            border-radius: 12px;
+            background-color: #f0ecec;
+            border: none;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-auto span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button-auto span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button-auto:hover span {
+            padding-right: 25px;
+        }
+        
+        .button-auto:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        .button-ch {
+            border-radius: 12px;
+            background-color: #faf6f6;
+            border: none;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            width: 20%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-ch span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button-ch span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button-ch:hover span {
+            padding-right: 25px;
+        }
+        
+        .button-ch:hover span:after {
+            opacity: 2;
+            right: 0;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+        }
+        
+        .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    </style>
+
+
+
+    <style>
+        /* TABS    */
+        
+        body {
+            font-family: Arial;
+        }
+        /* Style the tab */
+        
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Style the buttons inside the tab */
+        
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of buttons on hover */
+        
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+        
+        .tab button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+        
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+
+    <style>
+        /* CARD  */
+        
+        .cardTravel {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.10s;
+            width: 96.5%;
+            border-radius: 5px;
+            float: center;
+        }
+        
+        .cardTravel:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 200px;
+            height: 150px;
+        }
+        
+        .containerTravel {
+            padding: 10px 20px 15px 20px;
+        }
+    </style>
+
+    <style>
+        /*  BUTTON   */
+        
+        .btn {
+            background-color: #004966;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition: 0.3s;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 0px;
+        }
+        
+        .btn:hover {
+            background-color: #005677;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+
+
+    <style>
+        /*  FOOTER   */
+        
+        .icon-barfooter {
+            width: 100%;
+            background-color: #ffffff;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            font-size: 30px;
+        }
+        
+        .icon-barfooter a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 14px 12px;
+            transition: all 0.3s ease;
+            color: #003d66;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        
+        .icon-barfooter a:hover {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .activefooter {
+            background-color: #ffffff;
+            font-weight: bold;
+            color: #002c49;
+        }
+    </style>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .row {
+            display: -ms-flexbox;
+            /* IE 10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            /* IE 10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        /* Create two equal columns that sits next to each other */
+        
+        .column {
+            -ms-flex: 25%;
+            /* IE 10 */
+            flex: 25%;
+            padding: 0 4px;
+        }
+        
+        .column img {
+            margin-top: 6px;
+            vertical-align: middle;
+        }
+    </style>
+
+    <style>
+        /*  grupo de botones    */
+        
+        .btn-group button {
+            background-color: #04AA6D;
+            /* Green background */
+            border: 1px solid green;
+            /* Green border */
+            color: white;
+            /* White text */
+            padding: 10px 24px;
+            /* Some padding */
+            cursor: pointer;
+            /* Pointer/hand icon */
+            width: 50%;
+            /* Set a width if needed */
+            display: block;
+            /* Make the buttons appear below each other */
+        }
+        
+        .btn-group button:not(:last-child) {
+            border-bottom: none;
+            /* Prevent double borders */
+        }
+        /* Add a background color on hover */
+        
+        .btn-group button:hover {
+            background-color: #017dbb;
+        }
+        /*  PROGRESS container     */
+        
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgb(255, 255, 255);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            width: 0%;
+            background: linear-gradient( to right, #ff1616, #ff7716, #ffdc16, #36c945, #10a5ce, #0f0096, #a51eff, #ff1616);
+            background-position: center 0%;
+            animation: background-slide 25s infinite linear;
+        }
+    </style>
+
+    <style>
+        div.gallery {
+            border: 0px solid #ccc;
+        }
+        
+        div.gallery:hover {
+            border: 0px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 20%;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 20%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 25%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    <style>
+        .font {
+            font-size: 30px;
+        }
+    </style>
+
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
+
+
+
+    <style>
+        .button-auto {
+            border-radius: 12px;
+            background-color: #f0ecec;
+            border: none;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            width: 100%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-auto span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button-auto span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button-auto:hover span {
+            padding-right: 25px;
+        }
+        
+        .button-auto:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        .button-ch {
+            border-radius: 12px;
+            background-color: #faf6f6;
+            border: none;
+            color: #000000;
+            text-align: center;
+            font-size: 14px;
+            padding: 12px;
+            width: 20%;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        .button-ch span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button-ch span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button-ch:hover span {
+            padding-right: 25px;
+        }
+        
+        .button-ch:hover span:after {
+            opacity: 2;
+            right: 0;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+        }
+        
+        .visuallyhidden {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header 
+        <div class="headerx w3-hide-small">
+            <h1>My Website</h1>    
+        </div>
+    -->
+
+    <div class="navbar">
+        <div class="icon-bar">
+            <a href="#"><i class="icon-menu font"></i></a>
+            <a href="#"><i class=""></i></a>
+            <a href="#"><i class="icon-xiiber-vertical font" style="color: #017dbb"></i></a>
+            <a href="#"><i class="" ></i> </a>
+            <a href="#"><i class=" icon-elipsis font" ></i> </a>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="row ">
+        <div class="side " id="Inicio "></div>
+
+        <div class="main ">
+            <h1>Donec eget massa vulputate, vestibulum justo id, tempor <del>blue</del> nisi. </h1>
+            <h1 class="name"> Luis Angel </h1>
+
+            <h2>Donec maximus ligula vel mi euismod placerat. Pellentesque pulvinar velit eget congue molestie. Aliquam nec nulla cursus, mollis dolor id, porttitor elit. </h2>
+
+            <h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+
+
+            <img src="https://www.xiiber.com/img/photo-preview.webp" alt="dos" style="width: 600;height: 457;">
+
+
+            <p> Pellentesque id turpis non mauris posuere lobortis. Quisque a turpis laoreet ultricies enim non, tincidunt augue. Aliquam nec eros non ipsum eleifend euismod. Nam egestas sollicitudin risus eget volutpat. <br><br> Donec eget massa vulputate,
+                vestibulum justo id, tempor nisi. Donec maximus ligula vel mi euismod placerat. Pellentesque pulvinar velit eget congue molestie. Aliquam nec nulla cursus, mollis dolor id, porttitor elit. In hac habitasse platea dictumst. Sed vel consequat
+                dolor, ac egestas sem. Ut dictum at odio eu facilisis. Integer finibus ornare elit, eget iaculis libero consequat ac. Nullam vitae urna vitae elit blandit pretium. Vivamus eu metus erat. Curabitur ex erat, tristique ut pellentesque non,
+                pharetra sed diam.
+
+                <br><br> Curabitur dui nisi, vulputate in sapien ut, commodo condimentum ipsum. Nunc quis imperdiet ligula. Suspendisse magna ex, interdum nec porta ac, gravida ac neque. Integer elementum, augue in semper facilisis, velit lectus varius
+                lorem, eget luctus risus dolor id ligula. Sed sagittis ipsum purus, in hendrerit felis congue in. Ut ultricies leo dictum, egestas lorem ac, sollicitudin leo. Sed tempor dignissim neque nec ultrices. Phasellus mi diam, egestas id tellus
+                condimentum, porta tempus libero. Cras faucibus et odio lacinia molestie. Suspendisse nec odio tellus.
+
+                <br><br> Praesent facilisis, nisl et dictum ultrices, est purus sagittis turpis, nec semper lorem neque ut nunc. In hac habitasse platea dictumst. Vestibulum sollicitudin enim non est placerat ultricies at ut sem. Duis at rhoncus tortor,
+                eget egestas sapien. Donec pretium odio risus, vitae commodo velit lacinia at. Maecenas tellus augue, lobortis in lorem eu, commodo faucibus augue. Nam id fermentum leo. Aliquam accumsan augue a finibus dapibus. Cras maximus ligula eu
+                ligula vehicula laoreet. Nullam consectetur convallis leo sit amet aliquam. Nullam dignissim mattis est vitae varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus velit lacus, eu vehicula leo molestie nec. Nam
+                posuere lacus ut rutrum faucibus. Mauris posuere ante sem, in porttitor quam faucibus quis. Aliquam justo diam, elementum eget hendrerit a, vestibulum nec mauris. Mauris at ligula commodo, tristique nulla at, faucibus arcu. Etiam dapibus
+                libero nec semper pulvinar. Donec pellentesque suscipit nibh, ac eleifend tortor ornare vel. Ut mollis fringilla sapien, eu feugiat ante eleifend ac. Sed non pellentesque erat. Cras aliquet eros et justo semper feugiat. Nulla aliquam quam
+                commodo fringilla blandit. Nunc consequat feugiat eleifend. Suspendisse potenti. Duis lobortis sed libero nec malesuada. In suscipit faucibus massa non fermentum. Nulla diam ex, finibus a eleifend a, accumsan molestie diam. Vestibulum
+                vitae felis ac risus consequat ullamcorper.
+            </p>
+
+            <h4>Nulla facilisi. Sed iaculis venenatis pharetra. Proin consectetur dolor vitae dui convallis feugiat. In nibh nisi, suscipit quis tempor et, viverra eget eros. Fusce viverra commodo risus eu sodales. Maecenas pharetra id tortor nec blandit.
+                Mauris sed maximus urna. </h4>
+
+            <!-- codigo -->
+            <h3>Codespan</h3>
+            <p>The w3-codespan class is used to hightlight inline code:</p>
+            <p>© Copyright 2021. All Rights Reserved. The following HTML elements: <code class="w3-codespan ">span</code>, <code class="w3-codespan ">section</code>, and <code class="w3-codespan ">div</code> defines a section in a document.</p>
+            <!-- codigo -->
+
+            <!-- codigo -->
+            <h3>Code Containers</h3>
+            <p>The w3-code class create code containers to highlight HTML, JavaScript and CSS code.</p>
+
+            <div class="w3-panel w3-card w3-light-grey " ">
+                <h4>HTML Example</h4>
+                <div class="w3-code htmlHigh notranslate ">
+                    &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br> &lt;title&gt;HTML Tutorial&lt;/title&gt;<br> &lt;body&gt;
+                    <br><br> &lt;h1&gt;This is a heading&lt;/h1&gt;<br> &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br> &lt;/body&gt;
+                    <br> &lt;/html&gt;
+                </div>
+            </div>
+
+            <div class="w3-panel w3-card w3-light-grey ">
+            <h4>CSS Example</h4>
+            <div class="w3-code cssHigh notranslate ">
+                body {<br> background-color: #d0e4fe;<br>}<br><br> h1 {<br> color: orange;<br> text-align: center;<br>}<br><br> p {<br> font-family: "Times New Roman ";<br> font-size: 20px;<br> }
+              </div>
+           </div>
+
+        <div class="w3-panel w3-card w3-light-grey ">
+            <h4>JavaScript Example</h4>
+            <div class="w3-code jsHigh notranslate ">
+                var x = 5; // assign the value 5 to x<br> var y = 2; // assign the value 2 to y<br> var z = x + y; // assign the value
+            </div>
+        </div>
+        <!-- fin codigo -->
+        
+        
+        <h2>Responsive Image Gallery</h2>
+
+      
+        <div class="responsive ">
+            <div class="gallery ">
+                <a href="https://www.w3schools.com/css/img_5terre.jpg ">
+                    <img src="https://www.w3schools.com/css/img_5terre.jpg " alt="Cinque Terre " width="600 " height="400 ">
+                </a>
+
+            </div>
+        </div>
+
+
+        <div class="responsive ">
+            <div class="gallery ">
+                <img src="https://www.w3schools.com/css/img_5terre.jpg " alt="Forest " width="600 " height="400 ">
+            </div>
+        </div>
+
+        <div class="responsive ">
+            <div class="gallery ">
+                <img src="https://www.w3schools.com/css/img_5terre.jpg " alt="Northern Lights " width="600 " height="400 ">
+            </div>
+        </div>
+
+        <div class="responsive ">
+            <div class="gallery ">
+                <img src="https://www.w3schools.com/css/img_mountains.jpg " alt="Mountains " width="600 " height="400 ">
+            </div>
+        </div>
+
+        <div class="responsive ">
+            <div class="gallery ">
+                <img src="https://www.w3schools.com/css/img_mountains.jpg " alt="Mountains " width="600 " height="400 ">
+            </div>
+        </div>
+
+        <div class="clearfix "></div>
+
+
+
+
+
+
+
+
+
+        <button class=" btn button-auto ">Hover Over Me</button>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        <button class=" btn "> <a href="#Inicio "> Ir arriba</a></button>
+        <hr>
+    </div>
+
+
+    <div class="sideOne ">    
+        <p class="w3-hide ">I am hidden.</p>
+    </div>
+
+
+    </div>
+
+
+
+    <div class="footer ">
+
+        <div class="icon-barfooter ">
+            <a class="activefooter " href="# "><i class="icon-home "></i></a>
+            <a href="# "><i class="icon-notificaciones "></i></a>
+            <a href="# "><i class="icon-viajes-one "></i></a>
+            <a href="# "><i class="icon-experiencias "></i></a>
+            <a href="# "><i class="icon-calendario " ></i></a>
+
+
+        </div>
+
+        <!-- Progreess -->
+        <div class="progress-container ">
+            <div class="progress-bar " id="myBar "></div>
+        </div>
+        <!--  Progreess -->
+
+    </div>
+
+
+    <!-- hTML -->
+    <script>
+        includeHTML();
+    </script>
+   
+    <!-- TABS -->
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent ");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none ";
+            }
+            tablinks = document.getElementsByClassName("tablinks ");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active ", " ");
+            }
+            document.getElementById(cityName).style.display = "block ";
+            evt.currentTarget.className += " active ";
+        }
+    </script>
+    <script>
+        // TOP VOLVER ARRIBA 
+        //Get the button
+        var mybutton = document.getElementById("myBtnTop ");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block ";
+            } else {
+                mybutton.style.display = "none ";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar ").style.width = scrolled + "% ";
+        }
+    </script>
+
+
+</body>
+
+</html>
+
+</html>
