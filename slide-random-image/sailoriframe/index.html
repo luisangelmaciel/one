@@ -1,0 +1,94 @@
+<div>  
+    <style>
+        
+.image-responsive {
+    display: inline-block;
+    overflow-x: auto;
+    max-width: 350px;
+    height: auto;
+    border-style: none;
+    vertical-align: middle;
+}
+    </style>  
+    <script src="./jquery-3-5-0.js" ></script>
+    <img id="slide" width="100%" height="auto" class="image-responsive"> 
+    <img id="slide1" width="100%" height="auto" class="image-responsive"> 
+    <img id="slide2" width="100%" height="auto" class="image-responsive"> 
+    <img id="slide3" width="100%" height="auto" class="image-responsive">
+    <img id="slide4" width="100%" height="auto" class="image-responsive">
+    <script>      
+        $(document).ready(function() {
+                    
+            //PIC SLIDESHOW FUNC
+            let pics = [
+                "moon1.jpeg",
+                "moon2.jpeg",
+                "moon3.jpeg",
+                "moon4.jpeg",
+                "moon5.jpeg",
+                "moon6.jpeg",
+                "moon7.jpeg",
+                "moon8.jpeg",
+                "moon9.jpeg",
+                "moon10.jpeg",
+                "moon11.jpeg",
+                "moon12.jpeg",
+                "moon13.jpeg",
+                "moon14.jpeg",
+                "moon15.jpeg",
+                "moon16.jpeg",
+                "moon17.jpeg",
+                "moon18.jpeg",
+                "moon19.jpeg",
+                "moon20.jpeg",
+                "moon21.jpeg",
+                "moon22.jpeg",
+                "moon23.jpeg",
+                "moon24.jpeg",
+                "moon25.jpeg",
+                "moon26.jpeg",
+                "moon27.jpeg",
+                "moon28.jpeg",
+                "moon29.jpeg",
+                "moon30.jpeg"
+            ];
+            // 0
+            function swapImg() {
+                const image = document.getElementById("slide");
+                image.src = "sailorpics/" + pics[Math.floor(Math.random() * pics.length)];
+                setTimeout(swapImg, 3000);
+            }
+            //1
+            function swapImg1() {
+                const image = document.getElementById("slide1");
+                image.src = "sailorpics/" + pics[Math.floor(Math.random() * pics.length)];
+                setTimeout(swapImg1, 3000);
+            }
+            swapImg1();
+            // 2
+            swapImg();
+
+            function swapImg2() {
+                const image = document.getElementById("slide2");
+                image.src = "sailorpics/" + pics[Math.floor(Math.random() * pics.length)];
+                setTimeout(swapImg2, 3000);
+            }
+            swapImg2();
+            //3
+            function swapImg3() {
+                const image = document.getElementById("slide3");
+                image.src = "sailorpics/" + pics[Math.floor(Math.random() * pics.length)];
+                setTimeout(swapImg3, 3000);
+            }
+            swapImg3();
+             // 4
+             function swapImg4() {
+                const image = document.getElementById("slide4");
+                image.src = "sailorpics/" + pics[Math.floor(Math.random() * pics.length)];
+                setTimeout(swapImg4, 3000);
+            }
+            swapImg4();
+            
+        }); 
+    </script>
+</div>
